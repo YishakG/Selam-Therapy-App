@@ -1,0 +1,27 @@
+{
+    "@@locale": "en",
+    "appName": "Selam",
+    "@appName": {
+        "description": "The name of the application"
+    },
+    "tagline": "Enjoy peace of mind anytime, anywhere",
+    "@tagline": {
+        "description": "The application's tagline"
+    },
+    "getStarted": "Get Started",
+    "@getStarted": {
+        "description": "Text for the get started button"
+    },
+    "selectLanguage": "Select Language",
+    "@selectLanguage": {
+        "description": "Text for language selection"
+    },
+    "english": "English",
+    "@english": {
+        "description": "Name of English language"
+    },
+    "amharic": "አማርኛ",
+    "@amharic": {
+        "description": "Name of Amharic language"
+    }
+} 

@@ -1,0 +1,187 @@
+{
+  "@@locale": "am",
+  "appName": "ሰላም ቴራፒ",
+  "@appName": {
+    "description": "The name of the application"
+  },
+  "tagline": "የአእምሮ ጤና ባልደረባዎ",
+  "@tagline": {
+    "description": "The application's tagline"
+  },
+  "getStarted": "ጀምር",
+  "@getStarted": {
+    "description": "Text for the get started button"
+  },
+  "selectLanguage": "ቋንቋ ይምረጡ",
+  "@selectLanguage": {
+    "description": "Text for language selection"
+  },
+  "english": "English",
+  "@english": {
+    "description": "Name of English language"
+  },
+  "amharic": "አማርኛ",
+  "@amharic": {
+    "description": "Name of Amharic language"
+  },
+  "features": "ዋና ባህሪያት",
+  "@features": {
+    "description": "Title for features section"
+  },
+  "onlineTherapy": "የመስመር ላይ ቴራፒ",
+  "@onlineTherapy": {
+    "description": "Title for online therapy feature"
+  },
+  "onlineTherapyDesc": "ከማንኛውም ቦታ የቴራፒ አገልግሎት ያግኙ",
+  "@onlineTherapyDesc": {
+    "description": "Description for online therapy feature"
+  },
+  "expertTherapists": "ባለሙያ ቴራፒስቶች",
+  "@expertTherapists": {
+    "description": "Title for expert therapists feature"
+  },
+  "expertTherapistsDesc": "ባለሙያ የአእምሮ ጤና ባለሙያዎች ያግኙ",
+  "@expertTherapistsDesc": {
+    "description": "Description for expert therapists feature"
+  },
+  "dataPrivacy": "የውሂብ ግላዊነት",
+  "@dataPrivacy": {
+    "description": "Title for data privacy feature"
+  },
+  "dataPrivacyDesc": "የእርስዎ መረጃ ደህንነቱ የተጠበቀ ነው",
+  "@dataPrivacyDesc": {
+    "description": "Description for data privacy feature"
+  },
+  "personalizedCare": "በግል የተበጀ እንክብካቤ",
+  "@personalizedCare": {
+    "description": "Title for personalized care feature"
+  },
+  "personalizedCareDesc": "ለእርስዎ የተሟላ የሕክምና እቅድ",
+  "@personalizedCareDesc": {
+    "description": "Description for personalized care feature"
+  },
+  "support247": "24/7 ድጋፍ",
+  "@support247": {
+    "description": "Title for 24/7 support feature"
+  },
+  "support247Desc": "በሚያስፈልግዎት ጊዜ እርዳታ ያግኙ",
+  "@support247Desc": {
+    "description": "Description for 24/7 support feature"
+  },
+  "createAccount": "መለያ ይፍጠሩ",
+  "login": "ግባ",
+  "newUser": "አዲስ ተጠቃሚ?",
+  "existingUser": "የአካውንት ባለቤት?",
+  "@_LOGIN_STRINGS": {},
+  "welcomeBack": "እንኳን ደህና መጡ!",
+  "loginToContinue": "እባክዎ ለመቀጠል ይግቡ",
+  "emailOrPhone": "ኢሜይል ወይም ስልክ ቁጥር",
+  "password": "የይለፍ ቃል",
+  "forgotPassword": "የይለፍ ቃል ረሱ?",
+  "dontHaveAccount": "መለያ የለዎትም?",
+  "emailOrPhoneRequired": "ኢሜይል ወይም ስልክ ቁጥር ያስፈልጋል",
+  "invalidEmailOrPhone": "እባክዎ ትክክለኛ ኢሜይል ወይም ስልክ ቁጥር ያስገቡ",
+  "passwordRequired": "የይለፍ ቃል ያስፈልጋል",
+  "passwordTooShort": "የይለፍ ቃል ቢያንስ 6 ቁምፊዎች መሆን አለበት",
+  "loginSuccess": "በተሳካ ሁኔታ ገብተዋል",
+  "@_NAVIGATION": {},
+  "home": "ዋና ገጽ",
+  "@home": {
+    "description": "Label for home navigation item"
+  },
+  "videos": "ቪዲዮዎች",
+  "@videos": {
+    "description": "Label for videos navigation item"
+  },
+  "services": "አገልግሎቶች",
+  "@services": {
+    "description": "Label for services navigation item"
+  },
+  "courses": "ኮርሶች",
+  "@courses": {
+    "description": "Label for courses navigation item"
+  },
+  "profile": "መገለጫ",
+  "@profile": {
+    "description": "Label for profile navigation item"
+  },
+  "@_SERVICES": {},
+  "emergencyHelp": "አስቸኳይ እርዳታ",
+  "emergencyHelpDescription": "ለአስቸኳይ የአእምሮ ጤና ችግሮች እርዳታ ያግኙ",
+  "consultationServices": "የምክር አገልግሎቶች",
+  "mentalHealth": "የአእምሮ ጤና",
+  "mentalHealthDescription": "ባለሙያ የምክር አገልግሎት",
+  "familyCounseling": "የቤተሰብ ምክር",
+  "familyCounselingDescription": "ለቤተሰብ ግንኙነት ድጋፍ",
+  "childCare": "የልጅ እንክብካቤ",
+  "childCareDescription": "ለልጆች ልዩ እንክብካቤ",
+  "healthEducation": "የጤና ትምህርት",
+  "healthEducationDescription": "ስለ አእምሮ ጤና ይማሩ",
+  "@_COURSES": {},
+  "effectiveCommunication": "ውጫታማ የመግባቢያ ክህሎቶች",
+  "stressManagement": "የጭንቀት አስተዳደር",
+  "mentalHealthBasics": "የአእምሮ ጤና መሰረታዊ እውቀት",
+  "instructor": "አስተማሪ",
+  "duration": "የጊዜ ርዝመት",
+  "hours": "ሰዓታት",
+  "continueText": "ይቀጥሉ",
+  "enrolledCourses": "የተመዘገቡ ክርስቶች",
+  "registeredCourses": "የተቀላቀሉ ክርስቶች",
+  "completedCourses": "የተጠናቀቁ ክርስቶች",
+  "@_PROFILE": {},
+  "memberSince": "ከጁላይ ጀምሮ አባል",
+  "personalInfo": "የግል መረጃ",
+  "settings": "ቅንብሮች",
+  "helpAndSupport": "እርዳታ እና ድጋፍ",
+  "logout": "ውጣ",
+  "language": "ቋንቋ",
+  "editProfile": "መገለጫ አስተካክል",
+  "mentalHealthServices": "የምክር አገልግሎቶች",
+  "@mentalHealthServices": {
+    "description": "Title for mental health services"
+  },
+  "needEmergencyHelp": "አስቸኳይ እርዳታ ይፈልጋሉ?",
+  "@needEmergencyHelp": {
+    "description": "Title for emergency help section"
+  },
+  "emergencyHelpDescription": "የ24/7 የድንገተኛ ጊዜ ስልክ መስመራችንን ያግኙ ሁልጊዜም እዚህ አለን",
+  "@emergencyHelpDescription": {
+    "description": "Description for emergency help"
+  },
+  "getEmergencyHelp": "አስቸኳይ እርዳታ አግኝ",
+  "@getEmergencyHelp": {
+    "description": "Button text for emergency help"
+  },
+  "chatConsultation": "በጽሁፍ የምክር አገልግሎት",
+  "@chatConsultation": {
+    "description": "Title for chat consultation service"
+  },
+  "chatConsultationDescription": "ስሜትዎን በጽሁፍ ለመግለጽ ከመረጡ",
+  "@chatConsultationDescription": {
+    "description": "Description for chat consultation"
+  },
+  "selfHelpResources": "የስነ-ልቦና ምክር አገልግሎት",
+  "@selfHelpResources": {
+    "description": "Title for self-help resources"
+  },
+  "selfHelpResourcesDescription": "ከባለሙያ ጋር በግል ይነጋገሩ",
+  "@selfHelpResourcesDescription": {
+    "description": "Description for self-help resources"
+  },
+  "familyServices": "የቤተሰብ ምክር አገልግሎት",
+  "@familyServices": {
+    "description": "Title for family services"
+  },
+  "familyServicesDescription": "ለቤተሰብዎ የተሻለ ድጋፍ ያግኙ",
+  "@familyServicesDescription": {
+    "description": "Description for family services"
+  },
+  "youthServices": "የህጻናት ምክር አገልግሎት",
+  "@youthServices": {
+    "description": "Title for youth services"
+  },
+  "youthServicesDescription": "ለትንሽ ህጻናት አስፈላጊ እንክብካቤ",
+  "@youthServicesDescription": {
+    "description": "Description for youth services"
+  }
+}

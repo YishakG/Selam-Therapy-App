@@ -1,0 +1,162 @@
+{
+  "@@locale": "en",
+  "appName": "Selam Therapy",
+  "@appName": {
+    "description": "The name of the application"
+  },
+  "tagline": "Your mental health companion",
+  "@tagline": {
+    "description": "The application's tagline"
+  },
+  "getStarted": "Get Started",
+  "@getStarted": {
+    "description": "Text for the get started button"
+  },
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Text for language selection"
+  },
+  "english": "English",
+  "@english": {
+    "description": "Name of English language"
+  },
+  "amharic": "አማርኛ",
+  "@amharic": {
+    "description": "Name of Amharic language"
+  },
+  "features": "Features",
+  "@features": {
+    "description": "Title for features section"
+  },
+  "onlineTherapy": "Online Therapy",
+  "@onlineTherapy": {
+    "description": "Title for online therapy feature"
+  },
+  "onlineTherapyDesc": "Access therapy sessions from anywhere",
+  "@onlineTherapyDesc": {
+    "description": "Description for online therapy feature"
+  },
+  "expertTherapists": "Expert Therapists",
+  "@expertTherapists": {
+    "description": "Title for expert therapists feature"
+  },
+  "expertTherapistsDesc": "Connect with qualified mental health professionals",
+  "@expertTherapistsDesc": {
+    "description": "Description for expert therapists feature"
+  },
+  "dataPrivacy": "Data Privacy",
+  "@dataPrivacy": {
+    "description": "Title for data privacy feature"
+  },
+  "dataPrivacyDesc": "Your information is secure and confidential",
+  "@dataPrivacyDesc": {
+    "description": "Description for data privacy feature"
+  },
+  "personalizedCare": "Personalized Care",
+  "@personalizedCare": {
+    "description": "Title for personalized care feature"
+  },
+  "personalizedCareDesc": "Tailored treatment plans for your needs",
+  "@personalizedCareDesc": {
+    "description": "Description for personalized care feature"
+  },
+  "support247": "24/7 Support",
+  "@support247": {
+    "description": "Title for 24/7 support feature"
+  },
+  "support247Desc": "Get help whenever you need it",
+  "@support247Desc": {
+    "description": "Description for 24/7 support feature"
+  },
+  "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Text for create account button"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Text for login button"
+  },
+  "newUser": "New to Selam?",
+  "@newUser": {
+    "description": "Text for new user prompt"
+  },
+  "existingUser": "Already have an account?",
+  "@existingUser": {
+    "description": "Text for existing user prompt"
+  },
+  "@_LOGIN_STRINGS": {},
+  "welcomeBack": "Welcome Back!",
+  "loginToContinue": "Please log in to continue",
+  "emailOrPhone": "Email or Phone",
+  "password": "Password",
+  "forgotPassword": "Forgot Password?",
+  "dontHaveAccount": "Don't have an account?",
+  "emailOrPhoneRequired": "Email or phone number is required",
+  "invalidEmailOrPhone": "Please enter a valid email or phone number",
+  "passwordRequired": "Password is required",
+  "passwordTooShort": "Password must be at least 6 characters",
+  "loginSuccess": "Logged in successfully",
+  "loginError": "Login failed. Please try again.",
+  "signUp": "Sign Up",
+  "@_NAVIGATION": {},
+  "home": "Home",
+  "@home": {
+    "description": "Label for home navigation item"
+  },
+  "videos": "Videos",
+  "@videos": {
+    "description": "Label for videos navigation item"
+  },
+  "services": "Services",
+  "@services": {
+    "description": "Label for services navigation item"
+  },
+  "courses": "Courses",
+  "@courses": {
+    "description": "Title for the courses page"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Label for profile navigation item"
+  },
+  "@_SERVICES": {},
+  "emergencyHelp": "Emergency Help",
+  "emergencyHelpDescription": "Get immediate assistance for mental health emergencies",
+  "getEmergencyHelp": "Get Emergency Help",
+  "consultationServices": "Consultation Services",
+  "healthConsultation": "Health Consultation",
+  "healthConsultationDesc": "Express your health concerns from the basics",
+  "psychologyConsultation": "Psychology Consultation",
+  "psychologyConsultationDesc": "Talk privately with a professional",
+  "familyConsultation": "Family Consultation",
+  "familyConsultationDesc": "Get better support for your family",
+  "lifeConsultation": "Life Consultation",
+  "lifeConsultationDesc": "Let's work together for a better life",
+  "@_COURSES": {},
+  "effectiveCommunication": "Effective Communication Skills",
+  "stressManagement": "Stress Management",
+  "mentalHealthBasics": "Mental Health Basics",
+  "instructor": "Instructor",
+  "duration": "Duration",
+  "hours": "hours",
+  "continueText": "Continue",
+  "enrolledCourses": "Enrolled Courses",
+  "registeredCourses": "Registered Courses",
+  "completedCourses": "Completed Courses",
+  "@_PROFILE": {},
+  "memberSince": "Member since",
+  "personalInfo": "Personal Information",
+  "settings": "Settings",
+  "helpAndSupport": "Help & Support",
+  "logout": "Logout",
+  "language": "Language",
+  "editProfile": "Edit Profile",
+  "mentalHealth": "Mental Health",
+  "mentalHealthDescription": "Professional counseling services",
+  "familyCounseling": "Family Counseling",
+  "familyCounselingDescription": "Support for family relationships",
+  "childCare": "Child Care",
+  "childCareDescription": "Specialized care for children",
+  "healthEducation": "Health Education",
+  "healthEducationDescription": "Learn about mental health"
+}

@@ -173,5 +173,194 @@
   "portfolioRequired": "Please enter your portfolio link",
   "shortBio": "Short Bio",
   "bioRequired": "Please enter your bio",
-  "alreadyHaveAccount": "Already have an account?"
+  "alreadyHaveAccount": "Already have an account?",
+  "@_THERAPIST_HOME": {},
+  "totalClients": "Total Clients",
+  "@totalClients": {
+    "description": "Label for total clients statistic"
+  },
+  "totalSessions": "Total Sessions",
+  "@totalSessions": {
+    "description": "Label for total sessions statistic"
+  },
+  "totalEarnings": "Total Earnings",
+  "@totalEarnings": {
+    "description": "Label for total earnings statistic"
+  },
+  "rating": "Rating",
+  "@rating": {
+    "description": "Label for rating statistic"
+  },
+  "messages": "Messages",
+  "@messages": {
+    "description": "Label for messages navigation item"
+  },
+  "appointments": "Appointments",
+  "@appointments": {
+    "description": "Label for appointments navigation item"
+  },
+  "@_MESSAGES": {},
+  "therapist": "Therapist",
+  "@therapist": {
+    "description": "Label for therapist"
+  },
+  "latestMessagePreview": "Latest message preview...",
+  "@latestMessagePreview": {
+    "description": "Preview text for latest message"
+  },
+  "hoursAgo": "{hours} hours ago",
+  "@hoursAgo": {
+    "description": "Text showing how many hours ago a message was sent",
+    "placeholders": {
+      "hours": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "@_THERAPIST_PROFILE": {},
+  "clinicalPsychologist": "Clinical Psychologist",
+  "@clinicalPsychologist": {
+    "description": "Professional title for clinical psychologist"
+  },
+  "traumaAndAnxietySpecialist": "Trauma & Anxiety Specialist",
+  "@traumaAndAnxietySpecialist": {
+    "description": "Specialization title"
+  },
+  "specializations": "Specializations",
+  "@specializations": {
+    "description": "Section title for specializations"
+  },
+  "traumaTherapy": "Trauma Therapy",
+  "@traumaTherapy": {
+    "description": "Specialization in trauma therapy"
+  },
+  "anxietyAndDepression": "Anxiety & Depression",
+  "@anxietyAndDepression": {
+    "description": "Specialization in anxiety and depression"
+  },
+  "youthPsychology": "Youth Psychology",
+  "@youthPsychology": {
+    "description": "Specialization in youth psychology"
+  },
+  "certifications": "Certifications",
+  "@certifications": {
+    "description": "Section title for certifications"
+  },
+  "phdClinicalPsychology": "Ph.D. Clinical Psychology, Addis Ababa University",
+  "@phdClinicalPsychology": {
+    "description": "PhD certification detail"
+  },
+  "licensedClinicalPsychologist": "Licensed Clinical Psychologist",
+  "@licensedClinicalPsychologist": {
+    "description": "License certification detail"
+  },
+  "certifiedTraumaSpecialist": "Certified Trauma Specialist",
+  "@certifiedTraumaSpecialist": {
+    "description": "Trauma specialist certification"
+  },
+  "editSchedule": "Edit Schedule",
+  "@editSchedule": {
+    "description": "Button text for editing schedule"
+  },
+  "monToFri": "Mon - Fri",
+  "@monToFri": {
+    "description": "Weekday range"
+  },
+  "saturday": "Sat",
+  "@saturday": {
+    "description": "Saturday abbreviated"
+  },
+  "sessionRates": "Session Rates",
+  "@sessionRates": {
+    "description": "Section title for session rates"
+  },
+  "individualSession": "Individual Session",
+  "@individualSession": {
+    "description": "Label for individual session type"
+  },
+  "coupleTherapy": "Couple Therapy",
+  "@coupleTherapy": {
+    "description": "Label for couple therapy session type"
+  },
+  "hour": "hour",
+  "@hour": {
+    "description": "Time unit singular"
+  },
+  "@hours": {
+    "description": "Time unit plural"
+  },
+  "availability": "Availability",
+  "@availability": {
+    "description": "Section title for availability schedule"
+  },
+  "@_APPOINTMENTS": {},
+  "upcoming": "Upcoming",
+  "@upcoming": {
+    "description": "Tab label for upcoming appointments"
+  },
+  "past": "Past",
+  "@past": {
+    "description": "Tab label for past appointments"
+  },
+  "all": "All",
+  "@all": {
+    "description": "Filter label for all appointments"
+  },
+  "individual": "Individual",
+  "@individual": {
+    "description": "Filter label for individual appointments"
+  },
+  "couple": "Couple",
+  "@couple": {
+    "description": "Filter label for couple appointments"
+  },
+  "family": "Family",
+  "@family": {
+    "description": "Filter label for family appointments"
+  },
+  "confirmed": "Confirmed",
+  "@confirmed": {
+    "description": "Status label for confirmed appointments"
+  },
+  "pending": "Pending",
+  "@pending": {
+    "description": "Status label for pending appointments"
+  },
+  "completed": "Completed",
+  "@completed": {
+    "description": "Status label for completed appointments"
+  },
+  "cancelled": "Cancelled",
+  "@cancelled": {
+    "description": "Status label for cancelled appointments"
+  },
+  "searchMessages": "Search messages...",
+  "@searchMessages": {
+    "description": "Hint text for message search field"
+  },
+  "noMessages": "No Messages Yet",
+  "@noMessages": {
+    "description": "Text shown when there are no messages"
+  },
+  "startNewChat": "Start a new conversation with your clients",
+  "@startNewChat": {
+    "description": "Subtitle text shown when there are no messages"
+  },
+  "allMessages": "All",
+  "@allMessages": {
+    "description": "Filter label for all messages"
+  },
+  "unreadMessages": "Unread",
+  "@unreadMessages": {
+    "description": "Filter label for unread messages"
+  },
+  "starredMessages": "Starred",
+  "@starredMessages": {
+    "description": "Filter label for starred messages"
+  },
+  "archivedMessages": "Archived",
+  "@archivedMessages": {
+    "description": "Filter label for archived messages"
+  }
 }

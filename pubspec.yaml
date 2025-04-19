@@ -55,6 +55,9 @@ dependencies:
   dartz: ^0.10.1
   equatable: ^2.0.5
 
+  # Added from the code block
+  timeago: ^3.6.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,0 +1,11 @@
+{
+    "totalClients": "Total Clients",
+    "totalSessions": "Total Sessions",
+    "totalEarnings": "Total Earnings",
+    "rating": "Rating",
+    "home": "Home",
+    "messages": "Messages",
+    "appointments": "Appointments",
+    "profile": "Profile",
+    "upcomingAppointments": "Upcoming Appointments"
+} 

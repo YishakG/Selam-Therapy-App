@@ -6,7 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/routes.dart';
 
-enum UserRole { client, contentCreator }
+enum RegistrationType { client, contentCreator }
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class RegistrationPage extends StatefulWidget {
 
 class _RegistrationPageState extends State<RegistrationPage> {
   final _formKey = GlobalKey<FormState>();
-  UserRole _selectedRole = UserRole.client;
+  RegistrationType _selectedRole = RegistrationType.client;
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _phoneController = TextEditingController();
@@ -96,15 +96,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
                           Expanded(
                             child: _RoleSelectionButton(
                               title: l10n.client,
-                              isSelected: _selectedRole == UserRole.client,
-                              onTap: () => setState(() => _selectedRole = UserRole.client),
+                              isSelected: _selectedRole == RegistrationType.client,
+                              onTap: () => setState(() => _selectedRole = RegistrationType.client),
                             ),
                           ),
                           Expanded(
                             child: _RoleSelectionButton(
                               title: l10n.contentCreator,
-                              isSelected: _selectedRole == UserRole.contentCreator,
-                              onTap: () => setState(() => _selectedRole = UserRole.contentCreator),
+                              isSelected: _selectedRole == RegistrationType.contentCreator,
+                              onTap: () => setState(() => _selectedRole = RegistrationType.contentCreator),
                             ),
                           ),
                         ],
@@ -170,7 +170,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     const SizedBox(height: 16),
 
                     // Role-specific fields
-                    if (_selectedRole == UserRole.contentCreator) ...[
+                    if (_selectedRole == RegistrationType.contentCreator) ...[
                       TextFormField(
                         controller: _portfolioController,
                         decoration: InputDecoration(

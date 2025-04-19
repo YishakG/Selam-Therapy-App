@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/routes.dart';
 import '../../../../core/widgets/app_logo.dart';
+import '../../../../core/providers/user_role_provider.dart';
 
 class LoginPage extends ConsumerStatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -36,9 +37,15 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   Future<void> _handleLogin() async {
     if (_formKey.currentState!.validate()) {
       try {
+        // Simulate API call
         await Future.delayed(const Duration(seconds: 1));
+        
         if (!mounted) return;
+
+        // Temporarily always set to therapist
+        ref.read(userRoleProvider.notifier).state = UserRole.therapist;
         context.go(Routes.home);
+        
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(

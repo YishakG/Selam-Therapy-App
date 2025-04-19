@@ -85,7 +85,7 @@
   "passwordTooShort": "የይለፍ ቃል ቢያንስ 6 ቁምፊዎች መሆን አለበት",
   "loginSuccess": "በተሳካ ሁኔታ ገብተዋል",
   "@_NAVIGATION": {},
-  "home": "ዋና ገጽ",
+  "home": "መነሻ",
   "@home": {
     "description": "Label for home navigation item"
   },
@@ -237,11 +237,16 @@
   "pending": "በመጠባበቅ ላይ",
   "completed": "የተጠናቀቀ",
   "cancelled": "የተሰረዘ",
-  "searchMessages": "መልእክቶችን ይፈልጉ...",
+  "searchMessages": "መልእክቶችን ይፈልጉ",
   "noMessages": "እስካሁን መልእክቶች የሉም",
   "startNewChat": "ከደንበኞችዎ ጋር አዲስ ውይይት ይጀምሩ",
   "allMessages": "ሁሉም",
   "unreadMessages": "ያልተነበቡ",
   "starredMessages": "ተመራጭ",
-  "archivedMessages": "በארኪቭ የተቀመጡ"
+  "archivedMessages": "በארኪቭ የተቀመጡ",
+  "professionalDetails": "የሙያ ዝርዝሮች",
+  "upcomingClasses": "የሚመጡ ክፍሎች",
+  "newEnrollments": "አዲስ ምዝገባዎች",
+  "review": "ግምገማ",
+  "searchCoursesAndStudents": "ተማሪዎችን እና ኮርሶችን ይፈልጉ..."
 }

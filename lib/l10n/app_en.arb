@@ -362,5 +362,66 @@
   "archivedMessages": "Archived",
   "@archivedMessages": {
     "description": "Filter label for archived messages"
+  },
+  "professionalDetails": "Professional Details",
+  "upcomingClasses": "Upcoming Classes",
+  "newEnrollments": "New Enrollments",
+  "review": "Review",
+  "searchCoursesAndStudents": "Search students, courses...",
+  "searchTopics": "Search topics...",
+  "@searchTopics": {
+    "description": "Hint text for search topics field"
+  },
+  "contentPerformance": "Content Performance",
+  "@contentPerformance": {
+    "description": "Title for content performance section"
+  },
+  "mentalHealthAwareness": "Mental Health Awareness",
+  "@mentalHealthAwareness": {
+    "description": "Title for mental health awareness content"
+  },
+  "wellnessTips": "Wellness Tips",
+  "@wellnessTips": {
+    "description": "Title for wellness tips content"
+  },
+  "scheduledContent": "Scheduled Content",
+  "@scheduledContent": {
+    "description": "Title for scheduled content section"
+  },
+  "selfCareRoutines": "Self-Care Routines",
+  "@selfCareRoutines": {
+    "description": "Title for self-care routines content"
+  },
+  "mindfulnessPractice": "Mindfulness Practice",
+  "@mindfulnessPractice": {
+    "description": "Title for mindfulness practice content"
+  },
+  "tomorrowAt": "Tomorrow at {time}",
+  "@tomorrowAt": {
+    "description": "Text for showing tomorrow's time",
+    "placeholders": {
+      "time": {
+        "type": "String",
+        "example": "10:00 AM"
+      }
+    }
+  },
+  "fridayAt": "Friday at {time}",
+  "@fridayAt": {
+    "description": "Text for showing Friday's time",
+    "placeholders": {
+      "time": {
+        "type": "String",
+        "example": "2:00 PM"
+      }
+    }
+  },
+  "content": "Content",
+  "@content": {
+    "description": "Label for content navigation item"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "Label for edit button"
   }
 }

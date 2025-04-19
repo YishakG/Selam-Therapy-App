@@ -102,10 +102,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get passwordTooShort => 'Password must be at least 6 characters';
 
   @override
-  String get loginSuccess => 'Logged in successfully';
+  String get loginSuccess => 'Login successful';
 
   @override
-  String get loginError => 'Login failed. Please try again.';
+  String get loginError => 'Login failed';
 
   @override
   String get signUp => 'Sign Up';
@@ -235,4 +235,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get healthEducationDescription => 'Learn about mental health';
+
+  @override
+  String get appTitle => 'Selam App';
 }

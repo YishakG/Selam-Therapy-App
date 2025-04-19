@@ -75,7 +75,7 @@ class FeaturesPage extends ConsumerWidget {
                   AuthButton(
                     prompt: l10n.newUser,
                     buttonText: l10n.createAccount,
-                    route: Routes.signup,
+                    route: Routes.registration,
                     isPrimary: true,
                   ),
                   const SizedBox(height: 16),

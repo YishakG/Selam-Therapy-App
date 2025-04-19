@@ -284,13 +284,13 @@ abstract class AppLocalizations {
   /// No description provided for @loginSuccess.
   ///
   /// In en, this message translates to:
-  /// **'Logged in successfully'**
+  /// **'Login successful'**
   String get loginSuccess;
 
   /// No description provided for @loginError.
   ///
   /// In en, this message translates to:
-  /// **'Login failed. Please try again.'**
+  /// **'Login failed'**
   String get loginError;
 
   /// No description provided for @signUp.
@@ -550,6 +550,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Learn about mental health'**
   String get healthEducationDescription;
+
+  /// No description provided for @appTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Selam App'**
+  String get appTitle;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

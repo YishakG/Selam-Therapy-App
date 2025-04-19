@@ -73,6 +73,8 @@ dev_dependencies:
   riverpod_lint: ^2.3.4
 
 flutter:
+  # Enable code generation for localization
+  generate: true
 
   # Include Material Icons
   uses-material-design: true
@@ -82,9 +84,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/videos/
-
-  # Enable code generation for localization
-  generate: true
+    - lib/l10n/
 
   # Uncomment and configure if you want to use custom fonts.
   # fonts:

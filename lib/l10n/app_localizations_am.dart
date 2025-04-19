@@ -105,7 +105,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get loginSuccess => 'በተሳካ ሁኔታ ገብተዋል';
 
   @override
-  String get loginError => 'Login failed. Please try again.';
+  String get loginError => 'መግባት አልተሳካም';
 
   @override
   String get signUp => 'Sign Up';
@@ -235,4 +235,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get healthEducationDescription => 'ስለ አእምሮ ጤና ይማሩ';
+
+  @override
+  String get appTitle => 'ሰላም መተግበሪያ';
 }

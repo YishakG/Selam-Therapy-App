@@ -7,7 +7,7 @@ import '../../features/home/presentation/pages/home_page.dart';
 import '../../features/onboarding/presentation/pages/get_started_page.dart';
 import '../../features/onboarding/presentation/pages/features_page.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
-import '../../features/auth/presentation/pages/signup_page.dart';
+import '../../features/auth/presentation/pages/registration_page.dart';
 
 /// Provider that manages the app's router configuration
 final routerProvider = Provider<GoRouter>((ref) {
@@ -32,13 +32,9 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const LoginPage(),
       ),
       GoRoute(
-        path: Routes.signup,
-        name: 'signup',
-        builder: (context, state) {
-          // Set not first time when user reaches signup
-          ref.read(isFirstTimeProvider.notifier).setNotFirstTime();
-          return const SignupPage();
-        },
+        path: Routes.registration,
+        name: 'registration',
+        builder: (context, state) => const RegistrationPage(),
       ),
       GoRoute(
         path: Routes.home,

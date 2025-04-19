@@ -183,5 +183,21 @@
   "youthServicesDescription": "ለትንሽ ህጻናት አስፈላጊ እንክብካቤ",
   "@youthServicesDescription": {
     "description": "Description for youth services"
-  }
+  },
+  "appTitle": "ሰላም መተግበሪያ",
+  "loginError": "መግባት አልተሳካም",
+  "@_REGISTRATION": {},
+  "client": "ደንበኛ",
+  "contentCreator": "ይዘት ፈጣሪ",
+  "fullName": "ሙሉ ስም",
+  "fullNameRequired": "እባክዎ ስምዎን ያስገቡ",
+  "email": "ኢሜይል",
+  "emailRequired": "እባክዎ ኢሜይልዎን ያስገቡ",
+  "phoneNumber": "ስልክ ቁጥር",
+  "phoneRequired": "እባክዎ ስልክ ቁጥርዎን ያስገቡ",
+  "portfolioLink": "የስራ ማሳያ ሊንክ",
+  "portfolioRequired": "እባክዎ የስራ ማሳያ ሊንክዎን ያስገቡ",
+  "shortBio": "አጭር ግለ ታሪክ",
+  "bioRequired": "እባክዎ አጭር ግለ ታሪክዎን ያስገቡ",
+  "alreadyHaveAccount": "አካውንት አለዎት?"
 }

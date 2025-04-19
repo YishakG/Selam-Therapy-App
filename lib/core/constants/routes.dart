@@ -13,8 +13,8 @@ class Routes {
   /// The login route
   static const String login = '/login';
 
-  /// The signup route
-  static const String signup = '/signup';
+  /// The registration route
+  static const String registration = '/registration';
 
   /// The home route after authentication
   static const String home = '/home';

@@ -243,7 +243,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         ),
                       ),
                       TextButton(
-                        onPressed: () => context.go(Routes.signup),
+                        onPressed: () => context.go(Routes.registration),
                         child: Text(
                           l10n.createAccount,
                           style: GoogleFonts.manrope(

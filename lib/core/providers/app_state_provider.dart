@@ -18,6 +18,11 @@ class FirstTimeNotifier extends StateNotifier<bool> {
     state = prefs.getBool('isFirstTime') ?? true;
   }
 
+  /// Sets the initial value for the first-time state
+  void setInitialValue(bool value) {
+    state = value;
+  }
+
   /// Sets the first-time state to false
   Future<void> setNotFirstTime() async {
     final prefs = await SharedPreferences.getInstance();

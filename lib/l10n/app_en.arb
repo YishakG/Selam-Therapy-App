@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appName": "Selam Therapy",
+  "appName": "Selam",
   "@appName": {
     "description": "The name of the application"
   },
@@ -20,7 +20,7 @@
   "@english": {
     "description": "Name of English language"
   },
-  "amharic": "አማርኛ",
+  "amharic": "Amharic",
   "@amharic": {
     "description": "Name of Amharic language"
   },
@@ -423,5 +423,336 @@
   "edit": "Edit",
   "@edit": {
     "description": "Label for edit button"
+  },
+  "@_CONTENT_SUPERVISOR": {},
+  "contentSupervisor": "Content Supervisor",
+  "@contentSupervisor": {
+    "description": "Title for content supervisor role"
+  },
+  "seniorTrainingManager": "Senior Training Manager",
+  "@seniorTrainingManager": {
+    "description": "Title for senior training manager role"
+  },
+  "pendingApprovals": "Pending Approvals",
+  "@pendingApprovals": {
+    "description": "Title for pending approvals section"
+  },
+  "creatorPerformance": "Creator Performance",
+  "@creatorPerformance": {
+    "description": "Title for creator performance section"
+  },
+  "reportedContent": "Reported Content",
+  "@reportedContent": {
+    "description": "Title for reported content section"
+  },
+  "earningsOverview": "Earnings Overview",
+  "@earningsOverview": {
+    "description": "Title for earnings overview section"
+  },
+  "totalEarningsEtb": "ETB {amount}",
+  "@totalEarningsEtb": {
+    "description": "Total earnings in ETB",
+    "placeholders": {
+      "amount": {
+        "type": "String",
+        "example": "45,230"
+      }
+    }
+  },
+  "contentSubmission": "Content Submission #{number}",
+  "@contentSubmission": {
+    "description": "Title for content submission",
+    "placeholders": {
+      "number": {
+        "type": "String",
+        "example": "1"
+      }
+    }
+  },
+  "approve": "Approve",
+  "@approve": {
+    "description": "Label for approve button"
+  },
+  "reject": "Reject",
+  "@reject": {
+    "description": "Label for reject button"
+  },
+  "contentDescription": "Content description...",
+  "@contentDescription": {
+    "description": "Placeholder for content description"
+  },
+  "@review": {
+    "description": "Label for review tab"
+  },
+  "searchCreators": "Search creators...",
+  "@searchCreators": {
+    "description": "Placeholder for creator search"
+  },
+  "@_ADMIN_INTERFACE": {},
+  "adminDashboard": "Admin Dashboard",
+  "systemAdministrator": "System Administrator",
+  "quickStats": "Quick Stats",
+  "totalUsers": "Total Users",
+  "activeSessions": "Active Sessions",
+  "totalRevenue": "Total Revenue",
+  "systemHealth": "System Health",
+  "dashboard": "Dashboard",
+  "users": "Users",
+  "settings": "Settings",
+  "content": "Content",
+  "analytics": "Analytics",
+  "payments": "Payments",
+  "userManagement": "User Management",
+  "addUser": "Add User",
+  "suspendUser": "Suspend User",
+  "removeUser": "Remove User",
+  "assignRole": "Assign Role",
+  "viewHistory": "View History",
+  "platformConfig": "Platform Configuration",
+  "uiThemes": "UI Themes",
+  "policyUpdates": "Policy Updates",
+  "accessRules": "Access Rules",
+  "firebaseConfig": "Firebase Config",
+  "contentModeration": "Content Moderation",
+  "publishedContent": "Published Content",
+  "flaggedContent": "Flagged Content",
+  "sessionFlow": "Session Flow",
+  "analyticsReporting": "Analytics & Reporting",
+  "userMetrics": "User Metrics",
+  "platformUsage": "Platform Usage",
+  "sessionStats": "Session Stats",
+  "financialDashboard": "Financial Dashboard",
+  "paymentManagement": "Payment Management",
+  "transactions": "Transactions",
+  "subscriptions": "Subscriptions",
+  "refunds": "Refunds",
+  "disputes": "Disputes",
+  "securityCompliance": "Security & Compliance",
+  "auditLogs": "Audit Logs",
+  "apiKeys": "API Keys",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfUse": "Terms of Use",
+  "systemUpdates": "System Updates",
+  "maintenanceMode": "Maintenance Mode",
+  "pushNotification": "Push Notification",
+  "exportReport": "Export Report",
+  "viewDetails": "View Details",
+  "registrationFailed": "Registration failed. Please try again.",
+  "unexpectedError": "An unexpected error occurred",
+  "fillDetailsToCreateAccount": "Fill in your details to create an account",
+  "@fillDetailsToCreateAccount": {
+    "description": "Text for fill details to create account"
+  },
+  "firstName": "First Name",
+  "@firstName": {
+    "description": "Text for first name field"
+  },
+  "pleaseEnterFirstName": "Please enter your first name",
+  "@pleaseEnterFirstName": {
+    "description": "Text for please enter first name"
+  },
+  "lastName": "Last Name",
+  "@lastName": {
+    "description": "Text for last name field"
+  },
+  "pleaseEnterLastName": "Please enter your last name",
+  "@pleaseEnterLastName": {
+    "description": "Text for please enter last name"
+  },
+  "pleaseEnterEmail": "Please enter your email",
+  "@pleaseEnterEmail": {
+    "description": "Text for please enter email"
+  },
+  "pleaseEnterValidEmail": "Please enter a valid email address",
+  "@pleaseEnterValidEmail": {
+    "description": "Text for please enter valid email"
+  },
+  "pleaseEnterPhoneNumber": "Please enter your phone number",
+  "@pleaseEnterPhoneNumber": {
+    "description": "Text for please enter phone number"
+  },
+  "pleaseEnterPassword": "Please enter your password",
+  "@pleaseEnterPassword": {
+    "description": "Text for please enter password"
+  },
+  "passwordMustBeAtLeast6Characters": "Password must be at least 6 characters",
+  "@passwordMustBeAtLeast6Characters": {
+    "description": "Text for password must be at least 6 characters"
+  },
+  "confirmPassword": "Confirm Password",
+  "@confirmPassword": {
+    "description": "Text for confirm password field"
+  },
+  "pleaseConfirmPassword": "Please confirm your password",
+  "@pleaseConfirmPassword": {
+    "description": "Text for please confirm password"
+  },
+  "passwordsDoNotMatch": "Passwords do not match",
+  "@passwordsDoNotMatch": {
+    "description": "Text for passwords do not match"
+  },
+  "alreadyHaveAnAccount": "Already have an account?",
+  "@alreadyHaveAnAccount": {
+    "description": "Text for already have an account"
+  },
+  "registerAs": "Register as {role}",
+  "@registerAs": {
+    "description": "Title for registration page with role",
+    "placeholders": {
+      "role": {
+        "type": "String",
+        "example": "Client"
+      }
+    }
+  },
+  "dateOfBirth": "Date of Birth",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "other": "Other",
+  "preferredLanguage": "Preferred Language",
+  "currentConcerns": "Current Concerns / Goals",
+  "anxiety": "Anxiety",
+  "depression": "Depression",
+  "stress": "Stress",
+  "relationshipIssues": "Relationship Issues",
+  "selfEsteem": "Self-Esteem",
+  "otherConcerns": "Other",
+  "hadTherapyBefore": "Have you had therapy before?",
+  "typeOfTherapy": "Type of Therapy Attended",
+  "preferredSessionDuration": "Preferred Session Duration",
+  "thirtyMinutes": "30 minutes",
+  "fortyFiveMinutes": "45 minutes",
+  "sixtyMinutes": "60 minutes",
+  "preferredTherapistBackground": "Preferred Therapist Background",
+  "psychologist": "Psychologist",
+  "counselor": "Counselor",
+  "socialWorker": "Social Worker",
+  "noPreference": "No Preference",
+  "preferredTherapistGender": "Preferred Therapist Gender",
+  "agreeToTerms": "I agree to the Terms & Privacy Policy",
+  "agreeToContentGuidelines": "I agree to the Terms & Content Guidelines",
+  "bio": "Bio / About",
+  "areasOfExpertise": "Areas of Expertise",
+  "psychology": "Psychology",
+  "mentalHealthWriting": "Mental Health Writing",
+  "videoProduction": "Video Production",
+  "animation": "Animation",
+  "research": "Research",
+  "otherExpertise": "Other",
+  "portfolioLink": "Portfolio / Social Link",
+  "pleaseAcceptTerms": "Please accept the terms and conditions",
+  "thisFieldIsRequired": "This field is required",
+  "pleaseSelectDateOfBirth": "Please select your date of birth",
+  "@pleaseSelectDateOfBirth": {
+    "description": "Error message when date of birth is not selected"
+  },
+  "pleaseSelectGender": "Please select your gender",
+  "@pleaseSelectGender": {
+    "description": "Error message when gender is not selected"
+  },
+  "pleaseSelectLanguage": "Please select your preferred language",
+  "@pleaseSelectLanguage": {
+    "description": "Error message when language is not selected"
+  },
+  "pleaseSelectTherapyType": "Please select a therapy type",
+  "@pleaseSelectTherapyType": {
+    "description": "Error message when therapy type is not selected"
+  },
+  "pleaseSelectTherapyDuration": "Please select therapy duration",
+  "@pleaseSelectTherapyDuration": {
+    "description": "Error message when therapy duration is not selected"
+  },
+  "pleaseSelectTherapistBackground": "Please select therapist background",
+  "@pleaseSelectTherapistBackground": {
+    "description": "Error message when therapist background is not selected"
+  },
+  "pleaseSelectTherapistGender": "Please select therapist gender",
+  "@pleaseSelectTherapistGender": {
+    "description": "Error message when therapist gender is not selected"
+  },
+  "pleaseEnterBio": "Please enter your bio",
+  "@pleaseEnterBio": {
+    "description": "Error message when bio is not entered"
+  },
+  "pleaseEnterPortfolioLink": "Please enter your portfolio link",
+  "@pleaseEnterPortfolioLink": {
+    "description": "Error message when portfolio link is not entered"
+  },
+  "familyTherapy": "Family Therapy",
+  "@familyTherapy": {
+    "description": "Label for family therapy option"
+  },
+  "longTerm": "Long Term",
+  "@longTerm": {
+    "description": "Label for long term therapy duration"
+  },
+  "therapyDuration": "Therapy Duration",
+  "@therapyDuration": {
+    "description": "Label for therapy duration field"
+  },
+  "psychiatrist": "Psychiatrist",
+  "@psychiatrist": {
+    "description": "Label for psychiatrist option"
+  },
+  "therapistBackground": "Therapist Background",
+  "@therapistBackground": {
+    "description": "Label for therapist background field"
+  },
+  "therapistGender": "Therapist Gender",
+  "@therapistGender": {
+    "description": "Label for therapist gender field"
+  },
+  "trauma": "Trauma",
+  "@trauma": {
+    "description": "Text for trauma concern"
+  },
+  "parentingSupport": "Parenting Support",
+  "@parentingSupport": {
+    "description": "Text for parenting support"
+  },
+  "addictionRecovery": "Addiction Recovery",
+  "@addictionRecovery": {
+    "description": "Text for addiction recovery"
+  },
+  "careerStress": "Career/Education Stress",
+  "@careerStress": {
+    "description": "Text for career stress"
+  },
+  "talkTherapy": "Talk Therapy",
+  "@talkTherapy": {
+    "description": "Text for talk therapy"
+  },
+  "groupTherapy": "Group Therapy",
+  "@groupTherapy": {
+    "description": "Text for group therapy"
+  },
+  "couplesTherapy": "Couples Therapy",
+  "@couplesTherapy": {
+    "description": "Text for couples therapy"
+  },
+  "therapyType": "Type of Therapy",
+  "@therapyType": {
+    "description": "Text for therapy type"
+  },
+  "shortTerm": "Short Term",
+  "@shortTerm": {
+    "description": "Text for short term"
+  },
+  "therapistGender": "Therapist Gender",
+  "@therapistGender": {
+    "description": "Text for therapist gender"
+  },
+  "pleaseSelectTherapistGender": "Please select therapist gender",
+  "@pleaseSelectTherapistGender": {
+    "description": "Error message when therapist gender is not selected"
+  },
+  "pleaseEnterBio": "Please enter your bio",
+  "@pleaseEnterBio": {
+    "description": "Error message when bio is not entered"
+  },
+  "pleaseEnterPortfolioLink": "Please enter your portfolio link",
+  "@pleaseEnterPortfolioLink": {
+    "description": "Error message when portfolio link is not entered"
   }
 }

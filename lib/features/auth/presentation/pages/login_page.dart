@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/routes.dart';
 import '../../../../core/widgets/app_logo.dart';
+import '../../../../core/providers/global_providers.dart';
 import '../../../../core/providers/user_role_provider.dart';
 
 class LoginPage extends ConsumerStatefulWidget {
@@ -41,31 +42,31 @@ class _LoginPageState extends ConsumerState<LoginPage> {
         await Future.delayed(const Duration(seconds: 1));
         
         if (!mounted) return;
-
-        // Temporarily always set to therapist
-        ref.read(userRoleProvider.notifier).state = UserRole.therapist;
-        context.go(Routes.home);
         
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(
-              AppLocalizations.of(context)!.loginSuccess,
-              style: const TextStyle(color: Colors.white),
-            ),
-            backgroundColor: Colors.green,
-            duration: const Duration(seconds: 2),
-          ),
-        );
+        // Set auth state to true
+        ref.read(authStateProvider.notifier).state = true;
+        
+        // Get user role
+        final userRole = ref.read(userRoleProvider);
+        
+        // Navigate based on user role
+        switch (userRole) {
+          case UserRole.admin:
+            context.go(Routes.adminDashboard);
+            break;
+          case UserRole.therapist:
+            context.go(Routes.therapistDashboard);
+            break;
+          case UserRole.client:
+            context.go(Routes.home);
+            break;
+        }
       } catch (e) {
         if (!mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(
-              AppLocalizations.of(context)!.loginError,
-              style: const TextStyle(color: Colors.white),
-            ),
+            content: Text(e.toString()),
             backgroundColor: Colors.red,
-            duration: const Duration(seconds: 2),
           ),
         );
       }
@@ -75,167 +76,108 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
       body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
             child: Form(
               key: _formKey,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black26,
-                          blurRadius: 15,
-                          offset: const Offset(0, 8),
-                        ),
-                      ],
-                    ),
-                    child: AppLogo(
-                      backgroundColor: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 40),
+                  const AppLogo(size: 100),
+                  const SizedBox(height: 40),
                   Text(
                     l10n.welcomeBack,
-                    style: GoogleFonts.manrope(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w700,
+                    style: GoogleFonts.poppins(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
                       color: AppColors.textPrimary,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 8),
                   Text(
                     l10n.loginToContinue,
-                    style: GoogleFonts.manrope(
+                    style: GoogleFonts.poppins(
                       fontSize: 16,
                       color: AppColors.textSecondary,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 40),
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10,
-                          offset: const Offset(0, 5),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      children: [
-                        TextFormField(
-                          controller: _emailOrPhoneController,
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                            labelText: l10n.emailOrPhone,
-                            prefixIcon: const Icon(Icons.email_outlined),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15),
-                              borderSide: BorderSide.none,
-                            ),
-                            filled: true,
-                            fillColor: AppColors.background,
-                          ),
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return l10n.emailOrPhoneRequired;
-                            }
-                            if (!_isValidEmailOrPhone(value)) {
-                              return l10n.invalidEmailOrPhone;
-                            }
-                            return null;
-                          },
-                        ),
-                        const SizedBox(height: 20),
-                        TextFormField(
-                          controller: _passwordController,
-                          obscureText: _obscurePassword,
-                          decoration: InputDecoration(
-                            labelText: l10n.password,
-                            prefixIcon: const Icon(Icons.lock_outline),
-                            suffixIcon: IconButton(
-                              icon: Icon(
-                                _obscurePassword
-                                    ? Icons.visibility_off
-                                    : Icons.visibility,
-                                color: theme.iconTheme.color,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _obscurePassword = !_obscurePassword;
-                                });
-                              },
-                            ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15),
-                              borderSide: BorderSide.none,
-                            ),
-                            filled: true,
-                            fillColor: AppColors.background,
-                          ),
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return l10n.passwordRequired;
-                            }
-                            if (value.length < 6) {
-                              return l10n.passwordTooShort;
-                            }
-                            return null;
-                          },
-                        ),
-                        const SizedBox(height: 12),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: TextButton(
-                            onPressed: () {
-                              // TODO: Implement forgot password
-                            },
-                            child: Text(
-                              l10n.forgotPassword,
-                              style: GoogleFonts.manrope(
-                                color: AppColors.primary,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 30),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 56,
-                    child: ElevatedButton(
-                      onPressed: _handleLogin,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.primary,
-                        elevation: 5,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
+                  TextFormField(
+                    controller: _emailOrPhoneController,
+                    decoration: InputDecoration(
+                      labelText: l10n.emailOrPhone,
+                      prefixIcon: const Icon(Icons.email_outlined),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
                       ),
-                      child: Text(
-                        l10n.login,
-                        style: GoogleFonts.manrope(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return l10n.emailOrPhoneRequired;
+                      }
+                      if (!_isValidEmailOrPhone(value)) {
+                        return l10n.invalidEmailOrPhone;
+                      }
+                      return null;
+                    },
+                  ),
+                  const SizedBox(height: 16),
+                  TextFormField(
+                    controller: _passwordController,
+                    obscureText: _obscurePassword,
+                    decoration: InputDecoration(
+                      labelText: l10n.password,
+                      prefixIcon: const Icon(Icons.lock_outline),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _obscurePassword
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                         ),
+                        onPressed: () {
+                          setState(() {
+                            _obscurePassword = !_obscurePassword;
+                          });
+                        },
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return l10n.passwordRequired;
+                      }
+                      if (value.length < 6) {
+                        return l10n.passwordTooShort;
+                      }
+                      return null;
+                    },
+                  ),
+                  const SizedBox(height: 24),
+                  ElevatedButton(
+                    onPressed: _handleLogin,
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      backgroundColor: AppColors.primary,
+                      foregroundColor: Colors.white,
+                      elevation: 0,
+                    ),
+                    child: Text(
+                      l10n.login,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
@@ -245,15 +187,17 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                     children: [
                       Text(
                         l10n.dontHaveAccount,
-                        style: GoogleFonts.manrope(
+                        style: GoogleFonts.poppins(
                           color: AppColors.textSecondary,
                         ),
                       ),
                       TextButton(
-                        onPressed: () => context.go(Routes.registration),
+                        onPressed: () {
+                          context.go(Routes.registration);
+                        },
                         child: Text(
                           l10n.createAccount,
-                          style: GoogleFonts.manrope(
+                          style: GoogleFonts.poppins(
                             color: AppColors.primary,
                             fontWeight: FontWeight.w600,
                           ),

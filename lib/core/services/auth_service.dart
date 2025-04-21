@@ -1,36 +1,33 @@
-/// Authentication service for handling user authentication operations.
-/// This service will manage user login, logout, token management, and authentication state.
-/// Example usage:
-/// ```dart
-/// class AuthService {
-///   final ApiClient _apiClient;
-///   final StorageService _storageService;
-/// 
-///   AuthService(this._apiClient, this._storageService);
-/// 
-///   Future<UserModel> login(String email, String password) async {
-///     try {
-///       final response = await _apiClient.post(
-///         '/auth/login',
-///         data: {'email': email, 'password': password},
-///       );
-///       
-///       final user = UserModel.fromJson(response.data);
-///       await _storageService.saveToken(user.token);
-///       return user;
-///     } catch (e) {
-///       throw AuthException(message: 'Login failed: ${e.toString()}');
-///     }
-///   }
-/// 
-///   Future<void> logout() async {
-///     await _storageService.deleteToken();
-///     // Additional cleanup if needed
-///   }
-/// 
-///   Future<bool> isAuthenticated() async {
-///     final token = await _storageService.getToken();
-///     return token != null;
-///   }
-/// }
-/// ``` 
+import 'package:selam_app/core/services/local_storage_service.dart';
+
+class AuthService {
+  final LocalStorageService _localStorage;
+
+  AuthService(this._localStorage);
+
+  Future<bool> register({
+    required String email,
+    required String password,
+    required String firstName,
+    required String lastName,
+    required String role,
+  }) async {
+    // TODO: Implement actual registration logic
+    await Future.delayed(const Duration(seconds: 2));
+    return true;
+  }
+
+  Future<bool> login(String email, String password) async {
+    // TODO: Implement actual login logic
+    await Future.delayed(const Duration(seconds: 2));
+    return true;
+  }
+
+  Future<void> logout() async {
+    await _localStorage.clear();
+  }
+
+  bool isAuthenticated() {
+    return _localStorage.getToken() != null;
+  }
+} 

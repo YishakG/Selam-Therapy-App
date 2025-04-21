@@ -31,61 +31,29 @@ class AppTheme {
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
         seedColor: AppColors.primary,
-        background: AppColors.background,
+        brightness: Brightness.light,
       ),
-      scaffoldBackgroundColor: AppColors.background,
+      textTheme: GoogleFonts.poppinsTextTheme(),
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.surface,
         elevation: 0,
-        iconTheme: IconThemeData(color: AppColors.textPrimary),
-        titleTextStyle: TextStyle(
-          color: AppColors.textPrimary,
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-        ),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
       ),
-      textTheme: GoogleFonts.manropeTextTheme(),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primary,
-          foregroundColor: Colors.white,
-          minimumSize: const Size(double.infinity, 56),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
           elevation: 0,
-        ),
-      ),
-      outlinedButtonTheme: OutlinedButtonThemeData(
-        style: OutlinedButton.styleFrom(
-          side: BorderSide(color: AppColors.primary),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(8),
           ),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
-        filled: true,
-        fillColor: AppColors.surface,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.border),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.border),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.primary),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.red),
+          borderRadius: BorderRadius.circular(8),
         ),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
-          vertical: 16,
+          vertical: 12,
         ),
       ),
     );
@@ -93,7 +61,47 @@ class AppTheme {
 
   /// Dark theme for the application
   static ThemeData get darkTheme {
-    // TODO: Implement dark theme
-    return lightTheme;
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: AppColors.primary,
+        brightness: Brightness.dark,
+      ),
+      textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
+      appBarTheme: const AppBarTheme(
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 12,
+        ),
+      ),
+    );
   }
+}
+
+class AppColors {
+  static const Color primary = Color(0xFF2196F3);
+  static const Color secondary = Color(0xFF03A9F4);
+  static const Color accent = Color(0xFF00BCD4);
+  static const Color background = Color(0xFFF5F5F5);
+  static const Color surface = Colors.white;
+  static const Color error = Color(0xFFB00020);
+  static const Color textPrimary = Color(0xFF212121);
+  static const Color textSecondary = Color(0xFF757575);
+  static const Color divider = Color(0xFFBDBDBD);
 } 

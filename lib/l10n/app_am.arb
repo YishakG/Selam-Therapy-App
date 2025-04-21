@@ -248,5 +248,288 @@
   "upcomingClasses": "የሚመጡ ክፍሎች",
   "newEnrollments": "አዲስ ምዝገባዎች",
   "review": "ግምገማ",
-  "searchCoursesAndStudents": "ተማሪዎችን እና ኮርሶችን ይፈልጉ..."
+  "searchCoursesAndStudents": "ተማሪዎችን እና ኮርሶችን ይፈልጉ...",
+  "@_CONTENT_SUPERVISOR": {},
+  "contentSupervisor": "የይዘት ተቆጣጣሪ",
+  "seniorTrainingManager": "ከፍተኛ የስልጠና አስተዳዳሪ",
+  "pendingApprovals": "በመጠባበቅ ላይ ያሉ ማጽደቂያዎች",
+  "creatorPerformance": "የፈጣሪ አፈጻጸም",
+  "reportedContent": "የተዘገበ ይዘት",
+  "earningsOverview": "የገቢ አጠቃላይ እይታ",
+  "totalEarningsEtb": "ብር {amount}",
+  "contentSubmission": "የይዘት ማስረከቢያ #{number}",
+  "approve": "አጽድቅ",
+  "reject": "ውድቅ አድርግ",
+  "contentDescription": "የይዘት መግለጫ...",
+  "searchCreators": "ፈጣሪዎችን ፈልግ...",
+  "latestMessagePreview": "የቅርብ ጊዜ መልእክት ቅድመ ዕይታ...",
+  "@_ADMIN_INTERFACE": {},
+  "adminDashboard": "የአስተዳዳሪ ዳሽቦርድ",
+  "systemAdministrator": "የሲስተም አስተዳዳሪ",
+  "quickStats": "ፈጣን ስታቲስቲክስ",
+  "totalUsers": "ጠቅላላ ተጠቃሚዎች",
+  "activeSessions": "ንቁ ክፍለ ጊዜዎች",
+  "totalRevenue": "ጠቅላላ ገቢ",
+  "systemHealth": "የሲስተም ጤንነት",
+  "dashboard": "ዳሽቦርድ",
+  "users": "ተጠቃሚዎች",
+  "settings": "ቅንብሮች",
+  "content": "ይዘት",
+  "analytics": "ትንታኔዎች",
+  "payments": "ክፍያዎች",
+  "userManagement": "የተጠቃሚ አስተዳደር",
+  "addUser": "ተጠቃሚ ጨምር",
+  "suspendUser": "ተጠቃሚን አግድ",
+  "removeUser": "ተጠቃሚን አስወግድ",
+  "assignRole": "ሚና መድብ",
+  "viewHistory": "ታሪክ ተመልከት",
+  "platformConfig": "የመድረክ ውቅር",
+  "uiThemes": "የዩአይ ገጽታዎች",
+  "policyUpdates": "የፖሊሲ ዝመናዎች",
+  "accessRules": "የመዳረሻ ህጎች",
+  "firebaseConfig": "የፋየርቤዝ ውቅር",
+  "contentModeration": "የይዘት ቁጥጥር",
+  "publishedContent": "የታተመ ይዘት",
+  "flaggedContent": "የተጠቆመ ይዘት",
+  "sessionFlow": "የክፍለ ጊዜ ፍሰት",
+  "analyticsReporting": "ትንታኔ እና ሪፖርት",
+  "userMetrics": "የተጠቃሚ መለኪያዎች",
+  "platformUsage": "የመድረክ አጠቃቀም",
+  "sessionStats": "የክፍለ ጊዜ ስታቲስቲክስ",
+  "financialDashboard": "የፋይናንስ ዳሽቦርድ",
+  "paymentManagement": "የክፍያ አስተዳደር",
+  "transactions": "ግብይቶች",
+  "subscriptions": "ምዝገባዎች",
+  "refunds": "ተመላሾች",
+  "disputes": "ክርክሮች",
+  "securityCompliance": "ደህንነት እና ተገዥነት",
+  "auditLogs": "የኦዲት መዝገቦች",
+  "apiKeys": "ኤፒአይ ቁልፎች",
+  "privacyPolicy": "የግላዊነት ፖሊሲ",
+  "termsOfUse": "የአጠቃቀም ውሎች",
+  "systemUpdates": "የሲስተም ዝመናዎች",
+  "maintenanceMode": "የጥገና ሁኔታ",
+  "pushNotification": "ማሳወቂያ ላክ",
+  "exportReport": "ሪፖርት አውጣ",
+  "viewDetails": "ዝርዝር ተመልከት",
+  "alreadyHaveAnAccount": "አካውንት አለህ?",
+  "registrationFailed": "ምዝገባ አልተሳካም። እባክዎ እንደገና ይሞክሩ።",
+  "unexpectedError": "ያልተጠበቀ ስህተት ተከስቷል",
+  "fillDetailsToCreateAccount": "መለያ ለመፍጠር የእርስዎን ዝርዝሮች ያስገቡ",
+  "@fillDetailsToCreateAccount": {
+    "description": "Text for fill details to create account"
+  },
+  "firstName": "የመጀመሪያ ስም",
+  "@firstName": {
+    "description": "Text for first name field"
+  },
+  "pleaseEnterFirstName": "እባክዎ የመጀመሪያ ስምዎን ያስገቡ",
+  "@pleaseEnterFirstName": {
+    "description": "Text for please enter first name"
+  },
+  "lastName": "የአባት ስም",
+  "@lastName": {
+    "description": "Text for last name field"
+  },
+  "pleaseEnterLastName": "እባክዎ የአባት ስምዎን ያስገቡ",
+  "@pleaseEnterLastName": {
+    "description": "Text for please enter last name"
+  },
+  "pleaseEnterEmail": "እባክዎ ኢሜይልዎን ያስገቡ",
+  "@pleaseEnterEmail": {
+    "description": "Text for please enter email"
+  },
+  "pleaseEnterValidEmail": "እባክዎ ትክክለኛ ኢሜይል አድራሻ ያስገቡ",
+  "@pleaseEnterValidEmail": {
+    "description": "Text for please enter valid email"
+  },
+  "pleaseEnterPhoneNumber": "እባክዎ ስልክ ቁጥርዎን ያስገቡ",
+  "@pleaseEnterPhoneNumber": {
+    "description": "Text for please enter phone number"
+  },
+  "pleaseEnterPassword": "እባክዎ የይለፍ ቃልዎን ያስገቡ",
+  "@pleaseEnterPassword": {
+    "description": "Text for please enter password"
+  },
+  "passwordMustBeAtLeast6Characters": "የይለፍ ቃል ቢያንስ 6 ቁምፊዎች መሆን አለበት",
+  "@passwordMustBeAtLeast6Characters": {
+    "description": "Text for password must be at least 6 characters"
+  },
+  "confirmPassword": "የይለፍ ቃል ያረጋግጡ",
+  "@confirmPassword": {
+    "description": "Text for confirm password field"
+  },
+  "pleaseConfirmPassword": "እባክዎ የይለፍ ቃልዎን ያረጋግጡ",
+  "@pleaseConfirmPassword": {
+    "description": "Text for please confirm password"
+  },
+  "passwordsDoNotMatch": "የይለፍ ቃሎች አይስማሙም",
+  "@passwordsDoNotMatch": {
+    "description": "Text for passwords do not match"
+  },
+  "@alreadyHaveAnAccount": {
+    "description": "Text for already have an account"
+  },
+  "registerAs": "እንደ {role} ይመዝገቡ",
+  "@registerAs": {
+    "description": "Title for registration page with role",
+    "placeholders": {
+      "role": {
+        "type": "String",
+        "example": "ደንበኛ"
+      }
+    }
+  },
+  "dateOfBirth": "የልደት ቀን",
+  "@dateOfBirth": {
+    "description": "Text for date of birth field"
+  },
+  "pleaseSelectDateOfBirth": "እባክዎ የልደት ቀንዎን ይምረጡ",
+  "@pleaseSelectDateOfBirth": {
+    "description": "Error message when date of birth is not selected"
+  },
+  "gender": "ጾታ",
+  "@gender": {
+    "description": "Text for gender field"
+  },
+  "pleaseSelectGender": "እባክዎ ጾታዎን ይምረጡ",
+  "@pleaseSelectGender": {
+    "description": "Error message when gender is not selected"
+  },
+  "male": "ወንድ",
+  "@male": {
+    "description": "Text for male gender"
+  },
+  "female": "ሴት",
+  "@female": {
+    "description": "Text for female gender"
+  },
+  "other": "ሌላ",
+  "@other": {
+    "description": "Text for other gender"
+  },
+  "preferredLanguage": "የተመረጠ ቋንቋ",
+  "@preferredLanguage": {
+    "description": "Text for preferred language field"
+  },
+  "pleaseSelectLanguage": "እባክዎ የተመረጠ ቋንቋዎን ይምረጡ",
+  "@pleaseSelectLanguage": {
+    "description": "Error message when language is not selected"
+  },
+  "currentConcerns": "የአሁኑ ስጋቶችዎ ወይም ግቦችዎ ምንድን ናቸው?",
+  "@currentConcerns": {
+    "description": "Text for current concerns"
+  },
+  "anxiety": "ጭንቀት",
+  "@anxiety": {
+    "description": "Text for anxiety concern"
+  },
+  "depression": "ድብርት",
+  "@depression": {
+    "description": "Text for depression concern"
+  },
+  "trauma": "የአእምሮ ጉዳት",
+  "@trauma": {
+    "description": "Text for trauma concern"
+  },
+  "relationshipIssues": "የግንኙነት ችግሮች",
+  "@relationshipIssues": {
+    "description": "Text for relationship issues concern"
+  },
+  "parentingSupport": "የልጅ እንክብካቤ ድጋፍ",
+  "@parentingSupport": {
+    "description": "Text for parenting support"
+  },
+  "addictionRecovery": "ከመጥመም መዳን",
+  "@addictionRecovery": {
+    "description": "Text for addiction recovery"
+  },
+  "careerStress": "የሥራ ወይም የትምህርት ጭንቀት",
+  "@careerStress": {
+    "description": "Text for career stress"
+  },
+  "otherConcerns": "ሌሎች ስጋቶች",
+  "@otherConcerns": {
+    "description": "Text for other concerns"
+  },
+  "hadTherapyBefore": "በፊት ቴራፒ አገኘችሁ?",
+  "@hadTherapyBefore": {
+    "description": "Text for had therapy before"
+  },
+  "therapyType": "የቴራፒ አይነት",
+  "@therapyType": {
+    "description": "Text for therapy type"
+  },
+  "pleaseSelectTherapyType": "እባክዎ የቴራፒ አይነቱን ይምረጡ",
+  "@pleaseSelectTherapyType": {
+    "description": "Error message when therapy type is not selected"
+  },
+  "talkTherapy": "የንግግር ቴራፒ",
+  "@talkTherapy": {
+    "description": "Text for talk therapy"
+  },
+  "groupTherapy": "የቡድን ቴራፒ",
+  "@groupTherapy": {
+    "description": "Text for group therapy"
+  },
+  "couplesTherapy": "የዘመዶች ቴራፒ",
+  "@couplesTherapy": {
+    "description": "Text for couples therapy"
+  },
+  "familyTherapy": "የቤተሰብ ቴራፒ",
+  "@familyTherapy": {
+    "description": "Text for family therapy"
+  },
+  "therapyDuration": "የቴራፒ ቆይታ",
+  "@therapyDuration": {
+    "description": "Text for therapy duration"
+  },
+  "pleaseSelectTherapyDuration": "እባክዎ የቴራፒ ቆይታ ይምረጡ",
+  "@pleaseSelectTherapyDuration": {
+    "description": "Error message when therapy duration is not selected"
+  },
+  "shortTerm": "አጭር ጊዜ",
+  "@shortTerm": {
+    "description": "Text for short term"
+  },
+  "longTerm": "ረዥም ጊዜ",
+  "@longTerm": {
+    "description": "Text for long term"
+  },
+  "therapistBackground": "የቴራፒስት ዝግጅት",
+  "@therapistBackground": {
+    "description": "Text for therapist background"
+  },
+  "pleaseSelectTherapistBackground": "እባክዎ የቴራፒስት ዝግጅት ይምረጡ",
+  "@pleaseSelectTherapistBackground": {
+    "description": "Error message when therapist background is not selected"
+  },
+  "therapistGender": "የቴራፒስት ጾታ",
+  "@therapistGender": {
+    "description": "Text for therapist gender"
+  },
+  "pleaseSelectTherapistGender": "እባክዎ የቴራፒስት ጾታ ይምረጡ",
+  "@pleaseSelectTherapistGender": {
+    "description": "Error message when therapist gender is not selected"
+  },
+  "pleaseEnterBio": "እባክዎ ስለ እርስዎ ያስገቡ",
+  "@pleaseEnterBio": {
+    "description": "Error message when bio is not entered"
+  },
+  "pleaseEnterPortfolioLink": "እባክዎ የስራ ማሳያ ሊንክዎን ያስገቡ",
+  "@pleaseEnterPortfolioLink": {
+    "description": "Error message when portfolio link is not entered"
+  },
+  "agreeToTerms": "የአገልግሎት ውሎችን እቀበላለሁ",
+  "@agreeToTerms": {
+    "description": "Text for agree to terms"
+  },
+  "agreeToContentGuidelines": "የይዘት መመሪያዎችን እቀበላለሁ",
+  "@agreeToContentGuidelines": {
+    "description": "Text for agree to content guidelines"
+  },
+  "pleaseAcceptTerms": "እባክዎ የአገልግሎት ውሎችን ይቀበሉ",
+  "@pleaseAcceptTerms": {
+    "description": "Text for please accept terms"
+  }
 }

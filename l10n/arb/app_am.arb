@@ -1,0 +1,940 @@
+{
+  "@@locale": "am",
+  "appName": "ሰላም ቴራፒ",
+  "@appName": {
+    "description": "The name of the application"
+  },
+  "tagline": "የአእምሮ ጤና ጓደኛዎ",
+  "@tagline": {
+    "description": "The application's tagline"
+  },
+  "getStarted": "ጀምር",
+  "@getStarted": {
+    "description": "Text for the get started button"
+  },
+  "selectLanguage": "ቋንቋ ይምረጡ",
+  "@selectLanguage": {
+    "description": "Text for language selection"
+  },
+  "english": "English",
+  "@english": {
+    "description": "Name of English language"
+  },
+  "amharic": "አማርኛ",
+  "@amharic": {
+    "description": "Name of Amharic language"
+  },
+  "features": "ዋና ባህሪያት",
+  "@features": {
+    "description": "Title for features section"
+  },
+  "onlineTherapy": "የመስመር ላይ ቴራፒ",
+  "@onlineTherapy": {
+    "description": "Title for online therapy feature"
+  },
+  "onlineTherapyDesc": "ከማንኛውም ቦታ የቴራፒ አገልግሎት ያግኙ",
+  "@onlineTherapyDesc": {
+    "description": "Description for online therapy feature"
+  },
+  "expertTherapists": "ባለሙያ ቴራፒስቶች",
+  "@expertTherapists": {
+    "description": "Title for expert therapists feature"
+  },
+  "expertTherapistsDesc": "ባለሙያ የአእምሮ ጤና ባለሙያዎች ያግኙ",
+  "@expertTherapistsDesc": {
+    "description": "Description for expert therapists feature"
+  },
+  "dataPrivacy": "የውሂብ ግላዊነት",
+  "@dataPrivacy": {
+    "description": "Title for data privacy feature"
+  },
+  "dataPrivacyDesc": "የእርስዎ መረጃ ደህንነቱ የተጠበቀ ነው",
+  "@dataPrivacyDesc": {
+    "description": "Description for data privacy feature"
+  },
+  "personalizedCare": "በግል የተበጀ እንክብካቤ",
+  "@personalizedCare": {
+    "description": "Title for personalized care feature"
+  },
+  "personalizedCareDesc": "ለእርስዎ የተሟላ የሕክምና እቅድ",
+  "@personalizedCareDesc": {
+    "description": "Description for personalized care feature"
+  },
+  "support247": "24/7 ድጋፍ",
+  "@support247": {
+    "description": "Title for 24/7 support feature"
+  },
+  "support247Desc": "በሚያስፈልግዎት ጊዜ እርዳታ ያግኙ",
+  "@support247Desc": {
+    "description": "Description for 24/7 support feature"
+  },
+  "createAccount": "መለያ ይፍጠሩ",
+  "login": "ግባ",
+  "newUser": "አዲስ ተጠቃሚ?",
+  "existingUser": "የአካውንት ባለቤት?",
+  "@_LOGIN_STRINGS": {},
+  "welcomeBack": "እንኳን ደህና መጡ!",
+  "loginToContinue": "እባክዎ ለመቀጠል ይግቡ",
+  "emailOrPhone": "ኢሜይል ወይም ስልክ ቁጥር",
+  "password": "የይለፍ ቃል",
+  "forgotPassword": "የይለፍ ቃል ረሱ?",
+  "dontHaveAccount": "መለያ የለዎትም?",
+  "emailOrPhoneRequired": "ኢሜይል ወይም ስልክ ቁጥር ያስፈልጋል",
+  "invalidEmailOrPhone": "እባክዎ ትክክለኛ ኢሜይል ወይም ስልክ ቁጥር ያስገቡ",
+  "passwordRequired": "የይለፍ ቃል ያስፈልጋል",
+  "passwordTooShort": "የይለፍ ቃል ቢያንስ 6 ቁምፊዎች መሆን አለበት",
+  "loginSuccess": "በተሳካ ሁኔታ ገብተዋል",
+  "loginError": "መግባት አልተሳካም",
+  "signUp": "TODO: Translate Sign Up",
+  "@_SIGNUP_STRINGS": {},
+  "@_NAVIGATION": {},
+  "home": "መነሻ",
+  "@home": {
+    "description": "Label for home navigation item"
+  },
+  "videos": "ቪዲዮዎች",
+  "@videos": {
+    "description": "Label for videos navigation item"
+  },
+  "services": "አገልግሎቶች",
+  "@services": {
+    "description": "Label for services navigation item"
+  },
+  "courses": "ኮርሶች",
+  "@courses": {
+    "description": "Title for the courses page"
+  },
+  "profile": "መገለጫ",
+  "@profile": {
+    "description": "Label for profile navigation item"
+  },
+  "@_SERVICES": {},
+  "emergencyHelp": "አስቸኳይ እርዳታ",
+  "emergencyHelpDescription": "ለአስቸኳይ የአእምሮ ጤና ችግሮች እርዳታ ያግኙ",
+  "getEmergencyHelp": "አስቸኳይ እርዳታ አግኝ",
+  "consultationServices": "የምክር አገልግሎቶች",
+  "healthConsultation": "TODO: Translate Health Consultation",
+  "@healthConsultation": {
+    "description": "Title for health consultation service"
+  },
+  "healthConsultationDesc": "TODO: Translate Express your health concerns from the basics",
+  "@healthConsultationDesc": {
+    "description": "Description for health consultation service"
+  },
+  "psychologyConsultation": "TODO: Translate Psychology Consultation",
+  "@psychologyConsultation": {
+    "description": "Title for psychology consultation service"
+  },
+  "psychologyConsultationDesc": "TODO: Translate Talk privately with a professional",
+  "@psychologyConsultationDesc": {
+    "description": "Description for psychology consultation service"
+  },
+  "familyConsultation": "TODO: Translate Family Consultation",
+  "@familyConsultation": {
+    "description": "Title for family consultation service"
+  },
+  "familyConsultationDesc": "TODO: Translate Get better support for your family",
+  "@familyConsultationDesc": {
+    "description": "Description for family consultation service"
+  },
+  "lifeConsultation": "TODO: Translate Life Consultation",
+  "@lifeConsultation": {
+    "description": "Title for life consultation service"
+  },
+  "lifeConsultationDesc": "TODO: Translate Let's work together for a better life",
+  "@lifeConsultationDesc": {
+    "description": "Description for life consultation service"
+  },
+  "mentalHealth": "የአእምሮ ጤና",
+  "mentalHealthDescription": "ባለሙያ የምክር አገልግሎት",
+  "familyCounseling": "የቤተሰብ ምክር",
+  "familyCounselingDescription": "ለቤተሰብ ግንኙነት ድጋፍ",
+  "childCare": "የልጅ እንክብካቤ",
+  "childCareDescription": "ለልጆች ልዩ እንክብካቤ",
+  "healthEducation": "የጤና ትምህርት",
+  "healthEducationDescription": "ስለ አእምሮ ጤና ይማሩ",
+  "mentalHealthServices": "የምክር አገልግሎቶች",
+  "@mentalHealthServices": {
+    "description": "Title for mental health services"
+  },
+  "needEmergencyHelp": "አስቸኳይ እርዳታ ይፈልጋሉ?",
+  "@needEmergencyHelp": {
+    "description": "Title for emergency help section"
+  },
+  "emergencyHelpDescription": "የ24/7 የድንገተኛ ጊዜ ስልክ መስመራችንን ያግኙ ሁልጊዜም እዚህ አለን",
+  "@emergencyHelpDescription": {
+    "description": "Description for emergency help"
+  },
+  "chatConsultation": "በጽሁፍ የምክር አገልግሎት",
+  "@chatConsultation": {
+    "description": "Title for chat consultation service"
+  },
+  "chatConsultationDescription": "ስሜትዎን በጽሁፍ ለመግለጽ ከመረጡ",
+  "@chatConsultationDescription": {
+    "description": "Description for chat consultation"
+  },
+  "selfHelpResources": "የስነ-ልቦና ምክር አገልግሎት",
+  "@selfHelpResources": {
+    "description": "Title for self-help resources"
+  },
+  "selfHelpResourcesDescription": "ከባለሙያ ጋር በግል ይነጋገሩ",
+  "@selfHelpResourcesDescription": {
+    "description": "Description for self-help resources"
+  },
+  "familyServices": "የቤተሰብ ምክር አገልግሎት",
+  "@familyServices": {
+    "description": "Title for family services"
+  },
+  "familyServicesDescription": "ለቤተሰብዎ የተሻለ ድጋፍ ያግኙ",
+  "@familyServicesDescription": {
+    "description": "Description for family services"
+  },
+  "youthServices": "የህጻናት ምክር አገልግሎት",
+  "@youthServices": {
+    "description": "Title for youth services"
+  },
+  "youthServicesDescription": "ለትንሽ ህጻናት አስፈላጊ እንክብካቤ",
+  "@youthServicesDescription": {
+    "description": "Description for youth services"
+  },
+  "@_COURSES": {},
+  "effectiveCommunication": "ውጫታማ የመግባቢያ ክህሎቶች",
+  "stressManagement": "የጭንቀት አስተዳደር",
+  "mentalHealthBasics": "የአእምሮ ጤና መሰረታዊ እውቀት",
+  "instructor": "አስተማሪ",
+  "duration": "የጊዜ ርዝመት",
+  "hours": "ሰዓታት",
+  "@hours": {
+    "description": "Time unit plural"
+  },
+  "continueText": "ይቀጥሉ",
+  "enrolledCourses": "የተመዘገቡ ክርስቶች",
+  "registeredCourses": "የተቀላቀሉ ክርስቶች",
+  "completedCourses": "የተጠናቀቁ ክርስቶች",
+  "@_PROFILE": {},
+  "memberSince": "ከጁላይ ጀምሮ አባል",
+  "personalInfo": "የግል መረጃ",
+  "settings": "ቅንብሮች",
+  "helpAndSupport": "እርዳታ እና ድጋፍ",
+  "logout": "ውጣ",
+  "language": "ቋንቋ",
+  "editProfile": "መገለጫ አስተካክል",
+  "appTitle": "ሰላም መተግበሪያ",
+  "@_REGISTRATION": {},
+  "client": "ደንበኛ",
+  "contentCreator": "ይዘት ፈጣሪ",
+  "fullName": "ሙሉ ስም",
+  "fullNameRequired": "እባክዎ ስምዎን ያስገቡ",
+  "email": "ኢሜይል",
+  "emailRequired": "እባክዎ ኢሜይልዎን ያስገቡ",
+  "phoneNumber": "ስልክ ቁጥር",
+  "phoneRequired": "እባክዎ ስልክ ቁጥርዎን ያስገቡ",
+  "portfolioLink": "TODO: Translate Portfolio Link",
+  "@portfolioLink": {
+    "description": "Text for portfolio link field"
+  },
+  "portfolioRequired": "እባክዎ የስራ ማሳያ ሊንክዎን ያስገቡ",
+  "shortBio": "አጭር ግለ ታሪክ",
+  "bioRequired": "እባክዎ አጭር ግለ ታሪክዎን ያስገቡ",
+  "alreadyHaveAccount": "አካውንት አለዎት?",
+  "bio": "TODO: Translate Bio / About",
+  "@bio": {
+    "description": "Text for bio field"
+  },
+  "areasOfExpertise": "TODO: Translate Areas of Expertise",
+  "@areasOfExpertise": {
+    "description": "Text for areas of expertise field"
+  },
+  "psychology": "TODO: Translate Psychology",
+  "@psychology": {
+    "description": "Text for psychology expertise"
+  },
+  "mentalHealthWriting": "TODO: Translate Mental Health Writing",
+  "@mentalHealthWriting": {
+    "description": "Text for mental health writing expertise"
+  },
+  "videoProduction": "TODO: Translate Video Production",
+  "@videoProduction": {
+    "description": "Text for video production expertise"
+  },
+  "animation": "TODO: Translate Animation",
+  "@animation": {
+    "description": "Text for animation expertise"
+  },
+  "research": "TODO: Translate Research",
+  "@research": {
+    "description": "Text for research expertise"
+  },
+  "otherExpertise": "TODO: Translate Other",
+  "@otherExpertise": {
+    "description": "Text for other expertise"
+  },
+  "@_THERAPIST_HOME": {},
+  "totalClients": "ጠቅላላ ደንበኞች",
+  "@totalClients": {
+    "description": "Label for total clients statistic"
+  },
+  "totalSessions": "ጠቅላላ ክፍለ ጊዜዎች",
+  "@totalSessions": {
+    "description": "Label for total sessions statistic"
+  },
+  "totalEarnings": "ጠቅላላ ገቢ",
+  "@totalEarnings": {
+    "description": "Label for total earnings statistic"
+  },
+  "rating": "ደረጃ",
+  "@rating": {
+    "description": "Label for rating statistic"
+  },
+  "messages": "መልእክቶች",
+  "@messages": {
+    "description": "Label for messages navigation item"
+  },
+  "appointments": "ቀጠሮዎች",
+  "@appointments": {
+    "description": "Label for appointments navigation item"
+  },
+  "@_MESSAGES": {},
+  "therapist": "ቴራፒስት",
+  "@therapist": {
+    "description": "Label for therapist"
+  },
+  "latestMessagePreview": "የመጨረሻ መልእክት ቅድመ ዕይታ...",
+  "@latestMessagePreview": {
+    "description": "Preview text for latest message"
+  },
+  "hoursAgo": "ከ{hours} ሰዓታት በፊት",
+  "@hoursAgo": {
+    "description": "Text showing how many hours ago a message was sent",
+    "placeholders": {
+      "hours": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "@_THERAPIST_PROFILE": {},
+  "clinicalPsychologist": "የአእምሮ ህክምና ባለሙያ",
+  "@clinicalPsychologist": {
+    "description": "Professional title for clinical psychologist"
+  },
+  "traumaAndAnxietySpecialist": "የስነልቦናና የጭንቀት ስፔሻሊስት",
+  "@traumaAndAnxietySpecialist": {
+    "description": "Specialization title"
+  },
+  "specializations": "ስፔሻላይዜሽኖች",
+  "@specializations": {
+    "description": "Section title for specializations"
+  },
+  "traumaTherapy": "የስነልቦና ህክምና",
+  "@traumaTherapy": {
+    "description": "Specialization in trauma therapy"
+  },
+  "anxietyAndDepression": "ጭንቀት እና ድብርት",
+  "@anxietyAndDepression": {
+    "description": "Specialization in anxiety and depression"
+  },
+  "youthPsychology": "የወጣቶች ስነልቦና",
+  "@youthPsychology": {
+    "description": "Specialization in youth psychology"
+  },
+  "certifications": "የምስክር ወረቀቶች",
+  "@certifications": {
+    "description": "Section title for certifications"
+  },
+  "phdClinicalPsychology": "ዶ/ር የአእምሮ ህክምና፣ አዲስ አበባ ዩኒቨርሲቲ",
+  "@phdClinicalPsychology": {
+    "description": "PhD certification detail"
+  },
+   "therapistDashboard": "የቴራፒስት ዳሽቦርድ",
+  "@therapistDashboard": {
+    "description": "Title for the therapist dashboard screen"
+  },
+  "morningSession": "የጠዋት ክፍለ ጊዜ",
+  "@morningSession": {
+    "description": "Label for morning therapy sessions"
+  },
+  "afternoonSession": "የከሰአት ክፍለ ጊዜ",
+  "@afternoonSession": {
+    "description": "Label for afternoon therapy sessions"
+  },
+  "todaysSchedule": "የዛሬ መርሐ ግብር",
+  "@todaysSchedule": {
+    "description": "Title for Today's schedule"
+  },
+  "completedSessions": "የተጠናቀቁ ክፍለ ጊዜዎች",
+  "@completedSessions": {
+    "description": "Label for sessions that have been completed"
+  },
+  "upcomingSessions": "መጪ ክፍለ ጊዜዎች",
+  "@upcomingSessions": {
+    "description": "Label for sessions scheduled in the future"
+  },
+  "licensedClinicalPsychologist": "የተፈቀደለት የአእምሮ ህክምና ባለሙያ",
+  "@licensedClinicalPsychologist": {
+    "description": "License certification detail"
+  },
+  "certifiedTraumaSpecialist": "የተረጋገጠ የስነልቦና ስፔሻሊስት",
+  "@certifiedTraumaSpecialist": {
+    "description": "Trauma specialist certification"
+  },
+  "editSchedule": "መርሃ ግብር ያስተካክሉ",
+  "@editSchedule": {
+    "description": "Button text for editing schedule"
+  },
+  "monToFri": "ሰኞ - አርብ",
+  "@monToFri": {
+    "description": "Weekday range"
+  },
+  "saturday": "ቅዳሜ",
+  "@saturday": {
+    "description": "Saturday abbreviated"
+  },
+  "sessionRates": "የክፍለ ጊዜ ዋጋዎች",
+  "@sessionRates": {
+    "description": "Section title for session rates"
+  },
+  "individualSession": "የግል ክፍለ ጊዜ",
+  "@individualSession": {
+    "description": "Label for individual session type"
+  },
+  "coupleTherapy": "የጥንዶች ቴራፒ",
+  "@coupleTherapy": {
+    "description": "Label for couple therapy session type"
+  },
+  "hour": "ሰዓት",
+  "@hour": {
+    "description": "Time unit singular"
+  },
+  "availability": "የስራ ሰዓታት",
+  "@availability": {
+    "description": "Section title for availability schedule"
+  },
+  "@_APPOINTMENTS": {},
+  "upcoming": "የሚመጡ",
+  "@upcoming": {
+    "description": "Tab label for upcoming appointments"
+  },
+  "past": "ያለፉ",
+  "@past": {
+    "description": "Tab label for past appointments"
+  },
+  "all": "ሁሉም",
+  "@all": {
+    "description": "Filter label for all appointments"
+  },
+  "individual": "የግል",
+  "@individual": {
+    "description": "Filter label for individual appointments"
+  },
+  "couple": "የጥንድ",
+  "@couple": {
+    "description": "Filter label for couple appointments"
+  },
+  "family": "የቤተሰብ",
+  "@family": {
+    "description": "Filter label for family appointments"
+  },
+  "confirmed": "የተረጋገጠ",
+  "@confirmed": {
+    "description": "Status label for confirmed appointments"
+  },
+  "pending": "በመጠባበቅ ላይ",
+  "@pending": {
+    "description": "Status label for pending appointments"
+  },
+  "completed": "የተጠናቀቀ",
+  "@completed": {
+    "description": "Status label for completed appointments"
+  },
+  "cancelled": "የተሰረዘ",
+  "@cancelled": {
+    "description": "Status label for cancelled appointments"
+  },
+  "searchMessages": "መልእክቶችን ይፈልጉ",
+  "@searchMessages": {
+    "description": "Hint text for message search field"
+  },
+  "noMessages": "እስካሁን መልእክቶች የሉም",
+  "@noMessages": {
+    "description": "Text shown when there are no messages"
+  },
+  "startNewChat": "ከደንበኞችዎ ጋር አዲስ ውይይት ይጀምሩ",
+  "@startNewChat": {
+    "description": "Subtitle text shown when there are no messages"
+  },
+  "allMessages": "ሁሉም",
+  "@allMessages": {
+    "description": "Filter label for all messages"
+  },
+  "unreadMessages": "ያልተነበቡ",
+  "@unreadMessages": {
+    "description": "Filter label for unread messages"
+  },
+  "starredMessages": "ተመራጭ",
+  "@starredMessages": {
+    "description": "Filter label for starred messages"
+  },
+  "archivedMessages": "በארኪቭ የተቀመጡ",
+  "@archivedMessages": {
+    "description": "Filter label for archived messages"
+  },
+  "professionalDetails": "የሙያ ዝርዝሮች",
+  "upcomingClasses": "የሚመጡ ክፍሎች",
+  "newEnrollments": "አዲስ ምዝገባዎች",
+  "review": "ግምገማ",
+  "@review": {
+    "description": "Label for review tab"
+  },
+  "searchCoursesAndStudents": "ተማሪዎችን እና ኮርሶችን ይፈልጉ...",
+  "searchTopics": "TODO: Translate Search topics...",
+  "@searchTopics": {
+    "description": "Hint text for search topics field"
+  },
+  "contentPerformance": "TODO: Translate Content Performance",
+  "@contentPerformance": {
+    "description": "Title for content performance section"
+  },
+  "mentalHealthAwareness": "TODO: Translate Mental Health Awareness",
+  "@mentalHealthAwareness": {
+    "description": "Title for mental health awareness content"
+  },
+  "wellnessTips": "TODO: Translate Wellness Tips",
+  "@wellnessTips": {
+    "description": "Title for wellness tips content"
+  },
+  "scheduledContent": "TODO: Translate Scheduled Content",
+  "@scheduledContent": {
+    "description": "Title for scheduled content section"
+  },
+  "selfCareRoutines": "TODO: Translate Self-Care Routines",
+  "@selfCareRoutines": {
+    "description": "Title for self-care routines content"
+  },
+  "mindfulnessPractice": "TODO: Translate Mindfulness Practice",
+  "@mindfulnessPractice": {
+    "description": "Title for mindfulness practice content"
+  },
+  "tomorrowAt": "TODO: Translate Tomorrow at {time}",
+  "@tomorrowAt": {
+    "description": "Text for showing tomorrow's time",
+    "placeholders": {
+      "time": {
+        "type": "String",
+        "example": "10:00 AM"
+      }
+    }
+  },
+  "fridayAt": "TODO: Translate Friday at {time}",
+  "@fridayAt": {
+    "description": "Text for showing Friday's time",
+    "placeholders": {
+      "time": {
+        "type": "String",
+        "example": "2:00 PM"
+      }
+    }
+  },
+  "content": "TODO: Translate Content",
+  "@content": {
+    "description": "Label for content navigation item"
+  },
+  "edit": "TODO: Translate Edit",
+  "@edit": {
+    "description": "Label for edit button"
+  },
+  "@_CONTENT_SUPERVISOR": {},
+  "contentSupervisor": "የይዘት ተቆጣጣሪ",
+  "@contentSupervisor": {
+    "description": "Title for content supervisor role"
+  },
+  "seniorTrainingManager": "ከፍተኛ የስልጠና አስተዳዳሪ",
+  "@seniorTrainingManager": {
+    "description": "Title for senior training manager role"
+  },
+  "pendingApprovals": "በመጠባበቅ ላይ ያሉ ማጽደቂያዎች",
+  "@pendingApprovals": {
+    "description": "Title for pending approvals section"
+  },
+  "creatorPerformance": "የፈጣሪ አፈጻጸም",
+  "@creatorPerformance": {
+    "description": "Title for creator performance section"
+  },
+  "reportedContent": "የተዘገበ ይዘት",
+  "@reportedContent": {
+    "description": "Title for reported content section"
+  },
+  "earningsOverview": "የገቢ አጠቃላይ እይታ",
+  "@earningsOverview": {
+    "description": "Title for earnings overview section"
+  },
+  "totalEarningsEtb": "ብር {amount}",
+  "@totalEarningsEtb": {
+    "description": "Total earnings in ETB",
+    "placeholders": {
+      "amount": {
+        "type": "String",
+        "example": "45,230"
+      }
+    }
+  },
+  "contentSubmission": "የይዘት ማስረከቢያ #{number}",
+  "@contentSubmission": {
+    "description": "Title for content submission",
+    "placeholders": {
+      "number": {
+        "type": "String",
+        "example": "1"
+      }
+    }
+  },
+  "approve": "አጽድቅ",
+  "@approve": {
+    "description": "Label for approve button"
+  },
+  "reject": "ውድቅ አድርግ",
+  "@reject": {
+    "description": "Label for reject button"
+  },
+  "contentDescription": "የይዘት መግለጫ...",
+  "@contentDescription": {
+    "description": "Placeholder for content description"
+  },
+  "searchCreators": "ፈጣሪዎችን ፈልግ...",
+  "@searchCreators": {
+    "description": "Placeholder for creator search"
+  },
+  "@_ADMIN_INTERFACE": {},
+  "adminDashboard": "የአስተዳዳሪ ዳሽቦርድ",
+  "systemAdministrator": "የሲስተም አስተዳዳሪ",
+  "quickStats": "ፈጣን ስታቲስቲክስ",
+  "statistic": "ስታቲስቲክስ",
+  "totalUsers": "ጠቅላላ ተጠቃሚዎች",
+  "activeUsers": "ንቁ ተጠቃሚዎች",
+  "activeSessions": "ንቁ ክፍለ ጊዜዎች",
+  "totalRevenue": "ጠቅላላ ገቢ",
+  "systemHealth": "የሲስተም ጤንነት",
+  "dashboard": "ዳሽቦርድ",
+  "therapists": "ቴራፒስቶች",
+  "users": "ተጠቃሚዎች",
+  "clients": "ደንበኞች",
+  "settings": "ቅንብሮች",
+  "content": "ይዘት",
+  "analytics": "ትንታኔዎች",
+  "payments": "ክፍያዎች",
+  "userManagement": "የተጠቃሚ አስተዳደር",
+  "addUser": "ተጠቃሚ ጨምር",
+  "suspendUser": "ተጠቃሚን አግድ",
+  "removeUser": "ተጠቃሚን አስወግድ",
+  "assignRole": "ሚና መድብ",
+  "viewHistory": "ታሪክ ተመልከት",
+  "platformConfig": "የመድረክ ውቅር",
+  "uiThemes": "የዩአይ ገጽታዎች",
+  "policyUpdates": "የፖሊሲ ዝመናዎች",
+  "accessRules": "የመዳረሻ ህጎች",
+  "firebaseConfig": "የፋየርቤዝ ውቅር",
+  "contentModeration": "የይዘት ቁጥጥር",
+  "publishedContent": "የታተመ ይዮች",
+  "flaggedContent": "የተጠቆመ ይዮች",
+  "sessionFlow": "የክፍለ ጊዜ ፍሰት",
+  "analyticsReporting": "ትንታኔ እና ሪፖርት",
+  "userMetrics": "የተጠቃሚ መለኪያዎች",
+  "platformUsage": "የመድረክ አጠቃቀም",
+  "sessionStats": "የክፍለ ጊዜ ስታቲስቲክስ",
+  "financialDashboard": "የፋይናንስ ዳሽቦርድ",
+  "paymentManagement": "የክፍያ አስተዳደር",
+  "transactions": "ግብይቶች",
+  "subscriptions": "ምዝገባዎች",
+  "refunds": "ተመላሾች",
+  "disputes": "ክርክሮች",
+  "securityCompliance": "ደህንነት እና ተገዥነት",
+  "auditLogs": "የኦዲት መዝገቦች",
+  "apiKeys": "ኤፒአይ ቁልፎች",
+  "privacyPolicy": "የግላዊነት ፖሊሲ",
+  "termsOfUse": "የአጠቃቀም ውሎች",
+  "systemUpdates": "የሲስተም ዝመናዎች",
+  "maintenanceMode": "የጥገና ሁኔታ",
+  "pushNotification": "ማሳወቂያ ላክ",
+  "exportReport": "ሪፖርት አውጣ",
+  "viewDetails": "ዝርዝር ተመልከት",
+  "registrationFailed": "ምዝገባ አልተሳካም። እባክዎ እንደገና ይሞክሩ።",
+  "unexpectedError": "ያልተጠበቀ ስህተት ተከስቷል",
+  "fillDetailsToCreateAccount": "መለያ ለመፍጠር የእርስዎን ዝርዝሮች ያስገቡ",
+  "@fillDetailsToCreateAccount": {
+    "description": "Text for fill details to create account"
+  },
+  "firstName": "የመጀመሪያ ስም",
+  "@firstName": {
+    "description": "Text for first name field"
+  },
+  "pleaseEnterFirstName": "እባክዎ የመጀመሪያ ስምዎን ያስገቡ",
+  "@pleaseEnterFirstName": {
+    "description": "Text for please enter first name"
+  },
+  "lastName": "የአባት ስም",
+  "@lastName": {
+    "description": "Text for last name field"
+  },
+  "pleaseEnterLastName": "እባክዎ የአባት ስምዎን ያስገቡ",
+  "@pleaseEnterLastName": {
+    "description": "Text for please enter last name"
+  },
+  "pleaseEnterEmail": "እባክዎ ኢሜይልዎን ያስገቡ",
+  "@pleaseEnterEmail": {
+    "description": "Text for please enter email"
+  },
+  "pleaseEnterValidEmail": "እባክዎ ትክክለኛ ኢሜይል አድራሻ ያስገቡ",
+  "@pleaseEnterValidEmail": {
+    "description": "Text for please enter valid email"
+  },
+  "pleaseEnterPhoneNumber": "እባክዎ ስልክ ቁጥርዎን ያስገቡ",
+  "@pleaseEnterPhoneNumber": {
+    "description": "Text for please enter phone number"
+  },
+  "pleaseEnterPassword": "እባክዎ የይለፍ ቃልዎን ያስገቡ",
+  "@pleaseEnterPassword": {
+    "description": "Text for please enter password"
+  },
+  "passwordMustBeAtLeast6Characters": "የይለፍ ቃል ቢያንስ 6 ቁምፊዎች መሆን አለበት",
+  "@passwordMustBeAtLeast6Characters": {
+    "description": "Text for password must be at least 6 characters"
+  },
+  "confirmPassword": "የይለፍ ቃል ያረጋግጡ",
+  "@confirmPassword": {
+    "description": "Text for confirm password field"
+  },
+  "pleaseConfirmPassword": "እባክዎ የይለፍ ቃልዎን ያረጋግጡ",
+  "@pleaseConfirmPassword": {
+    "description": "Text for please confirm password"
+  },
+  "passwordsDoNotMatch": "የይለፍ ቃሎች አይስማሙም",
+  "@passwordsDoNotMatch": {
+    "description": "Text for passwords do not match"
+  },
+  "alreadyHaveAnAccount": "አካውንት አለህ?",
+  "@alreadyHaveAnAccount": {
+    "description": "Text for already have an account"
+  },
+  "registerAs": "እንደ {role} ይመዝገቡ",
+  "@registerAs": {
+    "description": "Title for registration page with role",
+    "placeholders": {
+      "role": {
+        "type": "String",
+        "example": "ደንበኛ"
+      }
+    }
+  },
+  "dateOfBirth": "የልደት ቀን",
+  "@dateOfBirth": {
+    "description": "Text for date of birth field"
+  },
+  "pleaseSelectDateOfBirth": "እባክዎ የልደት ቀንዎን ይምረጡ",
+  "@pleaseSelectDateOfBirth": {
+    "description": "Error message when date of birth is not selected"
+  },
+  "gender": "ጾታ",
+  "@gender": {
+    "description": "Text for gender field"
+  },
+  "pleaseSelectGender": "እባክዎ ጾታዎን ይምረጡ",
+  "@pleaseSelectGender": {
+    "description": "Error message when gender is not selected"
+  },
+  "male": "ወንድ",
+  "@male": {
+    "description": "Text for male gender"
+  },
+  "female": "ሴት",
+  "@female": {
+    "description": "Text for female gender"
+  },
+  "other": "ሌላ",
+  "@other": {
+    "description": "Text for other gender"
+  },
+  "preferredLanguage": "የተመረጠ ቋንቋ",
+  "@preferredLanguage": {
+    "description": "Text for preferred language field"
+  },
+  "pleaseSelectLanguage": "እባክዎ የተመረጠ ቋንቋዎን ይምረጡ",
+  "@pleaseSelectLanguage": {
+    "description": "Error message when language is not selected"
+  },
+  "currentConcerns": "የአሁኑ ስጋቶችዎ ወይም ግቦችዎ ምንድን ናቸው?",
+  "@currentConcerns": {
+    "description": "Text for current concerns"
+  },
+  "anxiety": "ጭንቀት",
+  "@anxiety": {
+    "description": "Text for anxiety concern"
+  },
+  "depression": "ድብርት",
+  "@depression": {
+    "description": "Text for depression concern"
+  },
+  "stress": "TODO: Translate Stress",
+  "@stress": {
+    "description": "Text for stress concern"
+  },
+  "relationshipIssues": "የግንኙነት ችግሮች",
+  "@relationshipIssues": {
+    "description": "Text for relationship issues concern"
+  },
+  "selfEsteem": "TODO: Translate Self-Esteem",
+  "@selfEsteem": {
+    "description": "Text for self-esteem concern"
+  },
+  "otherConcerns": "ሌሎች ስጋቶች",
+  "@otherConcerns": {
+    "description": "Text for other concerns"
+  },
+  "hadTherapyBefore": "በፊት ቴራፒ አገኘችሁ?",
+  "@hadTherapyBefore": {
+    "description": "Text for had therapy before"
+  },
+  "typeOfTherapy": "TODO: Translate Type of Therapy Attended",
+  "@typeOfTherapy": {
+    "description": "Text for type of therapy field"
+  },
+  "preferredSessionDuration": "TODO: Translate Preferred Session Duration",
+  "@preferredSessionDuration": {
+    "description": "Text for preferred session duration field"
+  },
+  "thirtyMinutes": "TODO: Translate 30 minutes",
+  "@thirtyMinutes": {
+    "description": "Text for 30 minutes session duration"
+  },
+  "fortyFiveMinutes": "TODO: Translate 45 minutes",
+  "@fortyFiveMinutes": {
+    "description": "Text for 45 minutes session duration"
+  },
+  "sixtyMinutes": "TODO: Translate 60 minutes",
+  "@sixtyMinutes": {
+    "description": "Text for 60 minutes session duration"
+  },
+  "preferredTherapistBackground": "TODO: Translate Preferred Therapist Background",
+  "@preferredTherapistBackground": {
+    "description": "Text for preferred therapist background field"
+  },
+  "psychologist": "TODO: Translate Psychologist",
+  "@psychologist": {
+    "description": "Text for psychologist option"
+  },
+  "counselor": "TODO: Translate Counselor",
+  "@counselor": {
+    "description": "Text for counselor option"
+  },
+  "socialWorker": "TODO: Translate Social Worker",
+  "@socialWorker": {
+    "description": "Text for social worker option"
+  },
+  "noPreference": "TODO: Translate No Preference",
+  "@noPreference": {
+    "description": "Text for no preference option"
+  },
+  "preferredTherapistGender": "TODO: Translate Preferred Therapist Gender",
+  "@preferredTherapistGender": {
+    "description": "Text for preferred therapist gender field"
+  },
+  "therapistBackground": "የቴራፒስት ዝግጅት",
+  "@therapistBackground": {
+    "description": "Label for therapist background field"
+  },
+  "pleaseSelectTherapistBackground": "እባክዎ የቴራፒስት ዝግጅት ይምረጡ",
+  "@pleaseSelectTherapistBackground": {
+    "description": "Error message when therapist background is not selected"
+  },
+  "therapistGender": "የቴራፒስት ጾታ",
+  "@therapistGender": {
+    "description": "Text for therapist gender"
+  },
+  "pleaseSelectTherapistGender": "እባክዎ የቴራፒስት ጾታ ይምረጡ",
+  "@pleaseSelectTherapistGender": {
+    "description": "Error message when therapist gender is not selected"
+  },
+  "psychiatrist": "TODO: Translate Psychiatrist",
+  "@psychiatrist": {
+    "description": "Label for psychiatrist option"
+  },
+  "agreeToTerms": "የአገልግሎት ውሎችን እቀበላለሁ",
+  "@agreeToTerms": {
+    "description": "Text for agree to terms"
+  },
+  "agreeToContentGuidelines": "የይዘት መመሪያዎችን እቀበላለሁ",
+  "@agreeToContentGuidelines": {
+    "description": "Text for agree to content guidelines"
+  },
+  "pleaseAcceptTerms": "እባክዎ የአገልግሎት ውሎችን ይቀበሉ",
+  "@pleaseAcceptTerms": {
+    "description": "Text for please accept terms"
+  },
+  "thisFieldIsRequired": "TODO: Translate This field is required",
+  "@thisFieldIsRequired": {
+    "description": "Error message for required field"
+  },
+  "pleaseEnterBio": "እባክዎ ስለ እርስዎ ያስገቡ",
+  "@pleaseEnterBio": {
+    "description": "Error message when bio is not entered"
+  },
+  "pleaseEnterPortfolioLink": "እባክዎ የስራ ማሳያ ሊንክዎን ያስገቡ",
+  "@pleaseEnterPortfolioLink": {
+    "description": "Error message when portfolio link is not entered"
+  },
+  "trauma": "የአእምሮ ጉዳት",
+  "@trauma": {
+    "description": "Text for trauma concern"
+  },
+  "parentingSupport": "የልጅ እንክብካቤ ድጋፍ",
+  "@parentingSupport": {
+    "description": "Text for parenting support"
+  },
+  "addictionRecovery": "ከመጥመም መዳን",
+  "@addictionRecovery": {
+    "description": "Text for addiction recovery"
+  },
+  "careerStress": "የሥራ ወይም የትምህርት ጭንቀት",
+  "@careerStress": {
+    "description": "Text for career stress"
+  },
+  "talkTherapy": "የንግግር ቴራፒ",
+  "@talkTherapy": {
+    "description": "Text for talk therapy"
+  },
+  "groupTherapy": "የቡድን ቴራፒ",
+  "@groupTherapy": {
+    "description": "Text for group therapy"
+  },
+  "couplesTherapy": "የዘመዶች ቴራፒ",
+  "@couplesTherapy": {
+    "description": "Text for couples therapy"
+  },
+  "familyTherapy": "የቤተሰብ ቴራፒ",
+  "@familyTherapy": {
+    "description": "Label for family therapy option"
+  },
+  "therapyType": "የቴራፒ አይነት",
+  "@therapyType": {
+    "description": "Text for therapy type"
+  },
+  "pleaseSelectTherapyType": "እባክዎ የቴራፒ አይነቱን ይምረጡ",
+  "@pleaseSelectTherapyType": {
+    "description": "Error message when therapy type is not selected"
+  },
+  "shortTerm": "አጭር ጊዜ",
+  "@shortTerm": {
+    "description": "Text for short term"
+  },
+  "longTerm": "ረዥም ጊዜ",
+  "@longTerm": {
+    "description": "Text for long term"
+  },
+  "therapyDuration": "የቴራፒ ቆይታ",
+  "@therapyDuration": {
+    "description": "Text for therapy duration"
+  },
+  "pleaseSelectTherapyDuration": "እባክዎ የቴራፒ ቆይታ ይምረጡ",
+  "@pleaseSelectTherapyDuration": {
+    "description": "Error message when therapy duration is not selected"
+  }
+}

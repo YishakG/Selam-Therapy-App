@@ -1,4 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter/material.dart';
+
 
 /// Provider for managing the app's language
 final languageProvider = StateProvider<String>((ref) => 'en');

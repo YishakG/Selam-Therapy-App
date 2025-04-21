@@ -88,3 +88,4 @@ coverage/
 .env
 .env.*
 !.env.example
+.qodo

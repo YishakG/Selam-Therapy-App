@@ -84,10 +84,10 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/videos/
-    - lib/l10n/
+    - l10n/
     - .env
 
-  # Uncomment and configure if you want to use custom fonts.
+  # Uncomment and configure if you want sto use custom fonts.
   # fonts:
   #   - family: Montserrat
   #     fonts:

@@ -1,9 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../constants/user_role.dart';
 
-enum UserRole {
-  client,
-  therapist,
-  admin,
-}
-
-final userRoleProvider = StateProvider<UserRole>((ref) => UserRole.therapist); 
+final userRoleProvider = StateProvider<UserRole>((ref) => UserRole.therapist);

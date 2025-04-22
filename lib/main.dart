@@ -8,16 +8,33 @@ import 'core/constants/app_colors.dart';
 import 'core/providers/app_route_state_providers.dart';
 import 'core/providers/locale_provider.dart';
 import 'core/config/app_config.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 /// The entry point of the application.
 /// Sets up essential services and launches the Flutter app.
-void main() {
-  runApp(
-    const ProviderScope(
-      child: MyApp(),
-    ),
-  );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+
+    await Supabase.initialize(
+      url: 'https://jvwxkfgfkkkwyznfznol.supabase.co',
+      anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2d3hrZmdma2trd3l6bmZ6bm9sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUyMzIyNTcsImV4cCI6MjA2MDgwODI1N30.crAjtndG5yfza51SO3fy815W6pVrR7jkt599mPCJMJE',
+    );
+
+    runApp(const ProviderScope(child: MyApp()));
+  } catch (e, stackTrace) {
+    // Log the error or send to Crashlytics
+    debugPrint('Error initializing Firebase or Supabase: $e');
+    debugPrint('$stackTrace');
+  }
 }
+
 
 /// The root widget of the application.
 /// Sets up routing, localization, theming, and reactive state.

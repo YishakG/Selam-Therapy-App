@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "124875569347",
+    "project_id": "selam-therapy-app-e6c45",
+    "storage_bucket": "selam-therapy-app-e6c45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124875569347:android:d85e3f0d09ee1fc56bca76",
+        "android_client_info": {
+          "package_name": "com.example.selam_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQOoOTAbdGA7HikW8wbz02A72B8pYYf2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

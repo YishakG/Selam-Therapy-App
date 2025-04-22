@@ -1,121 +1,4 @@
-# Selam App
-
-A Flutter application with a clean architecture structure.
-
-## Project Structure
-
-```
-lib/
-├── core/                           # Core functionality and infrastructure
-│   ├── constants/                  # Application-wide constants
-│   ├── error/                      # Error handling
-│   ├── network/                    # Network layer
-│   ├── providers/                  # State management
-│   └── services/                   # Core services
-│
-├── shared/                         # Reusable components
-│   ├── enums/                      # Application enums
-│   ├── interfaces/                 # Interface definitions
-│   ├── mixins/                     # Reusable mixins
-│   ├── models/                     # Data models
-│   ├── themes/                     # Theme configuration
-│   └── widgets/                    # Reusable widgets
-│
-├── features/                       # Feature-specific code
-│   └── splash/                     # Splash screen feature
-│       ├── presentation/           # UI layer
-│       ├── domain/                 # Business logic
-│       └── data/                   # Data layer
-│
-├── pages/                          # Application pages
-│   ├── auth/                       # Authentication pages
-│   ├── home/                       # Home pages
-│   ├── profile/                    # Profile pages
-│   └── settings/                   # Settings pages
-│
-└── l10n/                          # Localization
-    └── arb/                       # ARB files for translations
-```
-
-## Getting Started
-
-### Prerequisites
-
-- Flutter SDK (>=3.0.0)
-- Dart SDK (>=3.0.0)
-- Android Studio / VS Code with Flutter extensions
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/selam_app.git
-```
-
-2. Navigate to the project directory
-```bash
-cd selam_app
-```
-
-3. Install dependencies
-```bash
-flutter pub get
-```
-
-4. Run the app
-```bash
-flutter run
-```
-
-## Localization
-
-The app supports English and Amharic languages. To add new translations:
-
-1. Add new strings to `lib/l10n/arb/app_en.arb` (English)
-2. Add corresponding translations to `lib/l10n/arb/app_am.arb` (Amharic)
-3. Run `flutter gen-l10n` to generate localization files
-
-## Testing
-
-The project includes three types of tests:
-
-- Unit tests: `test/unit/`
-- Widget tests: `test/widget/`
-- Integration tests: `test/integration/`
-
-Run tests with:
-```bash
-flutter test
-```
-
-## Architecture
-
-This project follows a clean architecture approach with:
-
-- **Presentation Layer**: UI components and state management
-- **Domain Layer**: Business logic and use cases
-- **Data Layer**: Data sources and repositories
-
-## Dependencies
-
-- **State Management**: Provider and Riverpod
-- **Network**: Dio and Retrofit
-- **Storage**: SharedPreferences and Hive
-- **UI Components**: Flutter ScreenUtil, CachedNetworkImage, Shimmer
-- **Utils**: Logger, Intl, JSON Annotation, Freezed
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
+ 
 ```
 selam_app
 ├─ android
@@ -631,6 +514,8 @@ selam_app
 │     └─ RunnerTests.swift
 ├─ l10n
 │  └─ arb
+│     ├─ app_am.arb
+│     └─ app_en.arb
 ├─ l10n.yaml
 ├─ lib
 │  ├─ core
@@ -643,15 +528,13 @@ selam_app
 │  │  ├─ error
 │  │  │  └─ failures.dart
 │  │  ├─ providers
-│  │  │  ├─ app_providers.dart
+│  │  │  ├─ app_route_state_providers.dart
 │  │  │  ├─ app_state_provider.dart
 │  │  │  ├─ global_providers.dart
 │  │  │  ├─ language_provider.dart
 │  │  │  ├─ locale_provider.dart
 │  │  │  ├─ theme_provider.dart
 │  │  │  └─ user_role_provider.dart
-│  │  ├─ router
-│  │  │  └─ app_state_provider.dart
 │  │  ├─ services
 │  │  │  ├─ api_client.dart
 │  │  │  ├─ auth_service.dart
@@ -660,12 +543,6 @@ selam_app
 │  │  │  └─ app_theme.dart
 │  │  ├─ usecases
 │  │  │  └─ usecase.dart
-│  │  ├─ utils
-│  │  │  ├─ constants.dart
-│  │  │  ├─ extensions.dart
-│  │  │  ├─ formatters.dart
-│  │  │  ├─ helpers.dart
-│  │  │  └─ validators.dart
 │  │  └─ widgets
 │  │     ├─ app_logo.dart
 │  │     ├─ custom_bottom_nav_bar.dart
@@ -676,29 +553,25 @@ selam_app
 │  │     └─ secondary_button.dart
 │  ├─ features
 │  │  ├─ admin
-│  │  │  └─ presentation
-│  │  │     ├─ pages
-│  │  │     │  ├─ admin_dashboard_page.dart
-│  │  │     │  └─ admin_home_page.dart
-│  │  │     └─ widgets
-│  │  │        ├─ admin_stats_card.dart
-│  │  │        ├─ analytics_section.dart
-│  │  │        ├─ content_moderation_section.dart
-│  │  │        ├─ payment_section.dart
-│  │  │        ├─ platform_config_section.dart
-│  │  │        ├─ security_section.dart
-│  │  │        └─ user_management_section.dart
+│  │  │  ├─ pages
+│  │  │  │  └─ admin_home_page.dart
+│  │  │  └─ widgets
+│  │  │     ├─ admin_stats_card.dart
+│  │  │     ├─ analytics_section.dart
+│  │  │     ├─ content_moderation_section.dart
+│  │  │     ├─ payment_section.dart
+│  │  │     ├─ platform_config_section.dart
+│  │  │     ├─ security_section.dart
+│  │  │     └─ user_management_section.dart
 │  │  ├─ auth
-│  │  │  └─ presentation
-│  │  │     ├─ pages
-│  │  │     │  ├─ login_page.dart
-│  │  │     │  └─ registration_page.dart
-│  │  │     └─ widgets
-│  │  │        ├─ auth_date_picker_field.dart
-│  │  │        ├─ auth_dropdown_field.dart
-│  │  │        ├─ auth_text_field.dart
-│  │  │        └─ role_selector.dart
-│  │  ├─ chat
+│  │  │  ├─ pages
+│  │  │  │  ├─ login_page.dart
+│  │  │  │  └─ registration_page.dart
+│  │  │  └─ widgets
+│  │  │     ├─ auth_date_picker_field.dart
+│  │  │     ├─ auth_dropdown_field.dart
+│  │  │     ├─ auth_text_field.dart
+│  │  │     └─ role_selector.dart
 │  │  ├─ courses
 │  │  │  ├─ domain
 │  │  │  │  ├─ entities
@@ -707,85 +580,68 @@ selam_app
 │  │  │  │  │  └─ course_repository.dart
 │  │  │  │  └─ usecases
 │  │  │  │     └─ get_courses.dart
-│  │  │  └─ presentation
-│  │  │     ├─ pages
-│  │  │     │  └─ courses_page.dart
-│  │  │     ├─ providers
-│  │  │     │  └─ courses_provider.dart
-│  │  │     └─ widgets
-│  │  │        └─ course_card.dart
+│  │  │  ├─ pages
+│  │  │  │  └─ courses_page.dart
+│  │  │  ├─ providers
+│  │  │  │  └─ courses_provider.dart
+│  │  │  └─ widgets
+│  │  │     └─ course_card.dart
 │  │  ├─ home
 │  │  │  ├─ domain
 │  │  │  │  └─ models
 │  │  │  │     └─ social_post.dart
-│  │  │  └─ presentation
-│  │  │     ├─ pages
-│  │  │     │  ├─ admin_home_page.dart
-│  │  │     │  ├─ client_home_page.dart
-│  │  │     │  ├─ content_creator_home_page.dart
-│  │  │     │  ├─ content_supervisor_home_page.dart
-│  │  │     │  ├─ course_trainer_home_page.dart
-│  │  │     │  ├─ home_page.dart
-│  │  │     │  ├─ home_screen.dart
-│  │  │     │  └─ therapist_home_page.dart
-│  │  │     └─ widgets
-│  │  │        ├─ appointments_page.dart
-│  │  │        ├─ content_creator_messages_page.dart
-│  │  │        ├─ content_creator_profile_page.dart
-│  │  │        ├─ content_performance_card.dart
-│  │  │        ├─ content_review_page.dart
-│  │  │        ├─ course_trainer_messages_page.dart
-│  │  │        ├─ course_trainer_profile_page.dart
-│  │  │        ├─ course_trainer_stats_card.dart
-│  │  │        ├─ earnings_chart.dart
-│  │  │        ├─ earnings_overview_card.dart
-│  │  │        ├─ messages_page.dart
-│  │  │        ├─ recent_reviews.dart
-│  │  │        ├─ scheduled_content_card.dart
-│  │  │        ├─ social_post_card.dart
-│  │  │        ├─ supervisor_messages_page.dart
-│  │  │        ├─ supervisor_profile_page.dart
-│  │  │        ├─ supervisor_stats_card.dart
-│  │  │        ├─ therapist_profile_page.dart
-│  │  │        ├─ therapist_stats_card.dart
-│  │  │        ├─ upcoming_appointments.dart
-│  │  │        ├─ upcoming_classes.dart
-│  │  │        └─ video_post_card.dart
+│  │  │  ├─ pages
+│  │  │  │  ├─ client_home_page.dart
+│  │  │  │  ├─ content_creator_home_page.dart
+│  │  │  │  ├─ content_supervisor_home_page.dart
+│  │  │  │  ├─ course_trainer_home_page.dart
+│  │  │  │  └─ therapist_home_page.dart
+│  │  │  └─ widgets
+│  │  │     ├─ appointments_page.dart
+│  │  │     ├─ content_creator_messages_page.dart
+│  │  │     ├─ content_creator_profile_page.dart
+│  │  │     ├─ content_performance_card.dart
+│  │  │     ├─ content_review_page.dart
+│  │  │     ├─ course_trainer_messages_page.dart
+│  │  │     ├─ course_trainer_profile_page.dart
+│  │  │     ├─ course_trainer_stats_card.dart
+│  │  │     ├─ earnings_chart.dart
+│  │  │     ├─ earnings_overview_card.dart
+│  │  │     ├─ messages_page.dart
+│  │  │     ├─ recent_reviews.dart
+│  │  │     ├─ scheduled_content_card.dart
+│  │  │     ├─ social_post_card.dart
+│  │  │     ├─ supervisor_messages_page.dart
+│  │  │     ├─ supervisor_profile_page.dart
+│  │  │     ├─ supervisor_stats_card.dart
+│  │  │     ├─ therapist_profile_page.dart
+│  │  │     ├─ therapist_stats_card.dart
+│  │  │     ├─ upcoming_appointments.dart
+│  │  │     ├─ upcoming_classes.dart
+│  │  │     └─ video_post_card.dart
 │  │  ├─ journal
 │  │  │  ├─ data
 │  │  │  ├─ domain
 │  │  │  └─ presentation
 │  │  ├─ onboarding
-│  │  │  └─ presentation
-│  │  │     └─ pages
-│  │  │        ├─ features_page.dart
-│  │  │        └─ get_started_page.dart
+│  │  │  └─ pages
+│  │  │     ├─ features_page.dart
+│  │  │     └─ get_started_page.dart
 │  │  ├─ profile
-│  │  │  └─ presentation
-│  │  │     └─ pages
-│  │  │        └─ profile_page.dart
+│  │  │  └─ pages
+│  │  │     └─ profile_page.dart
 │  │  ├─ services
-│  │  │  └─ presentation
-│  │  │     └─ pages
-│  │  │        └─ services_page.dart
-│  │  ├─ splash
-│  │  │  └─ presentation
-│  │  │     └─ splash_screen.dart
+│  │  │  └─ pages
+│  │  │     └─ services_page.dart
 │  │  ├─ therapist
-│  │  │  └─ presentation
-│  │  │     └─ pages
-│  │  │        └─ therapist_dashboard_page.dart
+│  │  │  └─ pages
+│  │  │     └─ therapist_dashboard_page.dart
 │  │  ├─ therapy_sessions
 │  │  └─ video
-│  │     └─ presentation
-│  │        └─ pages
-│  │           ├─ video_feed_screen.dart
-│  │           └─ video_player_screen.dart
-│  ├─ l10n
-│  │  ├─ app_am.arb
-│  │  └─ app_en.arb
-│  ├─ main.dart
-│  └─ README.md
+│  │     └─ pages
+│  │        ├─ video_feed_screen.dart
+│  │        └─ video_player_screen.dart
+│  └─ main.dart
 ├─ pubspec.yaml
 ├─ README.md
 ├─ untranslated.txt

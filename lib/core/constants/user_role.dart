@@ -4,5 +4,5 @@ enum UserRole {
   admin,
   contentCreator,
   contentSupervisor,
-  courseTrainer
+  courseTrainer,
 }

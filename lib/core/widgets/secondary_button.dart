@@ -18,11 +18,12 @@ class SecondaryButton extends StatelessWidget {
     return OutlinedButton(
       onPressed: isLoading ? null : onPressed,
       style: OutlinedButton.styleFrom(
-        foregroundColor: AppColors.primary,
-        side: const BorderSide(color: AppColors.primary),
+        backgroundColor: AppColors.surfaceBackground, // subtle background
+        foregroundColor: AppColors.primary, // text/icon/spinner color
+        side: BorderSide(color: AppColors.primary),
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(12), // use consistent radius
         ),
       ),
       child: isLoading
@@ -36,11 +37,12 @@ class SecondaryButton extends StatelessWidget {
             )
           : Text(
               text,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
+                color: AppColors.textPrimary, // ensure readable text color
               ),
             ),
     );
   }
-} 
+}

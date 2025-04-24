@@ -4,18 +4,19 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:selam_app/core/constants/app_colors.dart';
 import 'package:selam_app/core/constants/routes.dart';
-import 'package:selam_app/features/auth/pages/registration_state.dart';
-import 'package:selam_app/features/auth/pages/registration_form.dart';
 
-class RegistrationPage extends StatefulWidget {
-  const RegistrationPage({super.key});
+import 'package:selam_app/features/onboarding/pages/client_registration_form.dart';
+import 'package:selam_app/features/onboarding/pages/client_registration_state.dart';
+
+class ClientRegistrationPage extends StatefulWidget {
+  const ClientRegistrationPage({super.key});
 
   @override
-  State<RegistrationPage> createState() => _RegistrationPageState();
+  State<ClientRegistrationPage> createState() => _ClientRegistrationPageState();
 }
 
-class _RegistrationPageState extends State<RegistrationPage> {
-  final RegistrationState _state = RegistrationState();
+class _ClientRegistrationPageState extends State<ClientRegistrationPage> {
+  final ClientRegistrationState _state = ClientRegistrationState();
 
   @override
   void dispose() {
@@ -42,9 +43,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
           ),
         ),
       ),
-      body: RegistrationForm(
+      body: ClientRegistrationForm(
         state: _state,
-        onLoginRedirect: () => context.go(Routes.adminDashboard),
+        onLoginRedirect: () => context.go(Routes.login),
       ),
     );
   }

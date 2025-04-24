@@ -16,9 +16,9 @@ class CoursesPage extends ConsumerWidget {
     final coursesState = ref.watch(coursesProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.primaryBackground,
       appBar: AppBar(
-        backgroundColor: AppColors.surface,
+        backgroundColor: AppColors.surfaceBackground,
         elevation: 0,
         title: Text(
           l10n.courses,

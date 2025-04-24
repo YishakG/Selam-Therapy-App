@@ -1,6 +1,20 @@
 {
   "am": [
-    "userAlreadyExistsTryLogin",
-    "statistics"
+    "maintenanceMode",
+    "pushNotification",
+    "exportReport",
+    "viewDetails",
+    "unexpectedError",
+    "fillDetailsToCreateAccount",
+    "registerAs",
+    "stress",
+    "selfEsteem",
+    "otherExpertise",
+    "preferredSessionDuration",
+    "thirtyMinutes",
+    "fortyFiveMinutes",
+    "sixtyMinutes",
+    "psychologist",
+    "thisFieldIsRequired"
   ]
 }

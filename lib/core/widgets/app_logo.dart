@@ -1,65 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:selam_app/core/constants/app_colors.dart';
 
-/// A reusable widget that displays the app logo.
-/// The logo can be sized, colored, and customized with animations or shadows.
+
+/// A reusable logo widget with customizable size and improved styling.
+///
+/// This widget displays the app logo inside a circular container, with a border,
+/// shadow, and background color, ensuring it fits well into any UI.
 class AppLogo extends StatelessWidget {
-  /// The size of the logo container. Both width and height will be set to this value.
-  final double size;
-
-  /// Optional background color for the logo container.
-  /// If not provided, the container will be transparent.
-  final Color? backgroundColor;
-
-  /// Optional padding around the logo.
-  final EdgeInsets? padding;
-
-  /// Optional border color for the logo container.
-  final Color? borderColor;
-
-  /// Optional shadow for the logo container.
-  final BoxShadow? shadow;
-
-  /// Optional color filter to apply to the SVG logo.
-  final Color? logoColor;
-
-  /// Optional animation duration for logo's appearance.
-  final Duration? animationDuration;
+  final double size; // Size of the logo container
 
   const AppLogo({
     Key? key,
-    this.size = 80,
-    this.backgroundColor,
-    this.padding,
-    this.borderColor,
-    this.shadow,
-    this.logoColor,
-    this.animationDuration = const Duration(milliseconds: 500),
+    required this.size,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: animationDuration!,
-      curve: Curves.easeInOut,
+    return Container(
       width: size,
       height: size,
-      padding: padding ?? EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: backgroundColor ?? Colors.transparent,
         shape: BoxShape.circle,
-        border: borderColor != null
-            ? Border.all(color: borderColor!, width: 2)
-            : null,
-        boxShadow: shadow != null ? [shadow!] : [],
+        color: AppColors.surfaceBackground, // Using a solid background color
+        border: Border.all(
+          color: AppColors.border, // Subtle border color for the logo
+          width: 1.5,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.shadow, // Shadow for depth
+            spreadRadius: 1,
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
-      child: SvgPicture.asset(
-        'assets/images/logo.svg',
-        fit: BoxFit.contain,
-        color: logoColor,
-        semanticsLabel: 'App Logo',
-        placeholderBuilder: (context) => Center(
-          child: CircularProgressIndicator(),
+      child: Center(
+        child: SvgPicture.asset(
+          'assets/images/logo.svg', // Path to your SVG logo
+          width: size * 0.7, // Logo size will be 70% of the container size
+          height: size * 0.7,
         ),
       ),
     );

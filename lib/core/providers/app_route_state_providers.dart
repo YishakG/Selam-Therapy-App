@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:selam_app/features/onboarding/pages/client_registration_page.dart';
+
 
 import '../constants/routes.dart';
 import '../../features/onboarding/pages/get_started_page.dart';
@@ -34,6 +36,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: Routes.login,
         builder: (context, state) => const LoginPage(),
+      ),
+      GoRoute(
+        path: Routes.client_registration,
+        builder: (context, state) => const ClientRegistrationPage(),
       ),
       GoRoute(
         path: Routes.registration,

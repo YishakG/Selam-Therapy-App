@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:selam_app/core/widgets/app_logo.dart';
+import 'package:selam_app/core/widgets/primary_button.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/routes.dart';
 import '../../../core/providers/locale_provider.dart';
@@ -18,7 +20,7 @@ class GetStartedPage extends ConsumerWidget {
     final currentLocale = ref.watch(localeProvider);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.primaryBackground,
       body: SafeArea(
         child: Stack(
           children: [
@@ -47,7 +49,7 @@ class GetStartedPage extends ConsumerWidget {
                       style: GoogleFonts.manrope(
                         fontSize: 32,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black87,
+                        color: AppColors.textPrimary,
                       ),
                     ),
                     const SizedBox(height: 12),
@@ -56,7 +58,7 @@ class GetStartedPage extends ConsumerWidget {
                       textAlign: TextAlign.center,
                       style: GoogleFonts.manrope(
                         fontSize: 16,
-                        color: Colors.black54,
+                        color: AppColors.textPrimary,
                         height: 1.5,
                       ),
                     ),
@@ -75,8 +77,7 @@ class GetStartedPage extends ConsumerWidget {
     );
   }
 }
-
-/// Reusable language selector.
+ 
 class LanguageSelector extends StatelessWidget {
   final Locale currentLocale;
   final void Function(String?) onLanguageChanged;
@@ -93,28 +94,32 @@ class LanguageSelector extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: AppColors.primaryBackground, // Clean, neutral background
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: AppColors.border),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       child: DropdownButtonHideUnderline(
         child: DropdownButton<String>(
           value: currentLocale.languageCode,
           icon: const Icon(Icons.language, color: AppColors.primary),
+          dropdownColor: AppColors.surfaceBackground, // Dropdown menu background
+          style: GoogleFonts.manrope(
+            color: AppColors.textPrimary,
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
           items: [
             DropdownMenuItem(
               value: 'en',
               child: Text(
                 l10n.english,
-                style: GoogleFonts.manrope(color: AppColors.textPrimary),
               ),
             ),
             DropdownMenuItem(
               value: 'am',
               child: Text(
                 l10n.amharic,
-                style: GoogleFonts.manrope(color: AppColors.textPrimary),
               ),
             ),
           ],
@@ -124,74 +129,5 @@ class LanguageSelector extends StatelessWidget {
     );
   }
 }
+ // Import your AppColors class
 
-/// Clean logo with white background, border and shadow.
-class AppLogo extends StatelessWidget {
-  final double size;
-
-  const AppLogo({Key? key, required this.size}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.white,
-        border: Border.all(color: AppColors.border, width: 1.5),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black12,
-            spreadRadius: 1,
-            blurRadius: 8,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Center(
-        child: SvgPicture.asset(
-          'assets/images/logo.svg',
-          width: size * 0.5,
-          height: size * 0.5,
-        ),
-      ),
-    );
-  }
-}
-
-/// Consistent primary button widget.
-class PrimaryButton extends StatelessWidget {
-  final String text;
-  final VoidCallback onPressed;
-
-  const PrimaryButton({
-    Key? key,
-    required this.text,
-    required this.onPressed,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.surface,
-        minimumSize: const Size(double.infinity, 56),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
-        ),
-        elevation: 0,
-      ),
-      child: Text(
-        text,
-        style: GoogleFonts.manrope(
-          fontSize: 18,
-          fontWeight: FontWeight.w600,
-          letterSpacing: 0.5,
-        ),
-      ),
-    );
-  }
-}

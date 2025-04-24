@@ -4,146 +4,411 @@
   "@appName": {
     "description": "The name of the application"
   },
+  "uploadCertification": "Upload Certification",
+  "changeCertification": "Change Certification",
+  "trainerBio": "Trainer Bio",
+  "mentalHealthTraining": "Mental Health Training",
+  "leadershipTraining": "Leadership Training",
+  "workplaceWellness": "Workplace Wellness",
+  "softSkills": "Soft Skills",
+  "areasOfTrainingExpertise": "Areas of Training Expertise",
+  "pleaseEnterCertifications": "Please enter your certifications",
+  "certificationsHint": "Enter valid certifications related to your expertise",
+  "pleaseEnterAcademicBackground": "Please enter your academic background",
+  "academicBackground": "Academic Background",
+  "pleaseUploadLicense": "Please upload your license",
+  "agreeToTherapistTerms": "I agree to the terms and conditions for therapists",
+  "professionalBio": "Professional Bio",
+  "credentialsLicense": "Credentials and License",
+  "pleaseEnterCredentials": "Please enter your credentials",
+  "cbt": "Cognitive Behavioral Therapy (CBT)",
+  "ptsd": "Post-Traumatic Stress Disorder (PTSD)",
+  "adolescents": "Adolescents",
+  "languagesSpoken": "Languages Spoken",
+  "spanish": "Spanish",
+  "french": "French",
+  "uploadLicense": "Upload License",
+  "changeLicense": "Change License",
+  "availabilitySchedule": "Availability Schedule",
+  "availabilityHint": "Select your available days and hours",
+  "pleaseEnterAvailability": "Please enter your availability",
+  "pleaseEnterValidPhoneNumber": "Please enter a valid phone number",
+  "pleaseUploadProfilePicture": "Please upload a profile picture",
+  "networkError": "Network error. Please check your internet connection.",
+  "tooManyRequests": "Too many requests. Please try again later.",
   "dontHaveAnAccount": "Don’t have an account?",
+  "courseTrainer": "Course Trainer",
+  "admin": "Admin",
+  "selectYourRole": "Select your role",
   "firestoreWriteFailed": "Failed to save data. Please try again.",
   "failedToFetchUserData": "Failed to fetch user data.",
   "emailRequired": "Email is required",
+  "@emailRequired": {
+    "description": "Text for email required error"
+  },
   "invalidEmail": "Please enter a valid email",
+  "@invalidEmail": {
+    "description": "Text for invalid email error"
+  },
   "passwordRequired": "Password is required",
+  "@passwordRequired": {
+    "description": "Text for password required error"
+  },
   "passwordTooShort": "Password must be at least 6 characters",
+  "@passwordTooShort": {
+    "description": "Text for password too short error"
+  },
   "userNotFound": "No user found with this email",
+  "@userNotFound": {
+    "description": "Text for user not found error"
+  },
   "wrongPassword": "Incorrect password",
+  "@wrongPassword": {
+    "description": "Text for wrong password error"
+  },
   "invalidCredentials": "Invalid email or password",
+  "@invalidCredentials": {
+    "description": "Text for invalid credentials error"
+  },
   "fetchUserDataFailed": "Failed to fetch user data",
+  "@fetchUserDataFailed": {
+    "description": "Text for fetch user data failed error"
+  },
   "loginFailed": "Login failed",
+  "@loginFailed": {
+    "description": "Text for login failed error"
+  },
   "pleaseAcceptTerms": "Please accept the terms and conditions",
+  "@pleaseAcceptTerms": {
+    "description": "Text for please accept terms error"
+  },
   "pleaseEnterPassword": "Please enter your password",
+  "@pleaseEnterPassword": {
+    "description": "Text for please enter password"
+  },
   "passwordMustBeAtLeast8Characters": "Password must be at least 8 characters",
+  "@passwordMustBeAtLeast8Characters": {
+    "description": "Text for password must be at least 8 characters"
+  },
   "passwordRequirements": "Password must contain uppercase, lowercase, number, and special character",
+  "@passwordRequirements": {
+    "description": "Text for password requirements"
+  },
   "pleaseConfirmPassword": "Please confirm your password",
+  "@pleaseConfirmPassword": {
+    "description": "Text for please confirm password"
+  },
   "passwordsDoNotMatch": "Passwords do not match",
+  "@passwordsDoNotMatch": {
+    "description": "Text for passwords do not match"
+  },
   "userAlreadyExists": "This email is already registered",
+  "@userAlreadyExists": {
+    "description": "Text for user already exists error"
+  },
   "userAlreadyExistsTryLogin": "This email is already registered. Please try logging in or reset your password.",
   "weakPassword": "Password is too weak",
+  "@weakPassword": {
+    "description": "Text for weak password error"
+  },
   "profilePictureUploadFailed": "Failed to upload profile picture",
-  "registrationFailed": "Registration failed",
+  "@profilePictureUploadFailed": {
+    "description": "Text for profile picture upload failed error"
+  },
+  "registrationFailed": "Registration failed. Please try again.",
+  "@registrationFailed": {
+    "description": "Text for registration failed error"
+  },
   "registrationSuccessRedirect": "Successfully registered! You are now redirected to the login page. Please log in with your email and password.",
-  "emailRequired": "Email is required",
-  "invalidEmail": "Please enter a valid email",
-  "passwordRequired": "Password is required",
-  "passwordTooShort": "Password must be at least 6 characters",
-  "userNotFound": "No user found with this email",
-  "wrongPassword": "Incorrect password",
-  "invalidCredentials": "Invalid email or password",
-  "fetchUserDataFailed": "Failed to fetch user data",
-  "loginFailed": "Login failed",
-  "pleaseAcceptTerms": "Please accept the terms and conditions",
-  "pleaseEnterPassword": "Please enter your password",
-  "passwordMustBeAtLeast8Characters": "Password must be at least 8 characters",
-  "passwordRequirements": "Password must contain uppercase, lowercase, number, and special character",
-  "pleaseConfirmPassword": "Please confirm your password",
-  "passwordsDoNotMatch": "Passwords do not match",
-  "userAlreadyExists": "This email is already registered",
-  "weakPassword": "Password is too weak",
-  "profilePictureUploadFailed": "Failed to upload profile picture",
-  "registrationFailed": "Registration failed",
-  "registrationSuccessRedirect": "Successfully registered! You are now redirected to the login page. Please log in with your email and password.",
-  "emailRequired": "Email is required",
-  "invalidEmail": "Please enter a valid email",
-  "passwordRequired": "Password is required",
-  "passwordTooShort": "Password must be at least 6 characters",
-  "userNotFound": "No user found with this email",
-  "wrongPassword": "Incorrect password",
-  "invalidCredentials": "Invalid email or password",
-  "fetchUserDataFailed": "Failed to fetch user data",
-  "loginFailed": "Login failed",
+  "@registrationSuccessRedirect": {
+    "description": "Text for successful registration redirect message"
+  },
   "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Text for create account button"
+  },
   "registrationSuccessful": "Registration successful",
   "firstName": "First Name",
+  "@firstName": {
+    "description": "Text for first name field"
+  },
   "pleaseEnterFirstName": "Please enter your first name",
+  "@pleaseEnterFirstName": {
+    "description": "Text for please enter first name"
+  },
   "lastName": "Last Name",
+  "@lastName": {
+    "description": "Text for last name field"
+  },
   "pleaseEnterLastName": "Please enter your last name",
+  "@pleaseEnterLastName": {
+    "description": "Text for please enter last name"
+  },
   "email": "Email",
+  "@email": {
+    "description": "Text for email field"
+  },
   "pleaseEnterEmail": "Please enter your email",
+  "@pleaseEnterEmail": {
+    "description": "Text for please enter email"
+  },
   "pleaseEnterValidEmail": "Please enter a valid email",
+  "@pleaseEnterValidEmail": {
+    "description": "Text for please enter valid email"
+  },
   "phoneNumber": "Phone Number",
+  "@phoneNumber": {
+    "description": "Text for phone number field"
+  },
   "pleaseEnterPhoneNumber": "Please enter your phone number",
+  "@pleaseEnterPhoneNumber": {
+    "description": "Text for please enter phone number"
+  },
   "password": "Password",
-  "pleaseEnterPassword": "Please enter your password",
-  "passwordMustBeAtLeast8Characters": "Password must be at least 8 characters",
-  "passwordRequirements": "Password must include uppercase, lowercase, number, and special character",
+  "@password": {
+    "description": "Text for password field"
+  },
   "confirmPassword": "Confirm Password",
-  "pleaseConfirmPassword": "Please confirm your password",
-  "passwordsDoNotMatch": "Passwords do not match",
+  "@confirmPassword": {
+    "description": "Text for confirm password field"
+  },
   "dateOfBirth": "Date of Birth",
+  "@dateOfBirth": {
+    "description": "Text for date of birth field"
+  },
   "pleaseSelectDateOfBirth": "Please select your date of birth",
+  "@pleaseSelectDateOfBirth": {
+    "description": "Error message when date of birth is not selected"
+  },
   "gender": "Gender",
+  "@gender": {
+    "description": "Text for gender field"
+  },
   "pleaseSelectGender": "Please select your gender",
+  "@pleaseSelectGender": {
+    "description": "Error message when gender is not selected"
+  },
   "male": "Male",
+  "@male": {
+    "description": "Text for male gender option"
+  },
   "female": "Female",
+  "@female": {
+    "description": "Text for female gender option"
+  },
   "other": "Other",
+  "@other": {
+    "description": "Text for other gender option"
+  },
   "preferredLanguage": "Preferred Language",
+  "@preferredLanguage": {
+    "description": "Text for preferred language field"
+  },
   "pleaseSelectLanguage": "Please select your preferred language",
+  "@pleaseSelectLanguage": {
+    "description": "Error message when language is not selected"
+  },
   "english": "English",
+  "@english": {
+    "description": "Name of English language"
+  },
   "amharic": "Amharic",
+  "@amharic": {
+    "description": "Name of Amharic language"
+  },
   "currentConcerns": "Current Concerns or Goals",
+  "@currentConcerns": {
+    "description": "Text for current concerns field"
+  },
   "anxiety": "Anxiety",
+  "@anxiety": {
+    "description": "Text for anxiety concern"
+  },
   "depression": "Depression",
+  "@depression": {
+    "description": "Text for depression concern"
+  },
   "stressManagement": "Stress Management",
+  "@stressManagement": {
+    "description": "Text for stress management concern"
+  },
   "trauma": "Trauma/PTSD",
+  "@trauma": {
+    "description": "Text for trauma concern"
+  },
   "relationshipIssues": "Relationship Issues",
+  "@relationshipIssues": {
+    "description": "Text for relationship issues concern"
+  },
   "parentingSupport": "Parenting Support",
+  "@parentingSupport": {
+    "description": "Text for parenting support"
+  },
   "addictionRecovery": "Addiction Recovery",
+  "@addictionRecovery": {
+    "description": "Text for addiction recovery"
+  },
   "careerStress": "Career or Academic Stress",
+  "@careerStress": {
+    "description": "Text for career stress"
+  },
   "otherConcerns": "Other Concerns",
   "hadTherapyBefore": "Have you had therapy before?",
+  "@hadTherapyBefore": {
+    "description": "Text for had therapy before question"
+  },
   "therapyType": "Type of Therapy",
+  "@therapyType": {
+    "description": "Text for therapy type"
+  },
   "pleaseSelectTherapyType": "Please select the type of therapy",
+  "@pleaseSelectTherapyType": {
+    "description": "Error message when therapy type is not selected"
+  },
   "talkTherapy": "Talk Therapy",
+  "@talkTherapy": {
+    "description": "Text for talk therapy"
+  },
   "groupTherapy": "Group Therapy",
+  "@groupTherapy": {
+    "description": "Text for group therapy"
+  },
   "couplesTherapy": "Couples Therapy",
+  "@couplesTherapy": {
+    "description": "Text for couples therapy"
+  },
   "familyTherapy": "Family Therapy",
+  "@familyTherapy": {
+    "description": "Label for family therapy option"
+  },
   "therapyDuration": "Therapy Duration",
+  "@therapyDuration": {
+    "description": "Label for therapy duration field"
+  },
   "pleaseSelectTherapyDuration": "Please select therapy duration",
+  "@pleaseSelectTherapyDuration": {
+    "description": "Error message when therapy duration is not selected"
+  },
   "shortTerm": "Short-term",
+  "@shortTerm": {
+    "description": "Text for short term"
+  },
   "longTerm": "Long-term",
+  "@longTerm": {
+    "description": "Label for long term therapy duration"
+  },
   "therapistBackground": "Preferred Therapist Background",
+  "@therapistBackground": {
+    "description": "Label for therapist background field"
+  },
   "pleaseSelectTherapistBackground": "Please select therapist background",
+  "@pleaseSelectTherapistBackground": {
+    "description": "Error message when therapist background is not selected"
+  },
   "clinicalPsychologist": "Clinical Psychologist",
+  "@clinicalPsychologist": {
+    "description": "Professional title for clinical psychologist"
+  },
   "counselor": "Counselor",
+  "@counselor": {
+    "description": "Label for counselor option"
+  },
   "socialWorker": "Social Worker",
+  "@socialWorker": {
+    "description": "Label for social worker option"
+  },
   "psychiatrist": "Psychiatrist",
+  "@psychiatrist": {
+    "description": "Label for psychiatrist option"
+  },
   "therapistGender": "Preferred Therapist Gender",
+  "@therapistGender": {
+    "description": "Text for therapist gender"
+  },
   "pleaseSelectTherapistGender": "Please select therapist gender",
+  "@pleaseSelectTherapistGender": {
+    "description": "Error message when therapist gender is not selected"
+  },
   "noPreference": "No Preference",
+  "@noPreference": {
+    "description": "Text for no preference option"
+  },
   "bio": "Bio",
+  "@bio": {
+    "description": "Text for bio field"
+  },
   "pleaseEnterBio": "Please enter your bio",
+  "@pleaseEnterBio": {
+    "description": "Error message when bio is not entered"
+  },
   "areasOfExpertise": "Areas of Expertise",
+  "@areasOfExpertise": {
+    "description": "Text for areas of expertise field"
+  },
   "psychology": "Psychology",
+  "@psychology": {
+    "description": "Text for psychology expertise"
+  },
   "mentalHealthWriting": "Mental Health Writing",
+  "@mentalHealthWriting": {
+    "description": "Text for mental health writing expertise"
+  },
   "videoProduction": "Video Production",
+  "@videoProduction": {
+    "description": "Text for video production expertise"
+  },
   "animation": "Animation",
+  "@animation": {
+    "description": "Text for animation expertise"
+  },
   "research": "Research",
+  "@research": {
+    "description": "Text for research expertise"
+  },
   "portfolioLink": "Portfolio Link",
+  "@portfolioLink": {
+    "description": "Text for portfolio link field"
+  },
   "pleaseEnterPortfolioLink": "Please enter a portfolio link",
+  "@pleaseEnterPortfolioLink": {
+    "description": "Error message when portfolio link is not entered"
+  },
   "uploadProfilePicture": "Upload Profile Picture",
+  "@uploadProfilePicture": {
+    "description": "Text for upload profile picture button"
+  },
   "changeProfilePicture": "Change Profile Picture",
+  "@changeProfilePicture": {
+    "description": "Text for change profile picture button"
+  },
   "socialPortfolioLinks": "Social/Portfolio Links",
+  "@socialPortfolioLinks": {
+    "description": "Text for social/portfolio links field"
+  },
   "addAnotherLink": "Add Another Link",
+  "@addAnotherLink": {
+    "description": "Text for add another link button"
+  },
   "pleaseEnterValidUrl": "Please enter a valid URL",
+  "@pleaseEnterValidUrl": {
+    "description": "Text for please enter valid URL error"
+  },
   "agreeToTerms": "I agree to the Terms & Privacy Policy",
+  "@agreeToTerms": {
+    "description": "Text for agree to terms checkbox"
+  },
   "agreeToContentGuidelines": "I agree to the Content Guidelines",
-  "pleaseAcceptTerms": "Please accept the terms",
+  "@agreeToContentGuidelines": {
+    "description": "Text for agree to content guidelines checkbox"
+  },
   "alreadyHaveAnAccount": "Already have an account?",
+  "@alreadyHaveAnAccount": {
+    "description": "Text for already have an account"
+  },
   "login": "Login",
-  "registrationFailed": "Registration failed. Please try again.",
-  "userAlreadyExists": "This user already exists",
-  "invalidEmail": "Invalid email address",
-  "weakPassword": "Password is too weak",
-  "profilePictureUploadFailed": "Failed to upload profile picture",
-  "userAlreadyExists": "This user already exists",
-  "passwordMustBeAtLeast8Characters": "Password must be at least 8 characters",
-  "passwordRequirements": "Password must include uppercase, lowercase, number, and special character",
+  "@login": {
+    "description": "Text for login button"
+  },
   "tagline": "Your mental health companion",
   "@tagline": {
     "description": "The application's tagline"
@@ -155,14 +420,6 @@
   "selectLanguage": "Select Language",
   "@selectLanguage": {
     "description": "Text for language selection"
-  },
-  "english": "English",
-  "@english": {
-    "description": "Name of English language"
-  },
-  "amharic": "Amharic",
-  "@amharic": {
-    "description": "Name of Amharic language"
   },
   "features": "Features",
   "@features": {
@@ -208,14 +465,6 @@
   "@support247Desc": {
     "description": "Description for 24/7 support feature"
   },
-  "createAccount": "Create Account",
-  "@createAccount": {
-    "description": "Text for create account button"
-  },
-  "login": "Login",
-  "@login": {
-    "description": "Text for login button"
-  },
   "newUser": "New to Selam?",
   "@newUser": {
     "description": "Text for new user prompt"
@@ -227,14 +476,11 @@
   "@_LOGIN_STRINGS": {},
   "welcomeBack": "Welcome Back!",
   "loginToContinue": "Please log in to continue",
-  "emailOrPhone": "Email or Phone",
-  "password": "Password",
+  "email": "Email",
   "forgotPassword": "Forgot Password?",
   "dontHaveAccount": "Don't have an account?",
-  "emailOrPhoneRequired": "Email or phone number is required",
-  "invalidEmailOrPhone": "Please enter a valid email or phone number",
-  "passwordRequired": "Password is required",
-  "passwordTooShort": "Password must be at least 6 characters",
+  "emailRequired": "Email is required",
+  "invalidEmail": "Please enter a valid email",
   "loginSuccess": "Login successful",
   "loginError": "Login failed",
   "signUp": "Sign Up",
@@ -274,7 +520,6 @@
   "lifeConsultationDesc": "Let's work together for a better life",
   "@_COURSES": {},
   "effectiveCommunication": "Effective Communication Skills",
-  "stressManagement": "Stress Management",
   "mentalHealthBasics": "Mental Health Basics",
   "instructor": "Instructor",
   "duration": "Duration",
@@ -305,15 +550,10 @@
   "contentCreator": "Content Creator",
   "fullName": "Full Name",
   "fullNameRequired": "Please enter your name",
-  "email": "Email",
-  "emailRequired": "Please enter your email",
-  "phoneNumber": "Phone Number",
   "phoneRequired": "Please enter your phone number",
-  "portfolioLink": "Portfolio Link",
   "portfolioRequired": "Please enter your portfolio link",
   "shortBio": "Short Bio",
   "bioRequired": "Please enter your bio",
-  "alreadyHaveAccount": "Already have an account?",
   "@_THERAPIST_HOME": {},
   "totalClients": "Total Clients",
   "@totalClients": {
@@ -359,10 +599,6 @@
     }
   },
   "@_THERAPIST_PROFILE": {},
-  "clinicalPsychologist": "Clinical Psychologist",
-  "@clinicalPsychologist": {
-    "description": "Professional title for clinical psychologist"
-  },
   "traumaAndAnxietySpecialist": "Trauma & Anxiety Specialist",
   "@traumaAndAnxietySpecialist": {
     "description": "Specialization title"
@@ -531,6 +767,9 @@
   "upcomingClasses": "Upcoming Classes",
   "newEnrollments": "New Enrollments",
   "review": "Review",
+  "@review": {
+    "description": "Label for review tab"
+  },
   "searchCoursesAndStudents": "Search students, courses...",
   "searchTopics": "Search topics...",
   "@searchTopics": {
@@ -613,11 +852,6 @@
   "@earningsOverview": {
     "description": "Title for earnings overview section"
   },
-  "uploadProfilePicture": "Upload Profile Picture",
-  "changeProfilePicture": "Change Profile Picture",
-  "socialPortfolioLinks": "Social/Portfolio Links",
-  "addAnotherLink": "Add Another Link",
-  "pleaseEnterValidUrl": "Please enter a valid URL",
   "totalEarningsEtb": "ETB {amount}",
   "@totalEarningsEtb": {
     "description": "Total earnings in ETB",
@@ -650,9 +884,6 @@
   "@contentDescription": {
     "description": "Placeholder for content description"
   },
-  "@review": {
-    "description": "Label for review tab"
-  },
   "searchCreators": "Search creators...",
   "@searchCreators": {
     "description": "Placeholder for creator search"
@@ -671,7 +902,6 @@
   "clients": "Clients",
   "therapists": "Therapists",
   "statistics": "Statistics",
-  "settings": "Settings",
   "content": "Content",
   "analytics": "Analytics",
   "payments": "Payments",
@@ -710,63 +940,10 @@
   "pushNotification": "Push Notification",
   "exportReport": "Export Report",
   "viewDetails": "View Details",
-  "registrationFailed": "Registration failed. Please try again.",
   "unexpectedError": "An unexpected error occurred",
   "fillDetailsToCreateAccount": "Fill in your details to create an account",
   "@fillDetailsToCreateAccount": {
     "description": "Text for fill details to create account"
-  },
-  "firstName": "First Name",
-  "@firstName": {
-    "description": "Text for first name field"
-  },
-  "pleaseEnterFirstName": "Please enter your first name",
-  "@pleaseEnterFirstName": {
-    "description": "Text for please enter first name"
-  },
-  "lastName": "Last Name",
-  "@lastName": {
-    "description": "Text for last name field"
-  },
-  "pleaseEnterLastName": "Please enter your last name",
-  "@pleaseEnterLastName": {
-    "description": "Text for please enter last name"
-  },
-  "pleaseEnterEmail": "Please enter your email",
-  "@pleaseEnterEmail": {
-    "description": "Text for please enter email"
-  },
-  "pleaseEnterValidEmail": "Please enter a valid email address",
-  "@pleaseEnterValidEmail": {
-    "description": "Text for please enter valid email"
-  },
-  "pleaseEnterPhoneNumber": "Please enter your phone number",
-  "@pleaseEnterPhoneNumber": {
-    "description": "Text for please enter phone number"
-  },
-  "pleaseEnterPassword": "Please enter your password",
-  "@pleaseEnterPassword": {
-    "description": "Text for please enter password"
-  },
-  "passwordMustBeAtLeast6Characters": "Password must be at least 6 characters",
-  "@passwordMustBeAtLeast6Characters": {
-    "description": "Text for password must be at least 6 characters"
-  },
-  "confirmPassword": "Confirm Password",
-  "@confirmPassword": {
-    "description": "Text for confirm password field"
-  },
-  "pleaseConfirmPassword": "Please confirm your password",
-  "@pleaseConfirmPassword": {
-    "description": "Text for please confirm password"
-  },
-  "passwordsDoNotMatch": "Passwords do not match",
-  "@passwordsDoNotMatch": {
-    "description": "Text for passwords do not match"
-  },
-  "alreadyHaveAnAccount": "Already have an account?",
-  "@alreadyHaveAnAccount": {
-    "description": "Text for already have an account"
   },
   "registerAs": "Register as {role}",
   "@registerAs": {
@@ -778,154 +955,46 @@
       }
     }
   },
-  "dateOfBirth": "Date of Birth",
-  "gender": "Gender",
-  "male": "Male",
-  "female": "Female",
-  "other": "Other",
-  "preferredLanguage": "Preferred Language",
-  "currentConcerns": "Current Concerns / Goals",
-  "anxiety": "Anxiety",
-  "depression": "Depression",
   "stress": "Stress",
-  "relationshipIssues": "Relationship Issues",
+  "@stress": {
+    "description": "Text for stress concern"
+  },
   "selfEsteem": "Self-Esteem",
-  "otherConcerns": "Other",
-  "hadTherapyBefore": "Have you had therapy before?",
-  "typeOfTherapy": "Type of Therapy Attended",
-  "preferredSessionDuration": "Preferred Session Duration",
-  "thirtyMinutes": "30 minutes",
-  "fortyFiveMinutes": "45 minutes",
-  "sixtyMinutes": "60 minutes",
-  "preferredTherapistBackground": "Preferred Therapist Background",
-  "psychologist": "Psychologist",
-  "counselor": "Counselor",
-  "socialWorker": "Social Worker",
-  "noPreference": "No Preference",
-  "preferredTherapistGender": "Preferred Therapist Gender",
-  "agreeToTerms": "I agree to the Terms & Privacy Policy",
-  "agreeToContentGuidelines": "I agree to the Terms & Content Guidelines",
-  "bio": "Bio / About",
-  "areasOfExpertise": "Areas of Expertise",
-  "psychology": "Psychology",
-  "mentalHealthWriting": "Mental Health Writing",
-  "videoProduction": "Video Production",
-  "animation": "Animation",
-  "research": "Research",
+  "@selfEsteem": {
+    "description": "Text for self-esteem concern"
+  },
   "otherExpertise": "Other",
-  "portfolioLink": "Portfolio / Social Link",
-  "pleaseAcceptTerms": "Please accept the terms and conditions",
+  "@otherExpertise": {
+    "description": "Text for other expertise"
+  },
+  "preferredSessionDuration": "Preferred Session Duration",
+  "@preferredSessionDuration": {
+    "description": "Text for preferred session duration field"
+  },
+  "thirtyMinutes": "30 minutes",
+  "@thirtyMinutes": {
+    "description": "Text for 30 minutes duration"
+  },
+  "fortyFiveMinutes": "45 minutes",
+  "@fortyFiveMinutes": {
+    "description": "Text for 45 minutes duration"
+  },
+  "sixtyMinutes": "60 minutes",
+  "@sixtyMinutes": {
+    "description": "Text for 60 minutes duration"
+  },
+  "psychologist": "Psychologist",
+  "@psychologist": {
+    "description": "Label for psychologist option"
+  },
   "thisFieldIsRequired": "This field is required",
-  "pleaseSelectDateOfBirth": "Please select your date of birth",
-  "@pleaseSelectDateOfBirth": {
-    "description": "Error message when date of birth is not selected"
+  "@thisFieldIsRequired": {
+    "description": "Text for required field error"
   },
-  "pleaseSelectGender": "Please select your gender",
-  "@pleaseSelectGender": {
-    "description": "Error message when gender is not selected"
-  },
-  "pleaseSelectLanguage": "Please select your preferred language",
-  "@pleaseSelectLanguage": {
-    "description": "Error message when language is not selected"
-  },
-  "pleaseSelectTherapyType": "Please select a therapy type",
-  "@pleaseSelectTherapyType": {
-    "description": "Error message when therapy type is not selected"
-  },
-  "pleaseSelectTherapyDuration": "Please select therapy duration",
-  "@pleaseSelectTherapyDuration": {
-    "description": "Error message when therapy duration is not selected"
-  },
-  "pleaseSelectTherapistBackground": "Please select therapist background",
-  "@pleaseSelectTherapistBackground": {
-    "description": "Error message when therapist background is not selected"
-  },
-  "pleaseSelectTherapistGender": "Please select therapist gender",
-  "@pleaseSelectTherapistGender": {
-    "description": "Error message when therapist gender is not selected"
-  },
-  "pleaseEnterBio": "Please enter your bio",
-  "@pleaseEnterBio": {
-    "description": "Error message when bio is not entered"
-  },
-  "pleaseEnterPortfolioLink": "Please enter your portfolio link",
-  "@pleaseEnterPortfolioLink": {
-    "description": "Error message when portfolio link is not entered"
-  },
-  "familyTherapy": "Family Therapy",
-  "@familyTherapy": {
-    "description": "Label for family therapy option"
-  },
-  "longTerm": "Long Term",
-  "@longTerm": {
-    "description": "Label for long term therapy duration"
-  },
-  "therapyDuration": "Therapy Duration",
-  "@therapyDuration": {
-    "description": "Label for therapy duration field"
-  },
-  "psychiatrist": "Psychiatrist",
-  "@psychiatrist": {
-    "description": "Label for psychiatrist option"
-  },
-  "therapistBackground": "Therapist Background",
-  "@therapistBackground": {
-    "description": "Label for therapist background field"
-  },
-  "therapistGender": "Therapist Gender",
-  "@therapistGender": {
-    "description": "Label for therapist gender field"
-  },
-  "trauma": "Trauma",
-  "@trauma": {
-    "description": "Text for trauma concern"
-  },
-  "parentingSupport": "Parenting Support",
-  "@parentingSupport": {
-    "description": "Text for parenting support"
-  },
-  "addictionRecovery": "Addiction Recovery",
-  "@addictionRecovery": {
-    "description": "Text for addiction recovery"
-  },
-  "careerStress": "Career/Education Stress",
-  "@careerStress": {
-    "description": "Text for career stress"
-  },
-  "talkTherapy": "Talk Therapy",
-  "@talkTherapy": {
-    "description": "Text for talk therapy"
-  },
-  "groupTherapy": "Group Therapy",
-  "@groupTherapy": {
-    "description": "Text for group therapy"
-  },
-  "couplesTherapy": "Couples Therapy",
-  "@couplesTherapy": {
-    "description": "Text for couples therapy"
-  },
-  "therapyType": "Type of Therapy",
-  "@therapyType": {
-    "description": "Text for therapy type"
-  },
-  "shortTerm": "Short Term",
-  "@shortTerm": {
-    "description": "Text for short term"
-  },
-  "therapistGender": "Therapist Gender",
-  "@therapistGender": {
-    "description": "Text for therapist gender"
-  },
-  "pleaseSelectTherapistGender": "Please select therapist gender",
-  "@pleaseSelectTherapistGender": {
-    "description": "Error message when therapist gender is not selected"
-  },
-  "pleaseEnterBio": "Please enter your bio",
-  "@pleaseEnterBio": {
-    "description": "Error message when bio is not entered"
-  },
-  "pleaseEnterPortfolioLink": "Please enter your portfolio link",
-  "@pleaseEnterPortfolioLink": {
-    "description": "Error message when portfolio link is not entered"
-  }
+  "alreadyHaveAccount": "Already have an account?",
+  "clientCreatorRegistrationTitle": "Client and Content Creator Registration",
+  "loginFailedRole": "Login failed: User role not found",
+  "passwordResetSuccess": "Password reset email sent successfully",
+  "passwordResetFailed": "Password reset failed"
+
 }

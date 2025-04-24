@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:selam_app/core/constants/app_colors.dart';
 
 class AuthDatePickerField extends StatelessWidget {
@@ -17,14 +18,17 @@ class AuthDatePickerField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final hasError = validator != null && validator!(selectedDate) != null;
+    final borderColor = hasError ? AppColors.error : AppColors.border;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           label,
-          style: const TextStyle(
+          style: GoogleFonts.manrope(
             fontSize: 14,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: AppColors.textPrimary,
           ),
         ),
@@ -36,6 +40,19 @@ class AuthDatePickerField extends StatelessWidget {
               initialDate: selectedDate ?? DateTime.now(),
               firstDate: DateTime(1900),
               lastDate: DateTime.now(),
+              builder: (context, child) {
+                return Theme(
+                  data: Theme.of(context).copyWith(
+                    colorScheme: ColorScheme.light(
+                      primary: AppColors.primary,
+                      onPrimary: Colors.white,
+                      onSurface: AppColors.textPrimary,
+                    ),
+                    dialogBackgroundColor: AppColors.primaryBackground,
+                  ),
+                  child: child!,
+                );
+              },
             );
             if (picked != null) {
               onDateSelected(picked);
@@ -44,7 +61,8 @@ class AuthDatePickerField extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
-              border: Border.all(color: AppColors.border),
+              color: AppColors.inputFieldBackground,
+              border: Border.all(color: borderColor),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
@@ -54,25 +72,27 @@ class AuthDatePickerField extends StatelessWidget {
                     selectedDate != null
                         ? '${selectedDate!.day}/${selectedDate!.month}/${selectedDate!.year}'
                         : 'Select date',
-                    style: TextStyle(
+                    style: GoogleFonts.manrope(
+                      fontSize: 14,
                       color: selectedDate != null
                           ? AppColors.textPrimary
                           : AppColors.textSecondary,
                     ),
                   ),
                 ),
-                const Icon(Icons.calendar_today, size: 20),
+                const Icon(Icons.calendar_today,
+                    size: 20, color: AppColors.textPrimary),
               ],
             ),
           ),
         ),
-        if (validator != null && validator!(selectedDate) != null)
+        if (hasError)
           Padding(
             padding: const EdgeInsets.only(top: 4),
             child: Text(
               validator!(selectedDate)!,
-              style: const TextStyle(
-                color: Colors.red,
+              style: GoogleFonts.manrope(
+                color: AppColors.error,
                 fontSize: 12,
               ),
             ),
@@ -80,4 +100,4 @@ class AuthDatePickerField extends StatelessWidget {
       ],
     );
   }
-} 
+}

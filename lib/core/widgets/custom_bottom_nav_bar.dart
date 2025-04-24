@@ -28,7 +28,7 @@ class CustomBottomNavBar extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: AppColors.primaryBackground,
         border: const Border(
           top: BorderSide(color: AppColors.border, width: 1),
         ),

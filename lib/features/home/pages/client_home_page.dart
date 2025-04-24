@@ -38,7 +38,7 @@ class _ClientHomePageState extends State<ClientHomePage> {
         children: [
           // Home Page
           Scaffold(
-            backgroundColor: AppColors.background,
+            backgroundColor: AppColors.primaryBackground,
             appBar: AppBar(
               backgroundColor: Colors.white,
               elevation: 0,

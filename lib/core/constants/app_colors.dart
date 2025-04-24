@@ -1,75 +1,78 @@
 import 'package:flutter/material.dart';
 
-/// A centralized color palette for the Selam Therapy application.
-///
-/// This class defines all the colors used across the app,
-/// organized into categories for easy reference and maintenance.
-/// Keeping colors in one place ensures a consistent look and feel,
-/// and simplifies future theming or rebranding.
 class AppColors {
-  // -------------------- Primary Colors --------------------
+  // -------------------- Brand / Identity --------------------
 
-  /// The main brand color used for primary actions and highlights.
-  static const Color primary = Color(0xFFFF6B6B);
+  /// Main branding color — use for AppBar, FAB, primary buttons, active elements.
+  static const Color primary = Color(0xFFFF6B6B); // Vibrant Red
 
-  /// The secondary brand color used for accents and complementary elements.
-  static const Color secondary = Color(0xFF4ECDC4);
-  
-  // -------------------- Neutral Colors --------------------
+  /// Secondary brand color — use for highlights, tags, chips, progress bars.
+  static const Color secondary = Color(0xFF4ECDC4); // Teal Mint
 
-  /// The darkest neutral shade, typically used for primary text or high-emphasis elements.
-  static const Color black = Color(0xFF2D3436);
+  // -------------------- Backgrounds --------------------
 
-  /// A strong grey shade for secondary text or subtle UI components.
-  static const Color darkGrey = Color(0xFF636E72);
+  /// Global screen background — used for Scaffold, pages.
+  static const Color surfaceBackground = Color(0xFFF8F9FA); // Light Grey
 
-  /// A mid-grey tone for placeholders, borders, or non-primary UI elements.
-  static const Color grey = Color(0xFFB2BEC3);
+  /// Secondary background — for cards, modals, surfaces on top of backgrounds.
+  static const Color primaryBackground = Color(0xFFFFFFFF); // Pure White
 
-  /// A soft grey ideal for backgrounds, disabled states, or light borders.
-  static const Color lightGrey = Color(0xFFDFE6E9);
+  // -------------------- Text --------------------
 
-  /// Pure white, typically used for backgrounds and elevated surfaces.
-  static const Color white = Color(0xFFFFFFFF);
-  
+  /// Main readable text — titles, body, and general content.
+  static const Color textPrimary = Color(0xFF2D3436); // Rich Black
+
+  /// Secondary text — labels, descriptions, hints, inactive text.
+  static const Color textSecondary = Color(0xFF636E72); // Muted Grey
+
+  /// Tertiary text — placeholders, extremely subtle elements.
+  static const Color textTertiary = Color(0xFFB2BEC3); // Pale Grey
+
+  // -------------------- Borders / Dividers --------------------
+
+  /// Thin UI lines, input outlines, card borders, dividers.
+  static const Color border = Color(0xFFB2BEC3); // Matches `textTertiary`
+
+  /// Very light gray for subtle section separation or disabled elements.
+  static const Color lightGrey = Color(0xFFDFE6E9); // Misty Grey
+
   // -------------------- Semantic Colors --------------------
 
-  /// Indicates success states, confirmations, and positive actions.
-  static const Color success = Color(0xFF00B894);
+  /// For success states — checkmarks, validation, positive alerts.
+  static const Color success = Color(0xFF00B894); // Emerald
 
-  /// Indicates caution or non-critical warnings.
-  static const Color warning = Color(0xFFFDAA5D);
+  /// For caution or warnings — temporary alerts, toasts, tips.
+  static const Color warning = Color(0xFFFDAA5D); // Orange-Yellow
 
-  /// Indicates errors, failures, and destructive actions.
-  static const Color error = Color(0xFFFF7675);
+  /// For errors or destructive actions — form errors, delete buttons.
+  static const Color error = Color(0xFFFF7675); // Coral Red
 
-  /// Used for informational banners, links, or hints.
-  static const Color info = Color(0xFF74B9FF);
-  
-  // -------------------- Background Colors --------------------
+  // -------------------- Additional States --------------------
 
-  /// The main background color for app screens.
-  static const Color background = Color(0xFFF8F9FA);
+  /// Disabled state for buttons, icons, form fields, etc.
+  static const Color disabled = Color(0xFFB2BEC3); // Reuse light neutral
 
-  /// Default surface color, often used for cards, sheets, and dialogs.
-  static const Color surface = Color(0xFFFFFFFF);
-  
-  // -------------------- Text Colors --------------------
+  /// Active state highlight — for toggles, selection, hover/focus.
+  static const Color active = Color(0xFF74B9FF); // Soft Blue (optional)
 
-  /// Primary text color for high-contrast readability.
-  static const Color textPrimary = Color(0xFF2D3436);
+  /// Shadow or elevation color — used with BoxShadows for depth.
+  static const Color shadow = Color(0x1A000000); // Black at 10% opacity
+  // -------------------- Additional UI Labels --------------------
 
-  /// Secondary text color for less prominent text like subtitles.
-  static const Color textSecondary = Color(0xFF636E72);
+  /// For form label text — use to distinguish labels from content.
+  static const Color labelColor = Color(0xFF2C3E50); // Dark Slate
 
-  /// Hint text color for placeholders and input field labels.
-  static const Color textHint = Color(0xFFB2BEC3);
-  
-  // -------------------- Border Colors --------------------
+  /// For optional text hints (e.g., "*optional") in labels.
+  static const Color optionalHint = Color(0xFF8395A7); // Cool Grey
 
-  /// Standard border color for input fields and containers.
-  static const Color border = Color(0xFFDFE6E9);
+  // -------------------- Dropdowns --------------------
 
-  /// Divider color used to separate sections or list items.
-  static const Color divider = Color(0xFFEEEEEE);
+  /// Background color for dropdown menus.
+  static const Color dropdownBackground =
+      Color(0xFFFFFFFF); // Matches primaryBackground
+  // -------------------- Inputs --------------------
+
+  /// Background color for input fields (TextField, TextFormField, etc.).
+  static const Color inputFieldBackground =
+      Color(0xFFF1F3F5); // Very light grey for contrast
 }

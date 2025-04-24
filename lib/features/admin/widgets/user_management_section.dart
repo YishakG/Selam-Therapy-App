@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constants/app_colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
+import '../../../core/constants/routes.dart';
+
+// Assuming Routes is defined somewhere in your project
+class Routes {
+  static const String registration = '/registration';
+}
 
 class UserManagementSection extends StatelessWidget {
   const UserManagementSection({Key? key}) : super(key: key);
@@ -9,7 +16,7 @@ class UserManagementSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -32,27 +39,39 @@ class UserManagementSection extends StatelessWidget {
           children: [
             _buildActionCard(
               context,
-              l10n.addUser,
-              Icons.person_add_outlined,
-              AppColors.primary,
+              title: l10n.addUser,
+              icon: Icons.person_add_outlined,
+              color: AppColors.primary,
+              onTap: () {
+                context.go(Routes.registration);
+              },
             ),
             _buildActionCard(
               context,
-              l10n.suspendUser,
-              Icons.person_off_outlined,
-              Colors.orange,
+              title: l10n.suspendUser,
+              icon: Icons.person_off_outlined,
+              color: Colors.orange,
+              onTap: () {
+                // TODO: Implement suspend user action
+              },
             ),
             _buildActionCard(
               context,
-              l10n.removeUser,
-              Icons.person_remove_outlined,
-              Colors.red,
+              title: l10n.removeUser,
+              icon: Icons.person_remove_outlined,
+              color: Colors.red,
+              onTap: () {
+                // TODO: Implement remove user action
+              },
             ),
             _buildActionCard(
               context,
-              l10n.assignRole,
-              Icons.assignment_ind_outlined,
-              Colors.purple,
+              title: l10n.assignRole,
+              icon: Icons.assignment_ind_outlined,
+              color: Colors.purple,
+              onTap: () {
+                // TODO: Implement assign role action
+              },
             ),
           ],
         ),
@@ -61,11 +80,12 @@ class UserManagementSection extends StatelessWidget {
   }
 
   Widget _buildActionCard(
-    BuildContext context,
-    String title,
-    IconData icon,
-    Color color,
-  ) {
+    BuildContext context, {
+    required String title,
+    required IconData icon,
+    required Color color,
+    required VoidCallback onTap, // Add onTap parameter
+  }) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -82,9 +102,7 @@ class UserManagementSection extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () {
-            // TODO: Implement action
-          },
+          onTap: onTap, // Use the provided onTap callback
           borderRadius: BorderRadius.circular(12),
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -113,4 +131,4 @@ class UserManagementSection extends StatelessWidget {
       ),
     );
   }
-} 
+}

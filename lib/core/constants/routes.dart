@@ -35,6 +35,8 @@ class Routes {
   /// Route for the Registration page where new users can create an account.
   static const String registration = '/registration';
 
+  static const String client_registration = '/client_registration';
+
   // ================= Main Navigation Routes =================
 
   /// Route for the Home page — the main dashboard after login.

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:selam_app/core/constants/app_colors.dart';
 
 class PrimaryButton extends StatelessWidget {
@@ -7,11 +8,11 @@ class PrimaryButton extends StatelessWidget {
   final bool isLoading;
 
   const PrimaryButton({
-    super.key,
+    Key? key,
     required this.text,
     required this.onPressed,
     this.isLoading = false,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +21,11 @@ class PrimaryButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        minimumSize: const Size(double.infinity, 56),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(30),
         ),
+        elevation: 0,
       ),
       child: isLoading
           ? const SizedBox(
@@ -36,11 +38,12 @@ class PrimaryButton extends StatelessWidget {
             )
           : Text(
               text,
-              style: const TextStyle(
-                fontSize: 16,
+              style: GoogleFonts.manrope(
+                fontSize: 18,
                 fontWeight: FontWeight.w600,
+                letterSpacing: 0.5,
               ),
             ),
     );
   }
-} 
+}

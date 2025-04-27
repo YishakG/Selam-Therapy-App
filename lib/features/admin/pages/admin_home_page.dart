@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cloud_firestore/cloud_firestore.dart'; // Import for Firebase Firestore
 import '../widgets/admin_stats_card.dart';
 import '../widgets/user_management_section.dart';
 import '../widgets/platform_config_section.dart';
@@ -10,6 +11,49 @@ import '../widgets/payment_section.dart';
 import '../widgets/security_section.dart';
 import '../../../core/constants/app_colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+// Firebase Firestore initialization function
+// Future<void> initializeGroups() async {
+//   final groups = [
+//     {
+//       'id': 'individual',
+//       'name': 'Individual',
+//       'description': 'Personal growth and self-care'
+//     },
+//     {
+//       'id': 'teenage',
+//       'name': 'Teenage',
+//       'description': 'Teen mental health and support'
+//     },
+//     {
+//       'id': 'family',
+//       'name': 'Family',
+//       'description': 'Family dynamics and relationships'
+//     },
+//     {
+//       'id': 'relationship',
+//       'name': 'Relationship',
+//       'description': 'Romantic and interpersonal relationships'
+//     },
+//     {
+//       'id': 'careers',
+//       'name': 'Careers',
+//       'description': 'Career guidance and workplace wellness'
+//     },
+//   ];
+
+//   for (var group in groups) {
+//     await FirebaseFirestore.instance
+//         .collection('Group-Chats')
+//         .doc(group['id'])
+//         .set({
+//       'name': group['name'],
+//       'description': group['description'],
+//       'participants': [],
+//       'createdAt': Timestamp.now(),
+//     });
+//   }
+// }
 
 class AdminHomePage extends ConsumerStatefulWidget {
   const AdminHomePage({Key? key}) : super(key: key);
@@ -22,9 +66,16 @@ class _AdminHomePageState extends ConsumerState<AdminHomePage> {
   int _selectedIndex = 0;
 
   @override
+  void initState() {
+    super.initState();
+    // Call initializeGroups when the AdminHomePage is created
+    // initializeGroups(); // Initialize groups in Firestore
+  }
+
+  @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    
+
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
@@ -229,4 +280,4 @@ class _AdminHomePageState extends ConsumerState<AdminHomePage> {
       ),
     );
   }
-} 
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:selam_app/features/chats/pages/group_chat_screen.dart';
 import 'package:selam_app/features/onboarding/pages/client_registration_page.dart';
 
 
@@ -69,6 +70,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: Routes.clientDashboard,
         builder: (context, state) => const ClientHomePage(),
       ),
+      GoRoute(
+        path: Routes.groupChats,
+        builder: (context, state) => GroupChatScreen(
+          groupId: state.pathParameters['groupId']!,
+        ),
+      ),
+
     ],
 
     /// Fallback error page for unknown routes.

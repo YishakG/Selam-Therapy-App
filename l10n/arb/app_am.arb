@@ -1007,7 +1007,31 @@
   "clientCreatorRegistrationTitle": "የደንበኛ እና የይዘት ፈጣሪ መመዝገቢያ",
   "loginFailedRole": "መግባት አልተሳካም፡ የተጠቃሚ ሚና አልተገኘም",
   "passwordResetSuccess": "የይለፍ ቃል ዳግም ማስጀመሪያ ኢሜል በተሳካ ሁኔታ ተልኳል",
-  "passwordResetFailed": "የይለፍ ቃል ዳግም ማስጀመር አልተሳካም"
-
-
+  "passwordResetFailed": "የይለፍ ቃል ዳግም ማስጀመር አልተሳካም",
+  "post": "መልእክት",
+  "story": "ታሪክ",
+  "reel": "ሪል",
+  "live": "ቀጥታ",
+  "individual": "ግለሰብ",
+  "teenage": "ወጣቶች",
+  "family": "ቤተሰብ",
+  "relationship": "ግንኙነት",
+  "careers": "ሙያዎች",
+  "typeMessage": "መልእክትዎን ይጻፉ...",
+  "viewAttachment": "አባሪ ፋይል እይት",
+  "cannotOpenAttachment": "አባሪውን ማክፈት አልተቻለም።",
+  "delete": "ማጥፋት",
+  "confirmDeleteMessage": "ማጥፋት እንደሚፈልጉ ያረጋግጡ።",
+  "deleteMessage": "መልእክቱ ተሰርዟል።",
+  "cancel": "መተው",
+  "failedToJoinGroup": "ቡድን ማቀላቀል አልተቻለም።",
+  "errorLoadingMessages": "መልእክቶችን ማከማቻ ላይ ስህተት ተፈጥሯል።",
+  "errorSendingAttachment": "አባሪ ማስተላለፊያ ላይ ስህተት ተፈጥሯል።",
+  "errorSendingMessage": "መልእክት ማስተላለፊያ ላይ ስህተት ተፈጥሯል።",
+  "pleaseLogin": "እባክዎ ይግቡ።",
+  "errorDeletingMessage": "መልእክት ሲሰረዝ ስህተት ተፈጥሯል።",
+  "offlineMessage": "ከመስመር ውጭ ነዎት።",
+  "fileTooLarge": "ፋይሉ በጣም ትልቅ ነው።",
+  "errorJoiningGroup": "ቡድኑን ለመቀላቀል ስህተት ተፈጥሯል።"
 }
+ 

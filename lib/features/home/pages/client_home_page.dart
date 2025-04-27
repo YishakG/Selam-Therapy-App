@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:selam_app/features/chats/pages/group_chat_screen.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../video/pages/video_feed_screen.dart';
 import '../../services/pages/services_page.dart';
@@ -40,7 +42,7 @@ class _ClientHomePageState extends State<ClientHomePage> {
           Scaffold(
             backgroundColor: AppColors.primaryBackground,
             appBar: AppBar(
-              backgroundColor: Colors.white,
+              backgroundColor: AppColors.primaryBackground,
               elevation: 0,
               title: Row(
                 children: [
@@ -100,25 +102,151 @@ class _ClientHomePageState extends State<ClientHomePage> {
                 ],
               ),
               actions: [
-                IconButton(
-                  icon: const Icon(Icons.add_circle_outline),
-                  onPressed: () {},
-                  color: AppColors.primary,
-                ),
-                IconButton(
-                  icon: const Icon(Icons.search),
-                  onPressed: () {},
-                  color: AppColors.primary,
-                ),
-                IconButton(
-                  icon: const Icon(Icons.chat_bubble_outline),
-                  onPressed: () {},
-                  color: AppColors.primary,
-                ),
-                IconButton(
-                  icon: const Icon(Icons.notifications_none),
-                  onPressed: () {},
-                  color: AppColors.primary,
+                Row(
+                  children: [
+                    // Add Button with Styled Dropdown
+                    PopupMenuButton<String>(
+                      icon: const Icon(
+                        Icons.add_circle_outline,
+                        color: AppColors.primary,
+                      ),
+                      color: AppColors.primaryBackground,
+                      onSelected: (value) {
+                        print("Selected: $value");
+                      },
+                      itemBuilder: (BuildContext context) => [
+                        PopupMenuItem(
+                          value: 'Post',
+                          child: Text(
+                            AppLocalizations.of(context)!.post,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'Story',
+                          child: Text(
+                            AppLocalizations.of(context)!.story,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'Reel',
+                          child: Text(
+                            AppLocalizations.of(context)!.reel,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'Live',
+                          child: Text(
+                            AppLocalizations.of(context)!.live,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    // Search Button
+                    IconButton(
+                      icon: const Icon(Icons.search),
+                      onPressed: () {},
+                      color: AppColors.primary,
+                    ),
+
+                    // Create this file next
+
+                    PopupMenuButton<String>(
+                      icon: const Icon(
+                        Icons.chat_bubble_outline,
+                        color: AppColors.primary,
+                      ),
+                      color: AppColors.primaryBackground,
+                      onSelected: (value) {
+                            GoRouter.of(context)
+                            .push('/group-chat/${value.toLowerCase()}');
+
+                      },
+                      itemBuilder: (BuildContext context) => [
+                        PopupMenuItem(
+                          value: 'Individual',
+                          child: Text(
+                            AppLocalizations.of(context)!.individual,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'Teenage',
+                          child: Text(
+                            AppLocalizations.of(context)!.teenage,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'Family',
+                          child: Text(
+                            AppLocalizations.of(context)!.family,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'Relationship',
+                          child: Text(
+                            AppLocalizations.of(context)!.relationship,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 'Careers',
+                          child: Text(
+                            AppLocalizations.of(context)!.careers,
+                            style: GoogleFonts.manrope(
+                              color: AppColors.textPrimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    // Notification Button
+                    IconButton(
+                      icon: const Icon(Icons.notifications_none),
+                      onPressed: () {},
+                      color: AppColors.primary,
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -129,7 +257,8 @@ class _ClientHomePageState extends State<ClientHomePage> {
                   profileImageUrl: 'https://picsum.photos/200',
                   username: 'ወ/ር ፍቅርት ጌታሁን',
                   subtitle: 'ማህበረሰብ · 2 ሰአታት በፊት',
-                  content: 'ፕንቶችን መረዳት የመጀመሪያው እርምጃ ነው። አልፎ አልፎ መጫነት የተለመደ ነው፣ ነገር ግን ቀጣይነት ያለው ፕንቶች ሙያዊ ድጋፍ ሊያስፈልገው ይችላል።',
+                  content:
+                      'ፕንቶችን መረዳት የመጀመሪያው እርምጃ ነው። አልፎ አልፎ መጫነት የተለመደ ነው፣ ነገር ግን ቀጣይነት ያለው ፕንቶች ሙያዊ ድጋፍ ሊያስፈልገው ይችላል።',
                   likes: 45,
                   comments: 12,
                 ),
@@ -137,17 +266,18 @@ class _ClientHomePageState extends State<ClientHomePage> {
                   profileImageUrl: 'https://picsum.photos/201',
                   username: 'ዶ/ር አበበ በቀለ',
                   subtitle: 'የጤና ባለሙያ · 1 ሰአታት በፊት',
-                  content: 'የዛሬው ስብሰባ በጣም ጠቃሚ ነበር። ሁሉም ተሳታፊዎች አዎንታዊ አስተያየት ሰጥተዋል።',
+                  content:
+                      'የዛሬው ስብሰባ በጣም ጠቃሚ ነበር። ሁሉም ተሳታፊዎች አዎንታዊ አስተያየት ሰጥተዋል።',
                   likes: 32,
                   comments: 8,
                 ),
               ],
             ),
           ),
-          const VideoFeedScreen(),    // Videos section
-          const ServicesPage(),       // Services section
-          const CoursesPage(),        // Courses section
-          const ProfilePage(),        // Profile section
+          const VideoFeedScreen(), // Videos section
+          const ServicesPage(), // Services section
+          const CoursesPage(), // Courses section
+          const ProfilePage(), // Profile section
         ],
       ),
       bottomNavigationBar: Container(
@@ -242,7 +372,8 @@ class CourseCard extends StatelessWidget {
           children: [
             // Course Image
             ClipRRect(
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+              borderRadius:
+                  const BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.network(
                 imageUrl,
                 height: 180,

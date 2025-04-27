@@ -41,7 +41,7 @@ class AuthService {
       }
 
       print('Attempting Firebase Authentication sign-in');
-      await _auth.currentUser?.reload(); // Ensure fresh auth state
+      await _auth.currentUser?.reload();
       firebase_auth.UserCredential userCredential =
           await _auth.signInWithEmailAndPassword(
         email: email,
@@ -50,17 +50,20 @@ class AuthService {
       String uid = userCredential.user!.uid;
       print('Firebase Auth sign-in successful, UID: $uid');
 
-      // Fetch user data to get role
+      // Fetch user data
       print('Fetching user data for UID: $uid');
       final userData = await fetchUserData();
       if (!userData['success']) {
         print(
             'Failed to fetch user data: ${userData['errorCode']} - ${userData['errorMessage']}');
-        return userData;
+        return {
+          'success': false,
+          'errorCode': userData['errorCode'],
+          'errorMessage': userData['errorMessage'],
+        };
       }
 
-      print(
-          'User data fetched successfully, role: ${userData['role']}, type: ${userData['role'].runtimeType}');
+      print('User data fetched, role: ${userData['role']}');
       return {
         'success': true,
         'uid': uid,
@@ -85,7 +88,7 @@ class AuthService {
     }
   }
 
-  /// Creates a new user account and stores data in role-specific Firebase collections and Supabase.
+  /// Creates a new user account.
   Future<Map<String, dynamic>> createAccount({
     required String email,
     required String password,
@@ -150,6 +153,15 @@ class AuthService {
               'Password must include uppercase, lowercase, number, and special character',
         };
       }
+      // Require dateOfBirth for clients
+      if (role == UserRole.client && dateOfBirth == null) {
+        print('Missing date of birth for client');
+        return {
+          'success': false,
+          'errorCode': 'missing-date-of-birth',
+          'errorMessage': 'Date of birth is required for clients',
+        };
+      }
 
       print('Attempting Firebase Authentication for email: $email');
       firebase_auth.UserCredential userCredential =
@@ -160,16 +172,36 @@ class AuthService {
       String uid = userCredential.user!.uid;
       print('User created in Firebase Auth: $uid');
 
-      // Prepare common user data
+      // Prepare user data
       Map<String, dynamic> userData = {
         'uid': uid,
         'email': email,
-        'firstName': firstName,
-        'lastName': lastName,
-        'phoneNumber': phoneNumber,
+        'first_name': firstName,
+        'last_name': lastName,
+        'phone': phoneNumber,
         'role': role.name,
-        'createdAt': FieldValue.serverTimestamp(),
+        'created_at': FieldValue.serverTimestamp(),
       };
+
+      // Add to users collection
+      try {
+        await _firestore.collection('users').doc(uid).set({
+          'uid': uid,
+          'email': email,
+          'role': role.name,
+          'created_at': FieldValue.serverTimestamp(),
+        });
+        print('User data stored in users collection for UID: $uid');
+      } catch (e) {
+        print('Failed to store user data in users collection: $e');
+        // Clean up Firebase Auth user if Firestore write fails
+        await _auth.currentUser?.delete();
+        return {
+          'success': false,
+          'errorCode': 'firestore-error',
+          'errorMessage': 'Failed to store user data in users collection: $e',
+        };
+      }
 
       // Handle profile picture upload
       String? profilePictureUrl;
@@ -196,6 +228,9 @@ class AuthService {
           print('Profile picture uploaded: $profilePictureUrl');
         } catch (e) {
           print('Profile picture upload failed: $e');
+          // Clean up Firebase Auth user and Firestore data
+          await _firestore.collection('users').doc(uid).delete();
+          await _auth.currentUser?.delete();
           return {
             'success': false,
             'errorCode': 'storage-error',
@@ -204,7 +239,7 @@ class AuthService {
         }
       }
 
-      // Handle license document upload for Therapist
+      // Handle license document upload
       String? licenseDocumentUrl;
       if (role == UserRole.therapist && licenseDocument != null) {
         try {
@@ -230,6 +265,9 @@ class AuthService {
           print('License document uploaded: $licenseDocumentUrl');
         } catch (e) {
           print('License document upload failed: $e');
+          // Clean up Firebase Auth user and Firestore data
+          await _firestore.collection('users').doc(uid).delete();
+          await _auth.currentUser?.delete();
           return {
             'success': false,
             'errorCode': 'storage-error',
@@ -238,7 +276,7 @@ class AuthService {
         }
       }
 
-      // Handle certification document upload for Course Trainer
+      // Handle certification document upload
       String? certificationDocumentUrl;
       if (role == UserRole.courseTrainer && certificationDocument != null) {
         try {
@@ -263,6 +301,9 @@ class AuthService {
           print('Certification document uploaded: $certificationDocumentUrl');
         } catch (e) {
           print('Certification document upload failed: $e');
+          // Clean up Firebase Auth user and Firestore data
+          await _firestore.collection('users').doc(uid).delete();
+          await _auth.currentUser?.delete();
           return {
             'success': false,
             'errorCode': 'storage-error',
@@ -274,33 +315,33 @@ class AuthService {
       // Add role-specific data
       if (role == UserRole.client) {
         userData.addAll({
-          'dateOfBirth': dateOfBirth,
+          'date_of_birth': dateOfBirth?.toIso8601String(),
           'gender': gender,
-          'preferredLanguage': preferredLanguage,
+          'preferred_language': preferredLanguage,
           'concerns': concerns ?? [],
-          'hasHadTherapy': hasHadTherapy,
-          'therapyType': therapyType,
-          'therapyDuration': therapyDuration,
-          'therapistBackground': therapistBackground,
-          'therapistGender': therapistGender,
-          'profilePictureUrl': profilePictureUrl,
+          'has_had_therapy': hasHadTherapy,
+          'therapy_type': therapyType,
+          'therapy_duration': therapyDuration,
+          'therapist_background': therapistBackground,
+          'therapist_gender': therapistGender,
+          'profile_picture_url': profilePictureUrl,
         });
       } else if (role == UserRole.contentCreator ||
           role == UserRole.contentSupervisor) {
         userData.addAll({
           'bio': bio,
           'expertise': expertise ?? [],
-          'portfolioLinks': portfolioLinks ?? [],
-          'profilePictureUrl': profilePictureUrl,
+          'portfolio_links': portfolioLinks ?? [],
+          'profile_picture_url': profilePictureUrl,
         });
       } else if (role == UserRole.courseTrainer) {
         userData.addAll({
           'bio': bio,
-          'academicBackground': academicBackground,
+          'academic_background': academicBackground,
           'certifications': certifications,
-          'trainingExpertise': trainingExpertise ?? [],
-          'profilePictureUrl': profilePictureUrl,
-          'certificationDocumentUrl': certificationDocumentUrl,
+          'training_expertise': trainingExpertise ?? [],
+          'profile_picture_url': profilePictureUrl,
+          'certification_document_url': certificationDocumentUrl,
         });
       } else if (role == UserRole.therapist) {
         userData.addAll({
@@ -309,17 +350,17 @@ class AuthService {
           'languages': languages ?? [],
           'credentials': credentials,
           'availability': availability,
-          'profilePictureUrl': profilePictureUrl,
-          'licenseDocumentUrl': licenseDocumentUrl,
+          'profile_picture_url': profilePictureUrl,
+          'license_document_url': licenseDocumentUrl,
         });
       } else if (role == UserRole.admin) {
         userData.addAll({
           'bio': bio,
-          'profilePictureUrl': profilePictureUrl,
+          'profile_picture_url': profilePictureUrl,
         });
       }
 
-      // Store in appropriate Firestore collection
+      // Store in role-specific collection
       final collectionName = role == UserRole.client
           ? 'Clients'
           : role == UserRole.contentCreator
@@ -338,6 +379,9 @@ class AuthService {
         print('User data stored successfully in $collectionName/$uid');
       } catch (e) {
         print('Firestore write failed: $e');
+        // Clean up Firebase Auth user and Firestore data
+        await _firestore.collection('users').doc(uid).delete();
+        await _auth.currentUser?.delete();
         return {
           'success': false,
           'errorCode': 'firestore-error',
@@ -363,6 +407,10 @@ class AuthService {
       } else {
         errorCode = 'unknown-error';
       }
+      // Clean up Firebase Auth user on failure
+      if (_auth.currentUser != null) {
+        await _auth.currentUser?.delete();
+      }
       return {
         'success': false,
         'errorCode': errorCode,
@@ -371,7 +419,7 @@ class AuthService {
     }
   }
 
-  /// Registers a user and stores data in role-specific Firebase collections.
+  /// Registers a user.
   Future<Map<String, dynamic>> registerUser({
     required String firstName,
     required String lastName,
@@ -436,8 +484,16 @@ class AuthService {
               'Password must include uppercase, lowercase, number, and special character',
         };
       }
+      // Require dateOfBirth for clients
+      if (role == UserRole.client && dateOfBirth == null) {
+        print('Missing date of birth for client');
+        return {
+          'success': false,
+          'errorCode': 'missing-date-of-birth',
+          'errorMessage': 'Date of birth is required for clients',
+        };
+      }
 
-      // Create user with Firebase Authentication
       print('Attempting Firebase Authentication for email: $email');
       firebase_auth.UserCredential userCredential =
           await _auth.createUserWithEmailAndPassword(
@@ -456,16 +512,36 @@ class AuthService {
       String uid = user.uid;
       print('User created in Firebase Auth: $uid');
 
-      // Prepare common user data
+      // Prepare user data
       Map<String, dynamic> userData = {
         'uid': uid,
+        'email': email,
         'first_name': firstName,
         'last_name': lastName,
-        'email': email,
         'phone': phone,
-        'role': role.toString().split('.').last,
+        'role': role.name,
         'created_at': FieldValue.serverTimestamp(),
       };
+
+      // Add to users collection
+      try {
+        await _firestore.collection('users').doc(uid).set({
+          'uid': uid,
+          'email': email,
+          'role': role.name,
+          'created_at': FieldValue.serverTimestamp(),
+        });
+        print('User data stored in users collection for UID: $uid');
+      } catch (e) {
+        print('Failed to store user data in users collection: $e');
+        // Clean up Firebase Auth user
+        await _auth.currentUser?.delete();
+        return {
+          'success': false,
+          'errorCode': 'firestore-error',
+          'errorMessage': 'Failed to store user data in users collection: $e',
+        };
+      }
 
       // Handle profile picture upload
       String? profilePictureUrl;
@@ -492,6 +568,9 @@ class AuthService {
           print('Profile picture uploaded: $profilePictureUrl');
         } catch (e) {
           print('Profile picture upload failed: $e');
+          // Clean up Firebase Auth user and Firestore data
+          await _firestore.collection('users').doc(uid).delete();
+          await _auth.currentUser?.delete();
           return {
             'success': false,
             'errorCode': 'storage-error',
@@ -500,7 +579,7 @@ class AuthService {
         }
       }
 
-      // Handle license document upload for Therapist
+      // Handle license document upload
       String? licenseDocumentUrl;
       if (role == UserRole.therapist && licenseDocument != null) {
         try {
@@ -526,6 +605,9 @@ class AuthService {
           print('License document uploaded: $licenseDocumentUrl');
         } catch (e) {
           print('License document upload failed: $e');
+          // Clean up Firebase Auth user and Firestore data
+          await _firestore.collection('users').doc(uid).delete();
+          await _auth.currentUser?.delete();
           return {
             'success': false,
             'errorCode': 'storage-error',
@@ -534,7 +616,7 @@ class AuthService {
         }
       }
 
-      // Handle certification document upload for Course Trainer
+      // Handle certification document upload
       String? certificationDocumentUrl;
       if (role == UserRole.courseTrainer && certificationDocument != null) {
         try {
@@ -559,6 +641,9 @@ class AuthService {
           print('Certification document uploaded: $certificationDocumentUrl');
         } catch (e) {
           print('Certification document upload failed: $e');
+          // Clean up Firebase Auth user and Firestore data
+          await _firestore.collection('users').doc(uid).delete();
+          await _auth.currentUser?.delete();
           return {
             'success': false,
             'errorCode': 'storage-error',
@@ -615,7 +700,7 @@ class AuthService {
         });
       }
 
-      // Store in appropriate Firestore collection
+      // Store in role-specific collection
       final collectionName = role == UserRole.client
           ? 'Clients'
           : role == UserRole.contentCreator
@@ -634,6 +719,9 @@ class AuthService {
         print('User data stored successfully in $collectionName/$uid');
       } catch (e) {
         print('Firestore write failed: $e');
+        // Clean up Firebase Auth user and Firestore data
+        await _firestore.collection('users').doc(uid).delete();
+        await _auth.currentUser?.delete();
         return {
           'success': false,
           'errorCode': 'firestore-error',
@@ -659,6 +747,10 @@ class AuthService {
       } else {
         errorCode = 'unknown-error';
       }
+      // Clean up Firebase Auth user on failure
+      if (_auth.currentUser != null) {
+        await _auth.currentUser?.delete();
+      }
       return {
         'success': false,
         'errorCode': errorCode,
@@ -667,10 +759,9 @@ class AuthService {
     }
   }
 
-  /// Fetches user data from Firebase and Supabase for the current user.
+  /// Fetches user data.
   Future<Map<String, dynamic>> fetchUserData() async {
     try {
-      // Get current user from Firebase Authentication
       final user = _auth.currentUser;
       if (user == null) {
         print('No authenticated user found');
@@ -684,207 +775,98 @@ class AuthService {
       final uid = user.uid;
       print('Fetching data for user: $uid');
 
-      // Try fetching from Clients collection
-      final clientDoc = await _firestore.collection('Clients').doc(uid).get();
-      if (clientDoc.exists) {
-        final data = clientDoc.data()!;
-        print('Stored role in Firestore: ${data['role']}');
-        final profilePictureUrl = data['profilePictureUrl'] as String?;
-        bool imageExists = false;
-
-        // Verify profile picture in Supabase
-        if (profilePictureUrl != null) {
-          try {
-            final response = await _supabase.storage
-                .from('profile-pictures')
-                .getPublicUrl(profilePictureUrl.split('/').last);
-            imageExists = true;
-          } catch (e) {
-            print('Error verifying profile picture: $e');
-            imageExists = false;
-          }
-        }
-
-        print('Client data found for UID: $uid');
+      // First, get the user's role from the users collection
+      final userDoc = await _firestore.collection('users').doc(uid).get();
+      if (!userDoc.exists) {
+        print('No user data found in users collection for UID: $uid');
         return {
-          'success': true,
-          'uid': uid,
-          'role': UserRole.client,
-          'email': data['email'],
-          'firstName': data['firstName'],
-          'lastName': data['lastName'],
-          'phoneNumber': data['phoneNumber'],
-          'dateOfBirth': data['dateOfBirth'] != null
-              ? (data['dateOfBirth'] as Timestamp).toDate()
+          'success': false,
+          'errorCode': 'user-not-found',
+          'errorMessage':
+              'User data not found in users collection. Please register.',
+        };
+      }
+
+      final userData = userDoc.data()!;
+      final roleString = userData['role'] as String;
+      final role = UserRole.values.firstWhere(
+        (r) => r.name == roleString,
+        orElse: () => UserRole.client,
+      );
+      print('User role from users collection: $roleString');
+
+      // Map role to collection name
+      final collectionName = role == UserRole.client
+          ? 'Clients'
+          : role == UserRole.contentCreator
+              ? 'ContentCreators'
+              : role == UserRole.contentSupervisor
+                  ? 'ContentSupervisors'
+                  : role == UserRole.courseTrainer
+                      ? 'CourseTrainers'
+                      : role == UserRole.therapist
+                          ? 'Therapists'
+                          : 'Admins';
+
+      // Fetch detailed data from the role-specific collection
+      final roleDoc =
+          await _firestore.collection(collectionName).doc(uid).get();
+      if (!roleDoc.exists) {
+        print('No user data found in $collectionName for UID: $uid');
+        return {
+          'success': false,
+          'errorCode': 'user-not-found',
+          'errorMessage':
+              'User data not found in $collectionName. Please register.',
+        };
+      }
+
+      final data = roleDoc.data()!;
+      print('Data found in $collectionName: ${data['role']}');
+      final profilePictureUrl = data['profile_picture_url'] as String?;
+      bool imageExists = false;
+
+      if (profilePictureUrl != null) {
+        try {
+          final response = await _supabase.storage
+              .from('profile-pictures')
+              .getPublicUrl(profilePictureUrl.split('/').last);
+          imageExists = true;
+        } catch (e) {
+          print('Error verifying profile picture: $e');
+        }
+      }
+
+      final result = {
+        'success': true,
+        'uid': uid,
+        'role': role,
+        'email': data['email'],
+        'first_name': data['first_name'],
+        'last_name': data['last_name'],
+        'phone': data['phone'],
+        'profile_picture_url': imageExists ? profilePictureUrl : null,
+      };
+
+      if (role == UserRole.client) {
+        result.addAll({
+          'date_of_birth': data['date_of_birth'] != null
+              ? (data['date_of_birth'] is Timestamp
+                  ? (data['date_of_birth'] as Timestamp).toDate()
+                  : DateTime.tryParse(data['date_of_birth'] as String))
               : null,
           'gender': data['gender'],
-          'preferredLanguage': data['preferredLanguage'],
+          'language': data['language'],
           'concerns': data['concerns']?.cast<String>(),
-          'hasHadTherapy': data['hasHadTherapy'],
-          'therapyType': data['therapyType'],
-          'therapyDuration': data['therapyDuration'],
-          'therapistBackground': data['therapistBackground'],
-          'therapistGender': data['therapistGender'],
-          'profilePictureUrl': imageExists ? profilePictureUrl : null,
-        };
-      }
-
-      // Try fetching from ContentCreators collection
-      final creatorDoc =
-          await _firestore.collection('ContentCreators').doc(uid).get();
-      if (creatorDoc.exists) {
-        final data = creatorDoc.data()!;
-        print('Stored role in Firestore: ${data['role']}');
-        final profilePictureUrl = data['profilePictureUrl'] as String?;
-        bool imageExists = false;
-
-        if (profilePictureUrl != null) {
-          try {
-            final response = await _supabase.storage
-                .from('profile-pictures')
-                .getPublicUrl(profilePictureUrl.split('/').last);
-            imageExists = true;
-          } catch (e) {
-            print('Error verifying profile picture: $e');
-            imageExists = false;
-          }
-        }
-
-        print('ContentCreator data found for UID: $uid');
-        return {
-          'success': true,
-          'uid': uid,
-          'role': UserRole.contentCreator,
-          'email': data['email'],
-          'firstName': data['firstName'],
-          'lastName': data['lastName'],
-          'phoneNumber': data['phoneNumber'],
-          'bio': data['bio'],
-          'expertise': data['expertise']?.cast<String>(),
-          'portfolioLinks': data['portfolioLinks']?.cast<String>(),
-          'profilePictureUrl': imageExists ? profilePictureUrl : null,
-        };
-      }
-
-      // Try fetching from ContentSupervisors collection
-      final supervisorDoc =
-          await _firestore.collection('ContentSupervisors').doc(uid).get();
-      if (supervisorDoc.exists) {
-        final data = supervisorDoc.data()!;
-        print('Stored role in Firestore: ${data['role']}');
-        final profilePictureUrl = data['profilePictureUrl'] as String?;
-        bool imageExists = false;
-
-        if (profilePictureUrl != null) {
-          try {
-            final response = await _supabase.storage
-                .from('profile-pictures')
-                .getPublicUrl(profilePictureUrl.split('/').last);
-            imageExists = true;
-          } catch (e) {
-            print('Error verifying profile picture: $e');
-            imageExists = false;
-          }
-        }
-
-        print('ContentSupervisor data found for UID: $uid');
-        return {
-          'success': true,
-          'uid': uid,
-          'role': UserRole.contentSupervisor,
-          'email': data['email'],
-          'firstName': data['firstName'],
-          'lastName': data['lastName'],
-          'phoneNumber': data['phoneNumber'],
-          'bio': data['bio'],
-          'expertise': data['expertise']?.cast<String>(),
-          'portfolioLinks': data['portfolioLinks']?.cast<String>(),
-          'profilePictureUrl': imageExists ? profilePictureUrl : null,
-        };
-      }
-
-      // Try fetching from CourseTrainers collection
-      final trainerDoc =
-          await _firestore.collection('CourseTrainers').doc(uid).get();
-      if (trainerDoc.exists) {
-        final data = trainerDoc.data()!;
-        print('Stored role in Firestore: ${data['role']}');
-        final profilePictureUrl = data['profilePictureUrl'] as String?;
-        final certificationDocumentUrl =
-            data['certificationDocumentUrl'] as String?;
-        bool profileImageExists = false;
-        bool certificationImageExists = false;
-
-        // Verify profile picture in Supabase
-        if (profilePictureUrl != null) {
-          try {
-            final response = await _supabase.storage
-                .from('profile-pictures')
-                .getPublicUrl(profilePictureUrl.split('/').last);
-            profileImageExists = true;
-          } catch (e) {
-            print('Error verifying profile picture: $e');
-            profileImageExists = false;
-          }
-        }
-
-        // Verify certification document in Supabase
-        if (certificationDocumentUrl != null) {
-          try {
-            final response = await _supabase.storage
-                .from('certifications')
-                .getPublicUrl(certificationDocumentUrl.split('/').last);
-            certificationImageExists = true;
-          } catch (e) {
-            print('Error verifying certification document: $e');
-            certificationImageExists = false;
-          }
-        }
-
-        print('CourseTrainer data found for UID: $uid');
-        return {
-          'success': true,
-          'uid': uid,
-          'role': UserRole.courseTrainer,
-          'email': data['email'],
-          'firstName': data['firstName'],
-          'lastName': data['lastName'],
-          'phoneNumber': data['phoneNumber'],
-          'bio': data['bio'],
-          'academicBackground': data['academicBackground'],
-          'certifications': data['certifications'],
-          'trainingExpertise': data['trainingExpertise']?.cast<String>(),
-          'profilePictureUrl': profileImageExists ? profilePictureUrl : null,
-          'certificationDocumentUrl':
-              certificationImageExists ? certificationDocumentUrl : null,
-        };
-      }
-
-      // Try fetching from Therapists collection
-      final therapistDoc =
-          await _firestore.collection('Therapists').doc(uid).get();
-      if (therapistDoc.exists) {
-        final data = therapistDoc.data()!;
-        print('Stored role in Firestore: ${data['role']}');
-        final profilePictureUrl = data['profilePictureUrl'] as String?;
-        final licenseDocumentUrl = data['licenseDocumentUrl'] as String?;
-        bool profileImageExists = false;
+          'has_had_therapy': data['has_had_therapy'],
+          'therapy_type': data['therapy_type'],
+          'therapy_duration': data['therapy_duration'],
+          'therapist_background': data['therapist_background'],
+          'therapist_gender': data['therapist_gender'],
+        });
+      } else if (role == UserRole.therapist) {
+        final licenseDocumentUrl = data['license_document_url'] as String?;
         bool licenseImageExists = false;
-
-        // Verify profile picture in Supabase
-        if (profilePictureUrl != null) {
-          try {
-            final response = await _supabase.storage
-                .from('profile-pictures')
-                .getPublicUrl(profilePictureUrl.split('/').last);
-            profileImageExists = true;
-          } catch (e) {
-            print('Error verifying profile picture: $e');
-            profileImageExists = false;
-          }
-        }
-
-        // Verify license document in Supabase
         if (licenseDocumentUrl != null) {
           try {
             final response = await _supabase.storage
@@ -893,69 +875,53 @@ class AuthService {
             licenseImageExists = true;
           } catch (e) {
             print('Error verifying license document: $e');
-            licenseImageExists = false;
           }
         }
-
-        print('Therapist data found for UID: $uid');
-        return {
-          'success': true,
-          'uid': uid,
-          'role': UserRole.therapist,
-          'email': data['email'],
-          'firstName': data['firstName'],
-          'lastName': data['lastName'],
-          'phoneNumber': data['phoneNumber'],
+        result.addAll({
           'bio': data['bio'],
           'specializations': data['specializations']?.cast<String>(),
           'languages': data['languages']?.cast<String>(),
           'credentials': data['credentials'],
           'availability': data['availability'],
-          'profilePictureUrl': profileImageExists ? profilePictureUrl : null,
-          'licenseDocumentUrl': licenseImageExists ? licenseDocumentUrl : null,
-        };
-      }
-
-      // Try fetching from Admins collection
-      final adminDoc = await _firestore.collection('Admins').doc(uid).get();
-      if (adminDoc.exists) {
-        final data = adminDoc.data()!;
-        print('Stored role in Firestore: ${data['role']}');
-        final profilePictureUrl = data['profilePictureUrl'] as String?;
-        bool imageExists = false;
-
-        if (profilePictureUrl != null) {
+          'license_document_url':
+              licenseImageExists ? licenseDocumentUrl : null,
+        });
+      } else if (role == UserRole.courseTrainer) {
+        final certificationDocumentUrl =
+            data['certification_document_url'] as String?;
+        bool certificationImageExists = false;
+        if (certificationDocumentUrl != null) {
           try {
             final response = await _supabase.storage
-                .from('profile-pictures')
-                .getPublicUrl(profilePictureUrl.split('/').last);
-            imageExists = true;
+                .from('certifications')
+                .getPublicUrl(certificationDocumentUrl.split('/').last);
+            certificationImageExists = true;
           } catch (e) {
-            print('Error verifying profile picture: $e');
-            imageExists = false;
+            print('Error verifying certification document: $e');
           }
         }
-
-        print('Admin data found for UID: $uid');
-        return {
-          'success': true,
-          'uid': uid,
-          'role': UserRole.admin,
-          'email': data['email'],
-          'firstName': data['firstName'],
-          'lastName': data['lastName'],
-          'phoneNumber': data['phoneNumber'],
+        result.addAll({
           'bio': data['bio'],
-          'profilePictureUrl': imageExists ? profilePictureUrl : null,
-        };
+          'academic_background': data['academic_background'],
+          'certifications': data['certifications'],
+          'training_expertise': data['training_expertise']?.cast<String>(),
+          'certification_document_url':
+              certificationImageExists ? certificationDocumentUrl : null,
+        });
+      } else if (role == UserRole.contentCreator ||
+          role == UserRole.contentSupervisor) {
+        result.addAll({
+          'bio': data['bio'],
+          'expertise': data['expertise']?.cast<String>(),
+          'portfolio_links': data['portfolio_links']?.cast<String>(),
+        });
+      } else if (role == UserRole.admin) {
+        result.addAll({
+          'bio': data['bio'],
+        });
       }
 
-      print('No user data found in Firestore for UID: $uid');
-      return {
-        'success': false,
-        'errorCode': 'user-not-found',
-        'errorMessage': 'User data not found in Firestore',
-      };
+      return result;
     } catch (e) {
       print('Error fetching user data: $e');
       return {

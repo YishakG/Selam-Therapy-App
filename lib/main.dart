@@ -24,7 +24,8 @@ void main() async {
 
     await Supabase.initialize(
       url: 'https://jvwxkfgfkkkwyznfznol.supabase.co',
-      anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2d3hrZmdma2trd3l6bmZ6bm9sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUyMzIyNTcsImV4cCI6MjA2MDgwODI1N30.crAjtndG5yfza51SO3fy815W6pVrR7jkt599mPCJMJE',
+      anonKey:
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp2d3hrZmdma2trd3l6bmZ6bm9sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUyMzIyNTcsImV4cCI6MjA2MDgwODI1N30.crAjtndG5yfza51SO3fy815W6pVrR7jkt599mPCJMJE',
     );
 
     runApp(const ProviderScope(child: MyApp()));
@@ -34,7 +35,6 @@ void main() async {
     debugPrint('$stackTrace');
   }
 }
-
 
 /// The root widget of the application.
 /// Sets up routing, localization, theming, and reactive state.

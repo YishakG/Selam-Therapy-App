@@ -73,4 +73,9 @@ class Routes {
   /// Route for the Client Dashboard.
   /// This is the main landing page for clients.
   static const String clientDashboard = '/client/dashboard';
+
+  static const String groupChats = '/group-chat/:groupId';
+
+
+  
 }

@@ -224,7 +224,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: _isLoading ? null : _handleLogin,
                       child: _isLoading
-                          ? const CircularProgressIndicator(color: Colors.white)
+                          ? const CircularProgressIndicator(color: AppColors.primary)
                           : Text(
                               l10n.login,
                               style: const TextStyle(
@@ -253,7 +253,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       TextButton(
                         onPressed: () {
-                          context.go(Routes.registration);
+                          context.go(Routes.client_registration);
                         },
                         child: Text(
                           l10n.createAccount,
